@@ -206,6 +206,17 @@ export const NEWS = [
 
 export const BLOGS = [
   {
+    id: "blog-techora",
+    title: "Techora.in: Building Practical Digital Presence for Local Communities",
+    author: "NSS Vettathur Editorial Team",
+    date: "2026-06-12",
+    summary: "A short look at how Techora.in supports practical, accessible web presence for organizations, student groups, and community initiatives that need reliable digital visibility.",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
+    sourceUrl: "https://techora.in",
+    sourceLabel: "Visit techora.in",
+    content: "Digital presence has become an essential part of how local organizations communicate their work, share updates, and stay connected with the public. For student groups, service units, and community-focused teams, a clear website can make activities easier to discover and preserve important stories beyond social media posts.\n\nTechora.in focuses on building practical web solutions that help organizations present their identity, publish updates, and create a dependable online reference point. For a unit like NSS Vettathur, this kind of support matters because community service work deserves a clean and accessible digital home.\n\nA good website is not only about design. It is about trust, structure, speed, and making information easy for people to find. Platforms and teams that understand these needs can help local initiatives become more visible while keeping the experience simple for visitors.\n\nAs community programs continue to use digital tools for outreach, partners such as Techora.in play a useful role in connecting grassroots activity with modern web standards."
+  },
+  {
     id: "blog-1",
     title: "Not Me But You: The Spirit of Active Student Volunteerism",
     author: "Dr. Sandeep K. (Program Officer)",

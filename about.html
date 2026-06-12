@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="text-md">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | NSS Vettathur</title>
+  
+  <meta name="description" content="Discover the history, motto, objectives, and vision of the National Service Scheme (NSS) Unit in Vettathur, Kerala. Read the Program Officer message.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A',
+            secondary: '#EA580C',
+            accent: '#F59E0B',
+            success: '#16A34A'
+          },
+          fontFamily: {
+            display: ['Outfit', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Theme Controller -->
+  <script src="js/theme.js"></script>
+</head>
+<body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300 font-body">
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-50 w-full transition-all duration-300 border-b border-slate-100 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md dark:border-slate-800">
+    <div class="w-full bg-slate-50 border-b border-slate-100 dark:bg-slate-950 dark:border-slate-800 text-xs py-1.5 px-4 md:px-8 flex justify-between items-center text-slate-500 dark:text-slate-400">
+      <div>
+        <span>Motto: <strong class="text-secondary dark:text-orange-500">Not Me But You</strong></span>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-1 border-r border-slate-200 dark:border-slate-800 pr-3">
+          <span class="mr-1 hidden sm:inline">Text Size:</span>
+          <button id="btn-text-dec" class="px-2 py-0.5 hover:bg-slate-200 dark:hover:bg-slate-800 rounded font-bold cursor-pointer">A-</button>
+          <button id="btn-text-rst" class="px-2 py-0.5 hover:bg-slate-200 dark:hover:bg-slate-800 rounded font-bold cursor-pointer">A</button>
+          <button id="btn-text-inc" class="px-2 py-0.5 hover:bg-slate-200 dark:hover:bg-slate-800 rounded font-bold cursor-pointer">A+</button>
+        </div>
+        <button id="theme-toggle" class="p-1 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors cursor-pointer" aria-label="Toggle Dark Mode">
+          <svg id="theme-toggle-dark-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.46 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-3.5 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full font-bold shadow-md shadow-primary/20 dark:shadow-none font-display">
+          <span>NSS</span>
+        </div>
+        <div>
+          <span class="font-bold text-lg text-slate-800 dark:text-slate-100 block tracking-tight leading-tight group-hover:text-primary dark:group-hover:text-orange-500 transition-colors font-display">NSS VETTATHUR</span>
+          <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-widest block leading-none">Kerala Unit</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 font-medium text-sm text-slate-600 dark:text-slate-300">
+        <a href="index.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Home</a>
+        <a href="about.html" class="text-secondary dark:text-orange-500 font-bold py-2">About</a>
+        <a href="activities.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Activities</a>
+        <a href="gallery.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Gallery</a>
+        <a href="achievements.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Achievements</a>
+        <a href="cyber-awareness.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Cyber Hub</a>
+        <a href="news.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">News</a>
+        <a href="blogs.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Blogs</a>
+        <a href="team.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Team</a>
+        <a href="contact.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Contact</a>
+      </nav>
+
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobile-menu-overlay" class="hidden fixed inset-0 z-40 bg-slate-900/20 dark:bg-slate-950/40 backdrop-blur-sm transition-opacity duration-300"></div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-menu-drawer" class="fixed top-0 right-0 z-50 w-72 h-full bg-white dark:bg-slate-900 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+      <div class="flex items-center justify-between p-4 border-b border-slate-100 dark:border-slate-800">
+        <span class="font-bold text-slate-800 dark:text-slate-100 font-display">Menu</span>
+        <button id="mobile-menu-close" class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto py-4 px-3 flex flex-col gap-1.5 font-medium text-slate-700 dark:text-slate-200">
+        <a href="index.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Home</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 text-secondary dark:text-orange-500 font-bold">About</a>
+        <a href="activities.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Activities</a>
+        <a href="gallery.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Gallery</a>
+        <a href="achievements.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Achievements</a>
+        <a href="cyber-awareness.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Cyber Hub</a>
+        <a href="news.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">News</a>
+        <a href="blogs.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Blogs</a>
+        <a href="team.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Team</a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Contact</a>
+      </nav>
+      <div class="p-6 bg-slate-50 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 text-center text-xs text-slate-400">
+        NSS Unit, Vettathur
+      </div>
+    </div>
+  </header>
+
+  <!-- Subpage Header -->
+  <section class="py-12 bg-slate-50 dark:bg-slate-950/30 border-b border-slate-100 dark:border-slate-800/20">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 text-center space-y-4">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-slate-950 dark:text-white tracking-tight font-display animate-slide-up">About NSS Vettathur</h1>
+      <p class="text-slate-500 dark:text-slate-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
+        Discover our history, national objectives, local chapter achievements, and the driving principles behind our volunteer projects.
+      </p>
+    </div>
+  </section>
+
+  <!-- Core Content Sections -->
+  <section class="py-16 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <!-- Left side: Vision, Mission & Motto -->
+      <div class="lg:col-span-7 space-y-12">
+        <div class="space-y-4">
+          <h2 class="text-2xl font-bold text-slate-950 dark:text-white tracking-tight font-display">What is National Service Scheme?</h2>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm md:text-base">
+            The National Service Scheme (NSS) is an Indian government-sponsored public service program conducted by the Ministry of Youth Affairs and Sports. Popularly known as NSS, the scheme was launched in Gandhiji's Centenary Year (1969) to establish a meaningful link between campus education and rural communities.
+          </p>
+          <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm md:text-base">
+            It provides students with hands-on opportunities to understand social realities, work collectively in environmental and medical campaigns, and learn first-hand administrative leadership through real-world problem-solving.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <h2 class="text-2xl font-bold text-slate-950 dark:text-white tracking-tight font-display">NSS Motto & Objectives</h2>
+          <div class="p-6 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 rounded-2xl">
+            <span class="block text-xs uppercase font-bold text-slate-400 mb-1 font-display">The Motto</span>
+            <span class="text-xl md:text-2xl font-extrabold text-secondary dark:text-orange-500 font-display">"Not Me But You"</span>
+            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm mt-2 leading-relaxed">
+              This motto underlines the concept of democratic living and upholds the need for selfless service. It reflects our belief that the welfare of an individual is ultimately dependent on the welfare of society as a whole.
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white font-display">Key Core Objectives:</h3>
+            <ul class="space-y-2.5 text-sm text-slate-600 dark:text-slate-400 list-disc list-inside">
+              <li>Understand the community in which the volunteers work.</li>
+              <li>Understand themselves in relation to their community.</li>
+              <li>Identify the needs and problems of the community and involve them in problem-solving.</li>
+              <li>Develop among themselves a sense of social and civic responsibility.</li>
+              <li>Utilise their knowledge in finding practical solutions to individual and community problems.</li>
+              <li>Develop competence required for group-living and sharing of responsibilities.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+          <div class="p-6 border border-slate-100 dark:border-slate-800 rounded-2xl hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-lg text-primary dark:text-orange-500 mb-2 font-display">Our Vision</h3>
+            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm leading-relaxed">
+              To build a youth volunteer force in Vettathur that acts as a proactive agent of social welfare, civic hygiene, and progressive digital development.
+            </p>
+          </div>
+          <div class="p-6 border border-slate-100 dark:border-slate-800 rounded-2xl hover:shadow-md transition-shadow">
+            <h3 class="font-bold text-lg text-primary dark:text-orange-500 mb-2 font-display">Our Mission</h3>
+            <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm leading-relaxed">
+              To drive impactful community sanitation, green conservation, blood donations, and cybersecurity campaigns while fostering leadership skills in students.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side: PO info -->
+      <div class="lg:col-span-5 space-y-8">
+        <div class="p-8 bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 rounded-3xl text-center space-y-4 shadow-sm animate-fade-in">
+          <div class="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white dark:border-slate-900 shadow-md">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Dr. Sandeep K." class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 class="font-bold text-xl text-slate-950 dark:text-white font-display">Dr. Sandeep K.</h3>
+            <span class="text-xs uppercase font-semibold tracking-wider text-slate-400 font-display">Program Officer</span>
+          </div>
+          <p class="text-slate-500 dark:text-slate-400 text-xs md:text-sm leading-relaxed max-w-sm mx-auto">
+            "Serving the community is the highest learning curve for any student. At NSS Vettathur, we shape not just academic minds, but empathetic social leaders."
+          </p>
+          <div class="pt-4 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-400 space-y-1.5">
+            <span>Email: po@nss-vettathur.techora.in</span><br>
+            <span>Phone: +91 98765 43210</span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-slate-950 dark:to-slate-950 border border-slate-100 dark:border-slate-800/60 text-xs text-slate-500 leading-relaxed">
+          <h4 class="font-bold text-sm text-slate-900 dark:text-slate-200 mb-2 font-display">The NSS Badge & Symbol</h4>
+          <p>
+            The symbol is based on the giant Rath Wheel of Konark Sun Temple. The wheel signifies progress, cycle of creation, and preservation. The deep blue color in the badge represents the cosmos of which the NSS is a tiny part, ready to serve mankind. The red color denotes the active volunteer blood.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w-full bg-slate-900 text-slate-300 dark:bg-slate-950 border-t border-slate-800/40 py-12 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full font-bold">
+            <span class="text-sm font-display">NSS</span>
+          </div>
+          <span class="font-bold text-white tracking-wide text-lg font-display">NSS VETTATHUR</span>
+        </div>
+        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+          The National Service Scheme (NSS) Unit of Vettathur, Kerala. Promoting active community leadership, social empathy, and volunteer action.
+        </p>
+        <span class="text-xs text-slate-500 italic">Motto: "Not Me But You"</span>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-white text-base mb-4 tracking-wide font-display">Quick Links</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="about.html" class="hover:text-orange-500 transition-colors">About NSS</a></li>
+          <li><a href="activities.html" class="hover:text-orange-500 transition-colors">Activities & Campaigns</a></li>
+          <li><a href="gallery.html" class="hover:text-orange-500 transition-colors">Gallery Albums</a></li>
+          <li><a href="cyber-awareness.html" class="hover:text-orange-500 transition-colors">Cyber Awareness Hub</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-white text-base mb-4 tracking-wide font-display">Resources</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="news.html" class="hover:text-orange-500 transition-colors">News Alerts</a></li>
+          <li><a href="blogs.html" class="hover:text-orange-500 transition-colors">NSS Blog Articles</a></li>
+          <li><a href="team.html" class="hover:text-orange-500 transition-colors">Our Team Directory</a></li>
+          <li><a href="contact.html" class="hover:text-orange-500 transition-colors">Get in Touch</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-white text-base mb-4 tracking-wide font-display">Contact Unit</h3>
+        <p class="text-sm text-slate-400 leading-relaxed mb-3">
+          NSS Program Officer,<br>
+          Vettathur, Malappuram District,<br>
+          Kerala, India - 679326
+        </p>
+        <p class="text-sm text-slate-400 mb-2">Email: <a href="mailto:po@nss-vettathur.techora.in" class="hover:text-orange-500 text-slate-300">po@nss-vettathur.techora.in</a></p>
+        <p class="text-sm text-slate-400">Phone: <a href="tel:+919876543210" class="hover:text-orange-500 text-slate-300">+91 98765 43210</a></p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+      <div>
+        <span>&copy; 2026 NSS Vettathur. All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hover:text-slate-400" aria-label="Facebook">Facebook</a>
+        <a href="#" class="hover:text-slate-400" aria-label="Instagram">Instagram</a>
+        <a href="#" class="hover:text-slate-400" aria-label="YouTube">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -19,7 +19,7 @@ function renderCategoryTabs() {
 
   container.innerHTML = categories.map(cat => {
     const isSelected = cat === activeCategory;
-    const activeClass = "bg-secondary text-white shadow-md";
+    const activeClass = "bg-primary text-white shadow-md";
     const inactiveClass = "bg-slate-50 text-slate-600 hover:bg-slate-100";
     
     return `
@@ -36,7 +36,7 @@ function renderCategoryTabs() {
       container.querySelectorAll("button").forEach(b => {
         const cat = b.getAttribute("data-category");
         if (cat === activeCategory) {
-          b.className = "px-4 py-2 text-xs font-semibold rounded-xl transition-all cursor-pointer bg-secondary text-white shadow-md";
+          b.className = "px-4 py-2 text-xs font-semibold rounded-xl transition-all cursor-pointer bg-primary text-white shadow-md";
         } else {
           b.className = "px-4 py-2 text-xs font-semibold rounded-xl transition-all cursor-pointer bg-slate-50 text-slate-600 hover:bg-slate-100";
         }

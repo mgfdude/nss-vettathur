@@ -23,7 +23,7 @@ function renderCategoryFilters() {
 
   container.innerHTML = categories.map(cat => {
     const isSelected = cat === activeCategory;
-    const activeClass = "bg-secondary text-white shadow-md";
+    const activeClass = "bg-primary text-white shadow-md";
     const inactiveClass = "bg-slate-50 text-slate-500 hover:bg-slate-100";
     
     return `
@@ -40,7 +40,7 @@ function renderCategoryFilters() {
       container.querySelectorAll("button").forEach(b => {
         const cat = b.getAttribute("data-cat");
         if (cat === activeCategory) {
-          b.className = "px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all cursor-pointer bg-secondary text-white shadow-md";
+          b.className = "px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all cursor-pointer bg-primary text-white shadow-md";
         } else {
           b.className = "px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all cursor-pointer bg-slate-50 text-slate-500 hover:bg-slate-100";
         }
@@ -61,7 +61,7 @@ function setupYearFilterListeners() {
       container.querySelectorAll("button").forEach(b => {
         const yr = b.getAttribute("data-year");
         if (yr === activeYear) {
-          b.className = "px-4 py-2 text-xs font-semibold rounded-lg bg-white text-secondary shadow-sm border border-slate-100 cursor-pointer";
+          b.className = "px-4 py-2 text-xs font-semibold rounded-lg bg-white text-primary shadow-sm border border-slate-100 cursor-pointer";
         } else {
           b.className = "px-4 py-2 text-xs font-semibold rounded-lg text-slate-500 hover:text-slate-700 cursor-pointer";
         }

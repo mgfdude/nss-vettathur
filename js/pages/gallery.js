@@ -23,8 +23,8 @@ function renderCategoryFilters() {
 
   container.innerHTML = categories.map(cat => {
     const isSelected = cat === activeCategory;
-    const activeClass = "bg-blue-800 text-white dark:bg-orange-600 shadow-md";
-    const inactiveClass = "bg-slate-50 text-slate-500 hover:bg-slate-100 dark:bg-slate-950 dark:text-slate-400 dark:hover:bg-slate-800";
+    const activeClass = "bg-secondary text-white shadow-md";
+    const inactiveClass = "bg-slate-50 text-slate-500 hover:bg-slate-100";
     
     return `
       <button data-cat="${cat}" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all cursor-pointer ${isSelected ? activeClass : inactiveClass}">
@@ -38,11 +38,11 @@ function renderCategoryFilters() {
       activeCategory = e.currentTarget.getAttribute("data-cat");
       
       container.querySelectorAll("button").forEach(b => {
-        b.className = b.className.replace(/bg-blue-800|text-white|dark:bg-orange-600|shadow-md/g, "").trim();
-        b.classList.add("bg-slate-50", "text-slate-500", "dark:bg-slate-950", "dark:text-slate-400");
-        if (b.getAttribute("data-cat") === activeCategory) {
-          b.classList.remove("bg-slate-50", "text-slate-500", "dark:bg-slate-950", "dark:text-slate-400");
-          b.classList.add("bg-blue-800", "text-white", "dark:bg-orange-600", "shadow-md");
+        const cat = b.getAttribute("data-cat");
+        if (cat === activeCategory) {
+          b.className = "px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all cursor-pointer bg-secondary text-white shadow-md";
+        } else {
+          b.className = "px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-all cursor-pointer bg-slate-50 text-slate-500 hover:bg-slate-100";
         }
       });
       renderAlbums();
@@ -59,11 +59,11 @@ function setupYearFilterListeners() {
       activeYear = e.currentTarget.getAttribute("data-year");
 
       container.querySelectorAll("button").forEach(b => {
-        b.className = b.className.replace(/bg-white|dark:bg-slate-900|text-blue-800|dark:text-orange-500|shadow-sm|border|border-slate-100|dark:border-slate-800/g, "").trim();
-        b.classList.add("text-slate-500", "dark:text-slate-400");
-        if (b.getAttribute("data-year") === activeYear) {
-          b.classList.remove("text-slate-500", "dark:text-slate-400");
-          b.classList.add("bg-white", "dark:bg-slate-900", "text-blue-800", "dark:text-orange-500", "shadow-sm", "border", "border-slate-100", "dark:border-slate-800");
+        const yr = b.getAttribute("data-year");
+        if (yr === activeYear) {
+          b.className = "px-4 py-2 text-xs font-semibold rounded-lg bg-white text-secondary shadow-sm border border-slate-100 cursor-pointer";
+        } else {
+          b.className = "px-4 py-2 text-xs font-semibold rounded-lg text-slate-500 hover:text-slate-700 cursor-pointer";
         }
       });
       renderAlbums();
@@ -83,26 +83,26 @@ function renderAlbums() {
 
   if (filtered.length === 0) {
     grid.innerHTML = `
-      <div class="col-span-full text-center py-20 text-slate-400 dark:text-slate-600">
-        No albums found matching active criteria.
+      <div class="col-span-full text-center py-20 text-slate-400">
+        No albums found.
       </div>
     `;
     return;
   }
 
   grid.innerHTML = filtered.map(al => `
-    <div data-album-id="${al.id}" class="album-card group cursor-pointer bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800/60 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div data-album-id="${al.id}" class="album-card group cursor-pointer bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
       <div class="h-56 relative overflow-hidden">
         <img src="${al.cover}" alt="${al.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-60"></div>
-        <span class="absolute top-4 left-4 px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-white/95 dark:bg-slate-900/90 text-blue-800 dark:text-orange-400 shadow-sm">${al.year}</span>
+        <span class="absolute top-4 left-4 px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-white/95 text-secondary shadow-sm">${al.year}</span>
         <span class="absolute bottom-4 right-4 text-xs font-semibold text-white bg-slate-900/80 px-2 py-1 rounded backdrop-blur">
           ${al.images.length} Photos
         </span>
       </div>
       <div class="p-5">
-        <span class="text-[10px] text-orange-600 dark:text-orange-400 font-bold uppercase tracking-widest block mb-1.5">${al.category}</span>
-        <h3 class="font-bold text-slate-900 dark:text-white group-hover:text-blue-800 dark:group-hover:text-orange-500 transition-colors leading-tight">${al.title}</h3>
+        <span class="text-[10px] text-accent font-bold uppercase tracking-widest block mb-1.5">${al.category}</span>
+        <h3 class="font-bold text-slate-900 group-hover:text-secondary transition-colors leading-tight">${al.title}</h3>
       </div>
     </div>
   `).join('');

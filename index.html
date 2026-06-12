@@ -20,7 +20,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
+      
       theme: {
         extend: {
           colors: {
@@ -49,25 +49,25 @@
   <!-- Theme Controller (runs in head to avoid flicker) -->
   <script src="js/theme.js"></script>
 </head>
-<body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300 font-body">
+<body class="bg-white text-slate-800 transition-colors duration-300 font-body">
 
   <!-- Header Navigation -->
-  <header class="sticky top-0 z-50 w-full transition-all duration-300 border-b border-slate-100 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md dark:border-slate-800">
+  <header class="sticky top-0 z-50 w-full transition-all duration-300 border-b border-slate-100 bg-white/80 backdrop-blur-md">
     <!-- Top Accessibility Bar -->
-    <div class="w-full bg-slate-50 border-b border-slate-100 dark:bg-slate-950 dark:border-slate-800 text-xs py-1.5 px-4 md:px-8 flex justify-between items-center text-slate-500 dark:text-slate-400">
+    <div class="w-full bg-slate-50 border-b border-slate-100 text-xs py-1.5 px-4 md:px-8 flex justify-between items-center text-slate-500">
       <div>
-        <span>Motto: <strong class="text-secondary dark:text-orange-500">Not Me But You</strong></span>
+        <span>Motto: <strong class="text-secondary">Not Me But You</strong></span>
       </div>
       <div class="flex items-center gap-4">
         <!-- Text Resizer -->
-        <div class="flex items-center gap-1 border-r border-slate-200 dark:border-slate-800 pr-3">
+        <div class="flex items-center gap-1 border-r border-slate-200 pr-3">
           <span class="mr-1 hidden sm:inline">Text Size:</span>
-          <button id="btn-text-dec" class="px-2 py-0.5 hover:bg-slate-200 dark:hover:bg-slate-800 rounded font-bold cursor-pointer" aria-label="Decrease text size">A-</button>
-          <button id="btn-text-rst" class="px-2 py-0.5 hover:bg-slate-200 dark:hover:bg-slate-800 rounded font-bold cursor-pointer" aria-label="Reset text size">A</button>
-          <button id="btn-text-inc" class="px-2 py-0.5 hover:bg-slate-200 dark:hover:bg-slate-800 rounded font-bold cursor-pointer" aria-label="Increase text size">A+</button>
+          <button id="btn-text-dec" class="px-2 py-0.5 hover:bg-slate-200 rounded font-bold cursor-pointer" aria-label="Decrease text size">A-</button>
+          <button id="btn-text-rst" class="px-2 py-0.5 hover:bg-slate-200 rounded font-bold cursor-pointer" aria-label="Reset text size">A</button>
+          <button id="btn-text-inc" class="px-2 py-0.5 hover:bg-slate-200 rounded font-bold cursor-pointer" aria-label="Increase text size">A+</button>
         </div>
         <!-- Light/Dark Toggle -->
-        <button id="theme-toggle" class="p-1 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors cursor-pointer" aria-label="Toggle Dark Mode">
+        <button id="theme-toggle" class="p-1 rounded-full hover:bg-slate-200 transition-colors cursor-pointer" aria-label="Toggle Dark Mode">
           <svg id="theme-toggle-dark-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
           <svg id="theme-toggle-light-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.46 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
         </button>
@@ -78,91 +78,89 @@
     <div class="max-w-7xl mx-auto px-4 md:px-8 py-3.5 flex justify-between items-center">
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full font-bold shadow-md shadow-primary/20 dark:shadow-none font-display">
-          <span>NSS</span>
-        </div>
+        <img src="asset/images/web/logo.jpeg" alt="NSS Logo" class="w-10 h-10 object-cover rounded-full shadow-md">
         <div>
-          <span class="font-bold text-lg text-slate-800 dark:text-slate-100 block tracking-tight leading-tight group-hover:text-primary dark:group-hover:text-orange-500 transition-colors font-display">NSS VETTATHUR</span>
+          <span class="font-bold text-lg text-slate-800 block tracking-tight leading-tight group-hover:text-primary transition-colors font-display">NSS VETTATHUR</span>
           <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-widest block leading-none">Kerala Unit</span>
         </div>
       </a>
 
       <!-- Desktop Nav links -->
-      <nav class="hidden lg:flex items-center gap-6 font-medium text-sm text-slate-600 dark:text-slate-300">
-        <a href="index.html" class="text-secondary dark:text-orange-500 font-bold py-2">Home</a>
-        <a href="about.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">About</a>
-        <a href="activities.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Activities</a>
-        <a href="gallery.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Gallery</a>
-        <a href="achievements.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Achievements</a>
-        <a href="cyber-awareness.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Cyber Hub</a>
-        <a href="news.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">News</a>
-        <a href="blogs.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Blogs</a>
-        <a href="team.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Team</a>
-        <a href="contact.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Contact</a>
+      <nav class="hidden lg:flex items-center gap-6 font-medium text-sm text-slate-600">
+        <a href="index.html" class="text-secondary font-bold py-2">Home</a>
+        <a href="about.html" class="hover:text-primary transition-colors py-2">About</a>
+        <a href="activities.html" class="hover:text-primary transition-colors py-2">Activities</a>
+        <a href="gallery.html" class="hover:text-primary transition-colors py-2">Gallery</a>
+        <a href="achievements.html" class="hover:text-primary transition-colors py-2">Achievements</a>
+        <a href="cyber-awareness.html" class="hover:text-primary transition-colors py-2">Cyber Hub</a>
+        <a href="news.html" class="hover:text-primary transition-colors py-2">News</a>
+        <a href="blogs.html" class="hover:text-primary transition-colors py-2">Blogs</a>
+        <a href="team.html" class="hover:text-primary transition-colors py-2">Team</a>
+        <a href="contact.html" class="hover:text-primary transition-colors py-2">Contact</a>
       </nav>
 
       <!-- Mobile hamburger toggle -->
-      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer" aria-label="Toggle Navigation Menu">
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg cursor-pointer" aria-label="Toggle Navigation Menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
     </div>
 
     <!-- Mobile Drawer Overlay -->
-    <div id="mobile-menu-overlay" class="hidden fixed inset-0 z-40 bg-slate-900/20 dark:bg-slate-950/40 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div id="mobile-menu-overlay" class="hidden fixed inset-0 z-40 bg-slate-900/20 backdrop-blur-sm transition-opacity duration-300"></div>
 
     <!-- Mobile Nav Drawer -->
-    <div id="mobile-menu-drawer" class="fixed top-0 right-0 z-50 w-72 h-full bg-white dark:bg-slate-900 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
-      <div class="flex items-center justify-between p-4 border-b border-slate-100 dark:border-slate-800">
-        <span class="font-bold text-slate-800 dark:text-slate-100 font-display">Menu</span>
-        <button id="mobile-menu-close" class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer" aria-label="Close menu">
+    <div id="mobile-menu-drawer" class="fixed top-0 right-0 z-50 w-72 h-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+      <div class="flex items-center justify-between p-4 border-b border-slate-100">
+        <span class="font-bold text-slate-800 font-display">Menu</span>
+        <button id="mobile-menu-close" class="p-2 text-slate-500 hover:bg-slate-100 rounded-lg cursor-pointer" aria-label="Close menu">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
       </div>
-      <nav class="flex-1 overflow-y-auto py-4 px-3 flex flex-col gap-1.5 font-medium text-slate-700 dark:text-slate-200">
-        <a href="index.html" class="px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 text-secondary dark:text-orange-500 font-bold">Home</a>
-        <a href="about.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">About</a>
-        <a href="activities.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Activities</a>
-        <a href="gallery.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Gallery</a>
-        <a href="achievements.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Achievements</a>
-        <a href="cyber-awareness.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Cyber Hub</a>
-        <a href="news.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">News</a>
-        <a href="blogs.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Blogs</a>
-        <a href="team.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Team</a>
-        <a href="contact.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Contact</a>
+      <nav class="flex-1 overflow-y-auto py-4 px-3 flex flex-col gap-1.5 font-medium text-slate-700">
+        <a href="index.html" class="px-4 py-3 rounded-xl bg-slate-50 text-secondary font-bold">Home</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">About</a>
+        <a href="activities.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Activities</a>
+        <a href="gallery.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Gallery</a>
+        <a href="achievements.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Achievements</a>
+        <a href="cyber-awareness.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Cyber Hub</a>
+        <a href="news.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">News</a>
+        <a href="blogs.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Blogs</a>
+        <a href="team.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Team</a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Contact</a>
       </nav>
-      <div class="p-6 bg-slate-50 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 text-center text-xs text-slate-400">
+      <div class="p-6 bg-slate-50 border-t border-slate-100 text-center text-xs text-slate-400">
         NSS Unit, Vettathur
       </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="relative overflow-hidden py-16 md:py-24 bg-gradient-to-br from-slate-50 to-blue-50/30 dark:from-slate-950 dark:to-slate-900">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,58,180,0.08),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(234,88,12,0.1),rgba(0,0,0,0))] pointer-events-none"></div>
+  <section class="relative overflow-hidden py-16 md:py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,58,180,0.08),rgba(255,255,255,0))] pointer-events-none"></div>
     <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       <div class="lg:col-span-7 space-y-6 animate-slide-up">
-        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 dark:bg-orange-950/50 text-secondary dark:text-orange-400 text-xs font-semibold tracking-wider uppercase font-display">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-100 text-secondary text-xs font-semibold tracking-wider uppercase font-display">
           National Service Scheme Unit
         </span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-950 dark:text-white leading-[1.1] tracking-tight font-display">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-950 leading-[1.1] tracking-tight font-display">
           Empowering Youth,<br>
-          <span class="text-primary dark:text-orange-500">Transforming Kerala</span>
+          <span class="text-primary">Transforming Kerala</span>
         </h1>
-        <p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
-          Welcome to <strong class="text-slate-800 dark:text-slate-200">NSS Vettathur</strong>. Guided by our motto <span class="italic text-secondary dark:text-orange-400">"Not Me But You"</span>, we lead grassroots initiatives in health, sanitation, conservation, and digital safety.
+        <p class="text-lg text-slate-600 max-w-xl leading-relaxed">
+          Welcome to <strong class="text-slate-800">NSS Vettathur</strong>. Guided by our motto <span class="italic text-secondary">"Not Me But You"</span>, we lead grassroots initiatives in health, sanitation, conservation, and digital safety.
         </p>
         <div class="flex flex-wrap gap-4 pt-2">
-          <a href="about.html" class="px-6 py-3.5 bg-primary dark:bg-orange-600 hover:bg-opacity-90 text-white font-medium rounded-xl shadow-lg shadow-primary/20 dark:shadow-none hover:-translate-y-0.5 transition-all duration-300">
+          <a href="about.html" class="px-6 py-3.5 bg-primary hover:bg-opacity-90 text-white font-medium rounded-xl shadow-lg shadow-primary/20 hover:-translate-y-0.5 transition-all duration-300">
             Learn Our Objectives
           </a>
-          <a href="activities.html" class="px-6 py-3.5 border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 backdrop-blur hover:bg-slate-50 dark:hover:bg-slate-800 font-medium rounded-xl hover:-translate-y-0.5 transition-all duration-300">
+          <a href="activities.html" class="px-6 py-3.5 border border-slate-200 bg-white/50 backdrop-blur hover:bg-slate-50 font-medium rounded-xl hover:-translate-y-0.5 transition-all duration-300">
             Explore Campaigns
           </a>
         </div>
       </div>
       <div class="lg:col-span-5 relative animate-fade-in">
         <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-primary to-secondary opacity-20 blur-xl"></div>
-        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100 dark:border-slate-800">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
           <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="NSS Volunteers Planting Trees in Kerala" class="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700">
           <div class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-slate-950/80 to-transparent text-white">
             <span class="text-xs text-orange-400 font-bold uppercase tracking-wider">Campaign Spotlight</span>
@@ -173,68 +171,40 @@
     </div>
   </section>
 
-  <!-- Impact Statistics -->
-  <section class="py-12 bg-white dark:bg-slate-900 relative">
-    <div class="max-w-7xl mx-auto px-4 md:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 p-8 bg-slate-50 dark:bg-slate-950 rounded-3xl border border-slate-100 dark:border-slate-800/40 shadow-sm">
-        <div class="text-center md:border-r border-slate-200/60 dark:border-slate-800/60 last:border-0 p-4">
-          <span class="block text-3xl md:text-4xl font-extrabold text-primary dark:text-orange-500 mb-1 font-display">100+</span>
-          <span class="text-xs uppercase font-semibold tracking-wider text-slate-400 dark:text-slate-500">Active Volunteers</span>
-        </div>
-        <div class="text-center md:border-r border-slate-200/60 dark:border-slate-800/60 last:border-0 p-4">
-          <span class="block text-3xl md:text-4xl font-extrabold text-primary dark:text-orange-500 mb-1 font-display">50+</span>
-          <span class="text-xs uppercase font-semibold tracking-wider text-slate-400 dark:text-slate-500">Campaigns Run</span>
-        </div>
-        <div class="text-center md:border-r border-slate-200/60 dark:border-slate-800/60 last:border-0 p-4">
-          <span class="block text-3xl md:text-4xl font-extrabold text-primary dark:text-orange-500 mb-1 font-display">600+</span>
-          <span class="text-xs uppercase font-semibold tracking-wider text-slate-400 dark:text-slate-500">Trees Planted</span>
-        </div>
-        <div class="text-center md:border-r border-slate-200/60 dark:border-slate-800/60 last:border-0 p-4">
-          <span class="block text-3xl md:text-4xl font-extrabold text-primary dark:text-orange-500 mb-1 font-display">4800+</span>
-          <span class="text-xs uppercase font-semibold tracking-wider text-slate-400 dark:text-slate-500">Service Hours</span>
-        </div>
-        <div class="text-center p-4 col-span-2 md:col-span-1">
-          <span class="block text-3xl md:text-4xl font-extrabold text-primary dark:text-orange-500 mb-1 font-display">3500+</span>
-          <span class="text-xs uppercase font-semibold tracking-wider text-slate-400 dark:text-slate-500">Beneficiaries</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Featured Activity -->
-  <section class="py-16 bg-white dark:bg-slate-900 border-t border-slate-50 dark:border-slate-800/20">
+  <section class="py-16 bg-white border-t border-slate-50">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="text-center max-w-xl mx-auto mb-12">
-        <h2 class="text-xs uppercase tracking-widest font-bold text-secondary dark:text-orange-400 mb-2 font-display">Pillar Project</h2>
-        <p class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display">Special Winter Camp 2025</p>
+        <h2 class="text-xs uppercase tracking-widest font-bold text-secondary mb-2 font-display">Pillar Project</h2>
+        <p class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight font-display">Special Winter Camp 2025</p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-slate-50 dark:bg-slate-950 rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-800/40">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-slate-50 rounded-3xl overflow-hidden border border-slate-100">
         <div class="h-[350px] lg:h-[450px] relative">
           <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1000&q=80" alt="Special Winter Camp Classrooms Painting" class="w-full h-full object-cover">
           <div class="absolute top-4 left-4 px-3 py-1 rounded bg-secondary text-white font-semibold text-xs font-display">Special Camp</div>
         </div>
         <div class="p-8 lg:p-12 space-y-6">
-          <h3 class="text-2xl font-bold text-slate-950 dark:text-white leading-tight font-display">Spandan: 7-Day Residential Sanitation & Education Project</h3>
-          <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+          <h3 class="text-2xl font-bold text-slate-950 leading-tight font-display">Spandan: 7-Day Residential Sanitation & Education Project</h3>
+          <p class="text-slate-600 leading-relaxed text-sm">
             Our 2025 Winter Camp was a massive success, hosted at Vettathur LP School. Over seven days, fifty dedicated volunteers constructed organic waste pits, repainted run-down classrooms, surveyed local well water, and conducted leadership forums.
           </p>
-          <div class="grid grid-cols-3 gap-4 border-t border-b border-slate-200 dark:border-slate-800 py-4 text-center">
+          <div class="grid grid-cols-3 gap-4 border-t border-b border-slate-200 py-4 text-center">
             <div>
-              <span class="block text-lg font-bold text-primary dark:text-orange-400 font-display">50</span>
+              <span class="block text-lg font-bold text-primary font-display">50</span>
               <span class="text-[10px] text-slate-400 uppercase font-semibold">Volunteers</span>
             </div>
             <div>
-              <span class="block text-lg font-bold text-primary dark:text-orange-400 font-display">350</span>
+              <span class="block text-lg font-bold text-primary font-display">350</span>
               <span class="text-[10px] text-slate-400 uppercase font-semibold">Service Hours</span>
             </div>
             <div>
-              <span class="block text-lg font-bold text-primary dark:text-orange-400 font-display">800+</span>
+              <span class="block text-lg font-bold text-primary font-display">800+</span>
               <span class="text-[10px] text-slate-400 uppercase font-semibold">Local Impact</span>
             </div>
           </div>
           <div>
-            <a href="activities.html" class="inline-flex items-center gap-2 font-bold text-primary dark:text-orange-500 hover:text-secondary dark:hover:text-orange-400 transition-colors text-sm">
+            <a href="activities.html" class="inline-flex items-center gap-2 font-bold text-primary hover:text-secondary transition-colors text-sm">
               Read Camp Report
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
             </a>
@@ -245,14 +215,14 @@
   </section>
 
   <!-- Recent Activities Grid -->
-  <section class="py-16 bg-slate-50 dark:bg-slate-950/30 border-t border-slate-100 dark:border-slate-800/20">
+  <section class="py-16 bg-slate-50 border-t border-slate-100">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-4">
         <div>
-          <h2 class="text-xs uppercase tracking-widest font-bold text-secondary dark:text-orange-400 mb-2 font-display">Our Footprints</h2>
-          <p class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display">Recent Social Campaigns</p>
+          <h2 class="text-xs uppercase tracking-widest font-bold text-secondary mb-2 font-display">Our Footprints</h2>
+          <p class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight font-display">Recent Social Campaigns</p>
         </div>
-        <a href="activities.html" class="px-5 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl text-sm font-semibold transition-all shadow-sm">
+        <a href="activities.html" class="px-5 py-2.5 bg-white border border-slate-200 hover:bg-slate-50 rounded-xl text-sm font-semibold transition-all shadow-sm">
           View All Activities
         </a>
       </div>
@@ -264,31 +234,31 @@
   </section>
 
   <!-- Upcoming Events & Timeline -->
-  <section class="py-16 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800/20">
+  <section class="py-16 bg-white border-t border-slate-100">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="text-center max-w-xl mx-auto mb-16">
-        <h2 class="text-xs uppercase tracking-widest font-bold text-secondary dark:text-orange-400 mb-2 font-display">Schedule</h2>
-        <p class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display">Upcoming Projects & Events</p>
+        <h2 class="text-xs uppercase tracking-widest font-bold text-secondary mb-2 font-display">Schedule</h2>
+        <p class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight font-display">Upcoming Projects & Events</p>
       </div>
 
-      <div class="relative border-l-2 border-slate-100 dark:border-slate-800 max-w-3xl mx-auto pl-6 space-y-12">
+      <div class="relative border-l-2 border-slate-100 max-w-3xl mx-auto pl-6 space-y-12">
         <div class="relative timeline-item animate-slide-up">
-          <span class="absolute right-0 top-0 text-xs font-bold text-secondary dark:text-orange-500 uppercase tracking-widest bg-orange-100 dark:bg-orange-950/40 px-2 py-0.5 rounded font-display">July 05, 2026</span>
+          <span class="absolute right-0 top-0 text-xs font-bold text-secondary uppercase tracking-widest bg-orange-100 px-2 py-0.5 rounded font-display">July 05, 2026</span>
           <div class="space-y-2 max-w-xl">
-            <h3 class="font-bold text-xl text-slate-900 dark:text-white font-display">Annual Blood Donation Drive</h3>
+            <h3 class="font-bold text-xl text-slate-900 font-display">Annual Blood Donation Drive</h3>
             <span class="text-xs text-slate-400 block font-medium">Venue: Vettathur PHC Health Center | Time: 9:00 AM</span>
-            <p class="text-slate-600 dark:text-slate-400 text-sm">
+            <p class="text-slate-600 text-sm">
               An open donation camp organized for students and local citizens. Collaborating with District General Hospital Blood Bank.
             </p>
           </div>
         </div>
 
         <div class="relative timeline-item animate-slide-up">
-          <span class="absolute right-0 top-0 text-xs font-bold text-secondary dark:text-orange-500 uppercase tracking-widest bg-orange-100 dark:bg-orange-950/40 px-2 py-0.5 rounded font-display">July 20, 2026</span>
+          <span class="absolute right-0 top-0 text-xs font-bold text-secondary uppercase tracking-widest bg-orange-100 px-2 py-0.5 rounded font-display">July 20, 2026</span>
           <div class="space-y-2 max-w-xl">
-            <h3 class="font-bold text-xl text-slate-900 dark:text-white font-display">Monsoon Disease Hygiene Campaign</h3>
+            <h3 class="font-bold text-xl text-slate-900 font-display">Monsoon Disease Hygiene Campaign</h3>
             <span class="text-xs text-slate-400 block font-medium">Venue: Vettathur Panchayat Hall | Time: 2:00 PM</span>
-            <p class="text-slate-600 dark:text-slate-400 text-sm">
+            <p class="text-slate-600 text-sm">
               Public seminar and distribution of chlorine tablets & sanitation kits to counter waterborne illnesses.
             </p>
           </div>
@@ -298,35 +268,35 @@
   </section>
 
   <!-- Cyber Awareness Highlight -->
-  <section class="py-16 bg-gradient-to-br from-amber-50 to-orange-50/50 dark:from-slate-950 dark:to-slate-900 border-t border-b border-orange-100/40 dark:border-slate-800">
+  <section class="py-16 bg-gradient-to-br from-amber-50 to-orange-50/50 border-t border-b border-orange-100/40">
     <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       <div class="lg:col-span-8 space-y-5">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-400 text-xs font-bold uppercase tracking-wider font-display">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-amber-100 text-amber-700 text-xs font-bold uppercase tracking-wider font-display">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
           Alert: Cyber Safety Awareness
         </span>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 dark:text-white tracking-tight font-display">Protect Your Family from WhatsApp & KSEB scams</h2>
-        <p class="text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl text-sm">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-950 tracking-tight font-display">Protect Your Family from WhatsApp & KSEB scams</h2>
+        <p class="text-slate-600 leading-relaxed max-w-2xl text-sm">
           Online fraud is targeting individuals in our locality. Read about fake electricity disconnection threats, WhatsApp voice cloning scams, and UPI security tips compiled by our Cyber Safety volunteers.
         </p>
         <div class="flex flex-wrap gap-4 pt-2">
           <a href="cyber-awareness.html" class="px-5 py-3 bg-secondary hover:bg-opacity-95 text-white font-semibold rounded-xl text-sm transition-all">
             Open Cyber Hub
           </a>
-          <a href="cyber-awareness.html#scams" class="px-5 py-3 border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-slate-900/60 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold rounded-xl text-sm transition-all">
+          <a href="cyber-awareness.html#scams" class="px-5 py-3 border border-slate-200 bg-white/60 hover:bg-slate-50 font-semibold rounded-xl text-sm transition-all">
             See Active Scam Alerts
           </a>
         </div>
       </div>
-      <div class="lg:col-span-4 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 p-6 rounded-2xl shadow-xl flex flex-col justify-between">
+      <div class="lg:col-span-4 bg-white border border-slate-100 p-6 rounded-2xl shadow-xl flex flex-col justify-between">
         <div>
-          <span class="text-[10px] uppercase font-bold text-red-500 bg-red-100 dark:bg-red-950/40 px-2 py-0.5 rounded inline-block mb-3 font-display">Critical Scam Warning</span>
-          <h4 class="font-bold text-lg text-slate-950 dark:text-white mb-2 font-display">The Skype/FedEx Parcel Trap</h4>
-          <p class="text-slate-500 dark:text-slate-400 text-xs leading-relaxed">
+          <span class="text-[10px] uppercase font-bold text-red-500 bg-red-100 px-2 py-0.5 rounded inline-block mb-3 font-display">Critical Scam Warning</span>
+          <h4 class="font-bold text-lg text-slate-950 mb-2 font-display">The Skype/FedEx Parcel Trap</h4>
+          <p class="text-slate-500 text-xs leading-relaxed">
             Scammers pretend to be FedEx officials claiming a parcel containing illegal narcotics has been sent under your Aadhaar ID. They demand payment during Skype calls.
           </p>
         </div>
-        <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-xs font-semibold text-secondary">
+        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-secondary">
           <span>Target: Homemakers & Seniors</span>
           <span>Read prevention &rarr;</span>
         </div>
@@ -335,11 +305,11 @@
   </section>
 
   <!-- Volunteer Testimonials -->
-  <section class="py-16 bg-white dark:bg-slate-900">
+  <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="text-center max-w-xl mx-auto mb-12">
-        <h2 class="text-xs uppercase tracking-widest font-bold text-secondary dark:text-orange-400 mb-2 font-display">Voices</h2>
-        <p class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display">What the Community Says</p>
+        <h2 class="text-xs uppercase tracking-widest font-bold text-secondary mb-2 font-display">Voices</h2>
+        <p class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight font-display">What the Community Says</p>
       </div>
 
       <div id="home-testimonials-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -349,7 +319,7 @@
   </section>
 
   <!-- Join Banner CTA -->
-  <section class="py-16 bg-primary dark:bg-slate-950 relative overflow-hidden">
+  <section class="py-16 bg-primary relative overflow-hidden">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(234,88,12,0.15),transparent)] pointer-events-none"></div>
     <div class="max-w-4xl mx-auto px-4 text-center space-y-6 relative z-10 animate-slide-up">
       <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight font-display">Ready to Make an Impact?</h2>
@@ -368,62 +338,60 @@
   </section>
 
   <!-- Footer -->
-  <footer class="w-full bg-slate-900 text-slate-300 dark:bg-slate-950 border-t border-slate-800/40 py-12 px-4 md:px-8">
+  <footer class="w-full bg-secondary text-slate-100 border-t border-blue-900 py-12 px-4 md:px-8">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
       <div>
         <div class="flex items-center gap-3 mb-4">
-          <div class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full font-bold">
-            <span class="text-sm">NSS</span>
-          </div>
+          <img src="asset/images/web/logo.jpeg" alt="NSS Logo" class="w-8 h-8 object-cover rounded-full">
           <span class="font-bold text-white tracking-wide text-lg font-display">NSS VETTATHUR</span>
         </div>
-        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+        <p class="text-sm text-slate-200 leading-relaxed mb-4">
           The National Service Scheme (NSS) Unit of Vettathur, Kerala. Promoting active community leadership, social empathy, and volunteer action since inception.
         </p>
-        <span class="text-xs text-slate-500 italic">Motto: "Not Me But You"</span>
+        <span class="text-xs text-slate-300 italic">Motto: "Not Me But You"</span>
       </div>
 
       <div>
         <h3 class="font-bold text-white text-base mb-4 tracking-wide font-display">Quick Links</h3>
         <ul class="space-y-2.5 text-sm">
-          <li><a href="about.html" class="hover:text-orange-500 transition-colors">About NSS</a></li>
-          <li><a href="activities.html" class="hover:text-orange-500 transition-colors">Activities & Campaigns</a></li>
-          <li><a href="gallery.html" class="hover:text-orange-500 transition-colors">Gallery Albums</a></li>
-          <li><a href="cyber-awareness.html" class="hover:text-orange-500 transition-colors">Cyber Awareness Hub</a></li>
-          <li><a href="achievements.html" class="hover:text-orange-500 transition-colors">Achievements</a></li>
+          <li><a href="about.html" class="hover:text-accent transition-colors">About NSS</a></li>
+          <li><a href="activities.html" class="hover:text-accent transition-colors">Activities & Campaigns</a></li>
+          <li><a href="gallery.html" class="hover:text-accent transition-colors">Gallery Albums</a></li>
+          <li><a href="cyber-awareness.html" class="hover:text-accent transition-colors">Cyber Awareness Hub</a></li>
+          <li><a href="achievements.html" class="hover:text-accent transition-colors">Achievements</a></li>
         </ul>
       </div>
 
       <div>
         <h3 class="font-bold text-white text-base mb-4 tracking-wide font-display">Resources</h3>
         <ul class="space-y-2.5 text-sm">
-          <li><a href="news.html" class="hover:text-orange-500 transition-colors">News Alerts</a></li>
-          <li><a href="blogs.html" class="hover:text-orange-500 transition-colors">NSS Blog Articles</a></li>
-          <li><a href="team.html" class="hover:text-orange-500 transition-colors">Our Team Directory</a></li>
-          <li><a href="contact.html" class="hover:text-orange-500 transition-colors">Get in Touch</a></li>
+          <li><a href="news.html" class="hover:text-accent transition-colors">News Alerts</a></li>
+          <li><a href="blogs.html" class="hover:text-accent transition-colors">NSS Blog Articles</a></li>
+          <li><a href="team.html" class="hover:text-accent transition-colors">Our Team Directory</a></li>
+          <li><a href="contact.html" class="hover:text-accent transition-colors">Get in Touch</a></li>
         </ul>
       </div>
 
       <div>
         <h3 class="font-bold text-white text-base mb-4 tracking-wide font-display">Contact Unit</h3>
-        <p class="text-sm text-slate-400 leading-relaxed mb-3">
+        <p class="text-sm text-slate-200 leading-relaxed mb-3">
           NSS Program Officer,<br>
           Vettathur, Malappuram District,<br>
           Kerala, India - 679326
         </p>
-        <p class="text-sm text-slate-400 mb-2">Email: <a href="mailto:po@nss-vettathur.techora.in" class="hover:text-orange-500 text-slate-300">po@nss-vettathur.techora.in</a></p>
-        <p class="text-sm text-slate-400">Phone: <a href="tel:+919876543210" class="hover:text-orange-500 text-slate-300">+91 98765 43210</a></p>
+        <p class="text-sm text-slate-200 mb-2">Email: <a href="mailto:po@nss-vettathur.techora.in" class="hover:text-accent text-slate-300">po@nss-vettathur.techora.in</a></p>
+        <p class="text-sm text-slate-200">Phone: <a href="tel:+919876543210" class="hover:text-accent text-slate-300">+91 98765 43210</a></p>
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-300">
       <div>
         <span>&copy; 2026 NSS Vettathur. All rights reserved.</span>
       </div>
       <div class="flex items-center gap-4">
-        <a href="#" class="hover:text-slate-400" aria-label="Facebook">Facebook</a>
-        <a href="#" class="hover:text-slate-400" aria-label="Instagram">Instagram</a>
-        <a href="#" class="hover:text-slate-400" aria-label="YouTube">YouTube</a>
+        <a href="#" class="hover:text-slate-200" aria-label="Facebook">Facebook</a>
+        <a href="#" class="hover:text-slate-200" aria-label="Instagram">Instagram</a>
+        <a href="#" class="hover:text-slate-200" aria-label="YouTube">YouTube</a>
         <span>Designed with care in Kerala</span>
       </div>
     </div>
@@ -438,20 +406,20 @@
     if (container) {
       const latest = ACTIVITIES.slice(0, 3);
       container.innerHTML = latest.map(act => `
-        <div class="flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+        <div class="flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
           <div class="h-48 overflow-hidden relative">
             <img src="${act.image}" alt="${act.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            <span class="absolute top-4 left-4 px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-white/90 dark:bg-slate-900/90 text-primary dark:text-orange-400 shadow-sm">${act.category}</span>
+            <span class="absolute top-4 left-4 px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-white/90 text-primary shadow-sm">${act.category}</span>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
               <span class="text-xs font-semibold text-slate-400 block mb-2">${act.date}</span>
-              <h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight group-hover:text-primary dark:group-hover:text-orange-500 transition-colors font-display">${act.title}</h3>
-              <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 line-clamp-3 leading-relaxed">${act.description}</p>
+              <h3 class="font-bold text-lg text-slate-900 leading-tight group-hover:text-primary transition-colors font-display">${act.title}</h3>
+              <p class="text-slate-500 text-sm mt-2 line-clamp-3 leading-relaxed">${act.description}</p>
             </div>
-            <div class="pt-4 border-t border-slate-50 dark:border-slate-800/60 flex items-center justify-between text-xs text-slate-400">
+            <div class="pt-4 border-t border-slate-50 flex items-center justify-between text-xs text-slate-400">
               <span>Impact: <strong>${act.impact.beneficiaries}+ helped</strong></span>
-              <span class="text-primary dark:text-orange-500 font-bold group-hover:translate-x-1 transition-transform inline-block">Read more &rarr;</span>
+              <span class="text-primary font-bold group-hover:translate-x-1 transition-transform inline-block">Read more &rarr;</span>
             </div>
           </div>
         </div>
@@ -462,16 +430,16 @@
     const testimonialContainer = document.getElementById("home-testimonials-grid");
     if (testimonialContainer) {
       testimonialContainer.innerHTML = TESTIMONIALS.map(t => `
-        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800/40 relative flex flex-col justify-between">
-          <div class="text-slate-500 dark:text-slate-400 text-sm italic leading-relaxed mb-6">
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 relative flex flex-col justify-between">
+          <div class="text-slate-500 text-sm italic leading-relaxed mb-6">
             "${t.text}"
           </div>
           <div>
-            <h4 class="font-bold text-slate-950 dark:text-white text-base font-display">${t.name}</h4>
+            <h4 class="font-bold text-slate-950 text-base font-display">${t.name}</h4>
             <span class="text-xs text-slate-400">${t.role}</span>
           </div>
           <!-- Quote Icon -->
-          <svg class="absolute right-4 bottom-4 w-10 h-10 text-slate-200/50 dark:text-slate-800/30 pointer-events-none" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.988zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+          <svg class="absolute right-4 bottom-4 w-10 h-10 text-slate-200/50 pointer-events-none" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.988zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
         </div>
       `).join('');
     }

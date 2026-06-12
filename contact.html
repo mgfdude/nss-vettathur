@@ -11,7 +11,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
+      
       theme: {
         extend: {
           colors: {
@@ -40,22 +40,22 @@
   <!-- Theme Controller -->
   <script src="js/theme.js"></script>
 </head>
-<body class="bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300 font-body">
+<body class="bg-white text-slate-800 transition-colors duration-300 font-body">
 
   <!-- Header Navigation -->
-  <header class="sticky top-0 z-50 w-full transition-all duration-300 border-b border-slate-100 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md dark:border-slate-800">
-    <div class="w-full bg-slate-50 border-b border-slate-100 dark:bg-slate-950 dark:border-slate-800 text-xs py-1.5 px-4 md:px-8 flex justify-between items-center text-slate-500 dark:text-slate-400">
+  <header class="sticky top-0 z-50 w-full transition-all duration-300 border-b border-slate-100 bg-white/80 backdrop-blur-md">
+    <div class="w-full bg-slate-50 border-b border-slate-100 text-xs py-1.5 px-4 md:px-8 flex justify-between items-center text-slate-500">
       <div>
-        <span>Motto: <strong class="text-secondary dark:text-orange-500">Not Me But You</strong></span>
+        <span>Motto: <strong class="text-secondary">Not Me But You</strong></span>
       </div>
       <div class="flex items-center gap-4">
-        <div class="flex items-center gap-1 border-r border-slate-200 dark:border-slate-800 pr-3">
+        <div class="flex items-center gap-1 border-r border-slate-200 pr-3">
           <span class="mr-1 hidden sm:inline">Text Size:</span>
-          <button id="btn-text-dec" class="px-2 py-0.5 hover:bg-slate-200 dark:hover:bg-slate-800 rounded font-bold cursor-pointer">A-</button>
-          <button id="btn-text-rst" class="px-2 py-0.5 hover:bg-slate-200 dark:hover:bg-slate-800 rounded font-bold cursor-pointer">A</button>
-          <button id="btn-text-inc" class="px-2 py-0.5 hover:bg-slate-200 dark:hover:bg-slate-800 rounded font-bold cursor-pointer">A+</button>
+          <button id="btn-text-dec" class="px-2 py-0.5 hover:bg-slate-200 rounded font-bold cursor-pointer">A-</button>
+          <button id="btn-text-rst" class="px-2 py-0.5 hover:bg-slate-200 rounded font-bold cursor-pointer">A</button>
+          <button id="btn-text-inc" class="px-2 py-0.5 hover:bg-slate-200 rounded font-bold cursor-pointer">A+</button>
         </div>
-        <button id="theme-toggle" class="p-1 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors cursor-pointer" aria-label="Toggle Dark Mode">
+        <button id="theme-toggle" class="p-1 rounded-full hover:bg-slate-200 transition-colors cursor-pointer" aria-label="Toggle Dark Mode">
           <svg id="theme-toggle-dark-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
           <svg id="theme-toggle-light-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.46 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
         </button>
@@ -65,98 +65,96 @@
     <!-- Main Navigation Bar -->
     <div class="max-w-7xl mx-auto px-4 md:px-8 py-3.5 flex justify-between items-center">
       <a href="index.html" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-full font-bold shadow-md shadow-primary/20 dark:shadow-none font-display">
-          <span>NSS</span>
-        </div>
+        <img src="asset/images/web/logo.jpeg" alt="NSS Logo" class="w-10 h-10 object-cover rounded-full shadow-md">
         <div>
-          <span class="font-bold text-lg text-slate-800 dark:text-slate-100 block tracking-tight leading-tight group-hover:text-primary dark:group-hover:text-orange-500 transition-colors font-display">NSS VETTATHUR</span>
+          <span class="font-bold text-lg text-slate-800 block tracking-tight leading-tight group-hover:text-primary transition-colors font-display">NSS VETTATHUR</span>
           <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-widest block leading-none">Kerala Unit</span>
         </div>
       </a>
 
-      <nav class="hidden lg:flex items-center gap-6 font-medium text-sm text-slate-600 dark:text-slate-300">
-        <a href="index.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Home</a>
-        <a href="about.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">About</a>
-        <a href="activities.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Activities</a>
-        <a href="gallery.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Gallery</a>
-        <a href="achievements.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Achievements</a>
-        <a href="cyber-awareness.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Cyber Hub</a>
-        <a href="news.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">News</a>
-        <a href="blogs.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Blogs</a>
-        <a href="team.html" class="hover:text-primary dark:hover:text-orange-500 transition-colors py-2">Team</a>
-        <a href="contact.html" class="text-secondary dark:text-orange-500 font-bold py-2">Contact</a>
+      <nav class="hidden lg:flex items-center gap-6 font-medium text-sm text-slate-600">
+        <a href="index.html" class="hover:text-primary transition-colors py-2">Home</a>
+        <a href="about.html" class="hover:text-primary transition-colors py-2">About</a>
+        <a href="activities.html" class="hover:text-primary transition-colors py-2">Activities</a>
+        <a href="gallery.html" class="hover:text-primary transition-colors py-2">Gallery</a>
+        <a href="achievements.html" class="hover:text-primary transition-colors py-2">Achievements</a>
+        <a href="cyber-awareness.html" class="hover:text-primary transition-colors py-2">Cyber Hub</a>
+        <a href="news.html" class="hover:text-primary transition-colors py-2">News</a>
+        <a href="blogs.html" class="hover:text-primary transition-colors py-2">Blogs</a>
+        <a href="team.html" class="hover:text-primary transition-colors py-2">Team</a>
+        <a href="contact.html" class="text-secondary font-bold py-2">Contact</a>
       </nav>
 
-      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg cursor-pointer">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
     </div>
 
     <!-- Mobile Drawer Overlay -->
-    <div id="mobile-menu-overlay" class="hidden fixed inset-0 z-40 bg-slate-900/20 dark:bg-slate-950/40 backdrop-blur-sm transition-opacity duration-300"></div>
+    <div id="mobile-menu-overlay" class="hidden fixed inset-0 z-40 bg-slate-900/20 backdrop-blur-sm transition-opacity duration-300"></div>
 
     <!-- Mobile Nav Drawer -->
-    <div id="mobile-menu-drawer" class="fixed top-0 right-0 z-50 w-72 h-full bg-white dark:bg-slate-900 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
-      <div class="flex items-center justify-between p-4 border-b border-slate-100 dark:border-slate-800">
-        <span class="font-bold text-slate-800 dark:text-slate-100 font-display">Menu</span>
-        <button id="mobile-menu-close" class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg cursor-pointer">
+    <div id="mobile-menu-drawer" class="fixed top-0 right-0 z-50 w-72 h-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+      <div class="flex items-center justify-between p-4 border-b border-slate-100">
+        <span class="font-bold text-slate-800 font-display">Menu</span>
+        <button id="mobile-menu-close" class="p-2 text-slate-500 hover:bg-slate-100 rounded-lg cursor-pointer">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
       </div>
-      <nav class="flex-1 overflow-y-auto py-4 px-3 flex flex-col gap-1.5 font-medium text-slate-700 dark:text-slate-200">
-        <a href="index.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Home</a>
-        <a href="about.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">About</a>
-        <a href="activities.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Activities</a>
-        <a href="gallery.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Gallery</a>
-        <a href="achievements.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Achievements</a>
-        <a href="cyber-awareness.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Cyber Hub</a>
-        <a href="news.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">News</a>
-        <a href="blogs.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Blogs</a>
-        <a href="team.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-primary dark:hover:text-orange-500 transition-colors">Team</a>
-        <a href="contact.html" class="px-4 py-3 bg-slate-50 dark:bg-slate-800/50 text-secondary dark:text-orange-500 font-bold">Contact</a>
+      <nav class="flex-1 overflow-y-auto py-4 px-3 flex flex-col gap-1.5 font-medium text-slate-700">
+        <a href="index.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Home</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">About</a>
+        <a href="activities.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Activities</a>
+        <a href="gallery.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Gallery</a>
+        <a href="achievements.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Achievements</a>
+        <a href="cyber-awareness.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Cyber Hub</a>
+        <a href="news.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">News</a>
+        <a href="blogs.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Blogs</a>
+        <a href="team.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Team</a>
+        <a href="contact.html" class="px-4 py-3 bg-slate-50 text-secondary font-bold">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- Subpage Header -->
-  <section class="py-12 bg-slate-50 dark:bg-slate-950/30 border-b border-slate-100 dark:border-slate-800/20">
+  <section class="py-12 bg-slate-50 border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-4 md:px-8 text-center space-y-4">
-      <h1 class="text-3xl md:text-5xl font-extrabold text-slate-950 dark:text-white tracking-tight font-display animate-slide-up">Connect with Us</h1>
-      <p class="text-slate-500 dark:text-slate-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-slate-950 tracking-tight font-display animate-slide-up">Connect with Us</h1>
+      <p class="text-slate-500 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
         Send inquiries, submit volunteer stories, or coordinate community campaigns with our program officer.
       </p>
     </div>
   </section>
 
   <!-- Form Grid -->
-  <section class="py-16 bg-white dark:bg-slate-900 animate-fade-in">
+  <section class="py-16 bg-white animate-fade-in">
     <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12">
-      <div class="lg:col-span-7 bg-slate-50 dark:bg-slate-950 p-8 rounded-3xl border border-slate-100 dark:border-slate-800/40 shadow-sm space-y-6">
+      <div class="lg:col-span-7 bg-slate-50 p-8 rounded-3xl border border-slate-100 shadow-sm space-y-6">
         <div>
-          <h2 class="text-2xl font-bold text-slate-950 dark:text-white tracking-tight font-display">Send a Message</h2>
-          <p class="text-slate-500 dark:text-slate-400 text-[11px] md:text-xs mt-1">Fill out the form below. We will reply to your registered email within 48 hours.</p>
+          <h2 class="text-2xl font-bold text-slate-950 tracking-tight font-display">Send a Message</h2>
+          <p class="text-slate-500 text-[11px] md:text-xs mt-1">Fill out the form below. We will reply to your registered email within 48 hours.</p>
         </div>
 
         <form id="contact-form" class="space-y-5">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="space-y-1.5">
               <label for="form-name" class="block text-xs font-bold uppercase text-slate-400 tracking-wider font-display">Full Name</label>
-              <input type="text" id="form-name" required placeholder="John Doe" class="w-full px-4 py-2.5 bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+              <input type="text" id="form-name" required placeholder="John Doe" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
             </div>
             <div class="space-y-1.5">
               <label for="form-email" class="block text-xs font-bold uppercase text-slate-400 tracking-wider font-display">Email Address</label>
-              <input type="email" id="form-email" required placeholder="john@example.com" class="w-full px-4 py-2.5 bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+              <input type="email" id="form-email" required placeholder="john@example.com" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
             </div>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="space-y-1.5">
               <label for="form-phone" class="block text-xs font-bold uppercase text-slate-400 tracking-wider font-display">Phone Number</label>
-              <input type="tel" id="form-phone" required placeholder="+91 9876543210" class="w-full px-4 py-2.5 bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+              <input type="tel" id="form-phone" required placeholder="+91 9876543210" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
             </div>
             <div class="space-y-1.5">
               <label for="form-type" class="block text-xs font-bold uppercase text-slate-400 tracking-wider font-display">Inquiry Type</label>
-              <select id="form-type" class="w-full px-4 py-2.5 bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+              <select id="form-type" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
                 <option value="General">General Query</option>
                 <option value="Volunteer">Volunteer Application</option>
                 <option value="Health">Blood Registry Coordination</option>
@@ -167,17 +165,17 @@
 
           <div class="space-y-1.5">
             <label for="form-msg" class="block text-xs font-bold uppercase text-slate-400 tracking-wider font-display">Your Message</label>
-            <textarea id="form-msg" required rows="4" placeholder="Type your message or inquiry here..." class="w-full px-4 py-2.5 bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-800 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"></textarea>
+            <textarea id="form-msg" required rows="4" placeholder="Type your message or inquiry here..." class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"></textarea>
           </div>
 
-          <button type="submit" class="w-full py-3.5 bg-primary dark:bg-orange-600 hover:bg-opacity-95 text-white font-medium rounded-xl shadow-lg transition-all cursor-pointer">
+          <button type="submit" class="w-full py-3.5 bg-primary hover:bg-opacity-95 text-white font-medium rounded-xl shadow-lg transition-all cursor-pointer">
             Submit Message
           </button>
         </form>
 
-        <div id="form-success" class="hidden p-4 bg-green-50 border border-green-200 dark:bg-green-950/40 dark:border-green-900 rounded-xl flex items-center gap-3">
-          <svg class="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          <div class="text-sm text-green-800 dark:text-green-200">
+        <div id="form-success" class="hidden p-4 bg-green-50 border border-green-200 rounded-xl flex items-center gap-3">
+          <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <div class="text-sm text-green-800">
             <strong>Inquiry Sent!</strong> Thank you. Your message has been received by the NSS Vettathur program coordinator.
           </div>
         </div>
@@ -185,27 +183,27 @@
 
       <div class="lg:col-span-5 space-y-8">
         <div class="space-y-4">
-          <div class="p-5 border border-slate-100 dark:border-slate-800 rounded-2xl flex gap-4 items-center animate-slide-up">
-            <div class="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 text-secondary flex items-center justify-center font-bold flex-shrink-0">
+          <div class="p-5 border border-slate-100 rounded-2xl flex gap-4 items-center animate-slide-up">
+            <div class="w-10 h-10 rounded-xl bg-orange-100 text-secondary flex items-center justify-center font-bold flex-shrink-0">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
             </div>
             <div>
               <span class="block text-[10px] uppercase text-slate-400 font-bold tracking-wider font-display">Call Directly</span>
-              <a href="tel:+919876543210" class="font-bold text-sm md:text-base text-slate-900 dark:text-white hover:text-secondary">+91 98765 43210</a>
+              <a href="tel:+919876543210" class="font-bold text-sm md:text-base text-slate-900 hover:text-secondary">+91 98765 43210</a>
             </div>
           </div>
-          <div class="p-5 border border-slate-100 dark:border-slate-800 rounded-2xl flex gap-4 items-center animate-slide-up">
-            <div class="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-950/50 text-secondary flex items-center justify-center font-bold flex-shrink-0">
+          <div class="p-5 border border-slate-100 rounded-2xl flex gap-4 items-center animate-slide-up">
+            <div class="w-10 h-10 rounded-xl bg-orange-100 text-secondary flex items-center justify-center font-bold flex-shrink-0">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
             </div>
             <div>
               <span class="block text-[10px] uppercase text-slate-400 font-bold tracking-wider font-display">Email Inquiry</span>
-              <a href="mailto:po@nss-vettathur.techora.in" class="font-bold text-sm md:text-base text-slate-900 dark:text-white hover:text-secondary">po@nss-vettathur.techora.in</a>
+              <a href="mailto:po@nss-vettathur.techora.in" class="font-bold text-sm md:text-base text-slate-900 hover:text-secondary">po@nss-vettathur.techora.in</a>
             </div>
           </div>
         </div>
 
-        <div class="rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-800/60 shadow-sm h-64 relative bg-slate-100">
+        <div class="rounded-3xl overflow-hidden border border-slate-100 shadow-sm h-64 relative bg-slate-100">
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15655.438446187518!2d76.2418386!3d11.0116084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1m3!2d76.2418386!2d11.0116084!3sVettathur%20Panchayat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
             class="absolute inset-0 w-full h-full border-0" 
@@ -219,16 +217,14 @@
   </section>
 
   <!-- Footer -->
-  <footer class="w-full bg-slate-900 text-slate-300 dark:bg-slate-950 border-t border-slate-800/40 py-12 px-4 md:px-8">
+  <footer class="w-full bg-secondary text-slate-100 border-t border-blue-900 py-12 px-4 md:px-8">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
       <div>
         <div class="flex items-center gap-3 mb-4">
-          <div class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full font-bold">
-            <span class="text-sm font-display">NSS</span>
-          </div>
+          <img src="asset/images/web/logo.jpeg" alt="NSS Logo" class="w-8 h-8 object-cover rounded-full">
           <span class="font-bold text-white tracking-wide text-lg font-display">NSS VETTATHUR</span>
         </div>
-        <p class="text-sm text-slate-400 leading-relaxed mb-4">
+        <p class="text-sm text-slate-200 leading-relaxed mb-4">
           The National Service Scheme (NSS) Unit of Vettathur, Kerala.
         </p>
       </div>

@@ -1,15 +1,21 @@
 // activities.js - Page features for activities.html
 
-import { ACTIVITIES } from '../data.js';
+
 
 let activeCategory = 'All';
 let searchQuery = '';
 
-document.addEventListener("DOMContentLoaded", () => {
+const init = () => {
   renderCategoryTabs();
   renderActivities();
   setupSearchListener();
-});
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
+}
 
 function renderCategoryTabs() {
   const container = document.getElementById("filter-tabs-container");
@@ -90,21 +96,25 @@ function renderActivities() {
           <h3 class="font-bold text-lg text-slate-900 leading-tight group-hover:text-secondary transition-colors">${act.title}</h3>
           <p class="text-slate-500 text-sm mt-2 line-clamp-4 leading-relaxed">${act.description}</p>
         </div>
-        <div class="pt-4 border-t border-slate-100 grid grid-cols-3 gap-2 text-center text-[10px] text-slate-400 uppercase font-medium">
-          <div>
-            <span class="block font-extrabold text-xs text-secondary">${act.impact.volunteers}</span>
-            <span>Volunteers</span>
+        <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-[10px] text-slate-400 uppercase font-medium">
+          <div class="flex gap-4">
+            <div class="text-center">
+              <span class="block font-extrabold text-xs text-secondary">${act.impact.volunteers}</span>
+              <span>Volunteers</span>
+            </div>
+            <div class="text-center">
+              <span class="block font-extrabold text-xs text-secondary">${act.impact.hours}h</span>
+              <span>Hours</span>
+            </div>
+            <div class="text-center">
+              <span class="block font-extrabold text-xs text-secondary">${act.impact.beneficiaries}+</span>
+              <span>Helped</span>
+            </div>
           </div>
-          <div>
-            <span class="block font-extrabold text-xs text-secondary">${act.impact.hours}h</span>
-            <span>Hours</span>
-          </div>
-          <div>
-            <span class="block font-extrabold text-xs text-secondary">${act.impact.beneficiaries}+</span>
-            <span>Helped</span>
-          </div>
+          <a href="${act.link ? act.link : 'activities.html'}" class="text-primary font-bold group-hover:translate-x-1 transition-transform inline-block text-xs normal-case">Read more &rarr;</a>
         </div>
       </div>
     </div>
   `).join('');
 }
+

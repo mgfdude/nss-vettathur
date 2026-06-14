@@ -1,6 +1,6 @@
 // gallery.js - Lightbox and album management for gallery.html
 
-import { GALLERY_ALBUMS } from '../data.js';
+
 
 let activeYear = 'All';
 let activeCategory = 'All';
@@ -207,3 +207,4 @@ function setupLightboxListeners() {
     if (e.key === "ArrowRight") next();
   });
 }
+

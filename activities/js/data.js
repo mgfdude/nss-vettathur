@@ -1,71 +1,27 @@
 // Static Database for NSS Vettathur (Kerala, India)
 
-export const STATS = {
-  volunteers: "100+",
+const STATS = {
+  volunteers: "100",
   activities: "50+",
   treesPlanted: "600+",
   serviceHours: "4800+",
   beneficiaries: "3500+"
 };
 
-export const ACTIVITIES = [
-  {
-    id: "act-1",
-    title: "Gramasree Cleanliness Drive & Sanitation Camp",
-    category: "Community Service",
-    date: "2026-05-18",
-    description: "In collaboration with Vettathur Grama Panchayat, NSS volunteers organized a comprehensive waste cleanup and sanitation drive in local public wards. They distributed info leaflets on solid waste management and cleared plastic waste from village canals to prevent monsoon logging.",
-    image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=800&q=80",
-    impact: { volunteers: 48, hours: 240, beneficiaries: 450 }
-  },
-  {
-    id: "act-2",
-    title: "Vanamahotsavam: Green Valley Tree Plantation",
-    category: "Environment",
-    date: "2026-06-05",
-    description: "Marking World Environment Day, the unit launched a massive afforestation campaign planting over 150 native fruit-bearing saplings along the riverbanks of Melattur valley. Seedlings were sourced from the Kerala Forest Department to restore ecological balance.",
-    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
-    impact: { volunteers: 60, hours: 300, beneficiaries: 600 }
-  },
-  {
-    id: "act-3",
-    title: "Jeevan: Blood Donation & Health Registry Campaign",
-    category: "Health",
-    date: "2026-04-12",
-    description: "Organized in partnership with the Malappuram District Blood Bank, our volunteers successfully donated 65 units of blood in a single day and created a local registry of 100 emergency volunteer donors for Vettathur and nearby areas.",
-    image: "https://images.unsplash.com/photo-1615461066841-4a18e041d589?auto=format&fit=crop&w=800&q=80",
-    impact: { volunteers: 35, hours: 140, beneficiaries: 120 }
-  },
-  {
-    id: "act-4",
-    title: "Cyber Security & Digital Literacy Seminar",
-    category: "Cyber Awareness",
-    date: "2026-03-22",
-    description: "An intensive cyber safety workshop for elderly citizens and homemakers, focusing on UPI fraud, QR code traps, and WhatsApp OTP scam prevention. Volunteers created live demo scenarios of digital safety practices.",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    impact: { volunteers: 20, hours: 80, beneficiaries: 150 }
-  },
-  {
-    id: "act-5",
-    title: "LED Bulb Assembly Training & Skill Workshop",
-    category: "Skill Development",
-    date: "2026-02-10",
-    description: "To support youth self-reliance, the unit held a hands-on workshop on assembling low-cost, energy-efficient LED bulbs. The training was open to high school students and local neighborhood self-help groups (Kudumbashree).",
-    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
-    impact: { volunteers: 30, hours: 120, beneficiaries: 90 }
-  },
+const ACTIVITIES = [
   {
     id: "act-6",
     title: "Spandan: 7-Day Special Winter Camp",
     category: "Special Camps",
     date: "2025-12-23",
-    description: "The annual special residential camp conducted at Vettathur LP School. Activities included building a community compost pit, painting school classrooms, running an environmental census, and holding daily cultural integration forums.",
-    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80",
-    impact: { volunteers: 50, hours: 350, beneficiaries: 800 }
+    description: "The annual special residential camp conducted at GLP SCHOOL THELAKKAD. Activities included building a community compost pit, painting school classrooms, running an environmental census, and holding daily cultural integration forums.",
+    image: (window.location.pathname.includes('/activities/') ? '../' : '') + "assets/images/thumpnail/special-camp-2025.JPG",
+    link: "special-camp-2025.html",
+    impact: { volunteers: 52, hours: 350, beneficiaries: 800 }
   }
 ];
 
-export const SCAM_ALERTS = [
+const SCAM_ALERTS = [
   {
     id: "scam-1",
     title: "Fake KSEB Bill Payment Messages",
@@ -100,7 +56,7 @@ export const SCAM_ALERTS = [
   }
 ];
 
-export const GALLERY_ALBUMS = [
+const GALLERY_ALBUMS = [
   {
     id: "gal-1",
     title: "World Environment Day Sapling Drive",
@@ -129,9 +85,9 @@ export const GALLERY_ALBUMS = [
     title: "Special Winter Camp - Vettathur LP School",
     year: "2025",
     category: "Special Camps",
-    cover: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=600&q=80",
+    cover: "/assets/images/thumpnail/special-camp-2025.JPG",
     images: [
-      "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80",
+      "/assets/images/thumpnail/special-camp-2025.JPG",
       "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80"
     ]
@@ -149,7 +105,7 @@ export const GALLERY_ALBUMS = [
   }
 ];
 
-export const ACHIEVEMENTS = [
+const ACHIEVEMENTS = [
   {
     id: "ach-1",
     year: "2026",
@@ -180,7 +136,7 @@ export const ACHIEVEMENTS = [
   }
 ];
 
-export const NEWS = [
+const NEWS = [
   {
     id: "news-1",
     title: "NSS Vettathur Launches Monsoon Precaution Campaign",
@@ -204,7 +160,7 @@ export const NEWS = [
   }
 ];
 
-export const BLOGS = [
+const BLOGS = [
   {
     id: "blog-techora",
     title: "Techora.in: Building Practical Digital Presence for Local Communities",
@@ -219,7 +175,7 @@ export const BLOGS = [
   {
     id: "blog-1",
     title: "Not Me But You: The Spirit of Active Student Volunteerism",
-    author: "Dr. Sandeep K. (Program Officer)",
+    author: "Naadira.P (Program Officer)",
     date: "2026-05-20",
     summary: "How student volunteering shifts the mindset of youth from individual concerns to collective growth. A reflection on community camps and the lessons learned outside classrooms.",
     image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80",
@@ -245,42 +201,60 @@ export const BLOGS = [
   }
 ];
 
-export const TEAM = [
+const TEAM = [
   {
     id: "team-1",
-    name: "Dr. Sandeep K.",
+    name: "Naadira.P",
     role: "Program Officer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
-    email: "sandeep.k@nss-vettathur.techora.in",
-    phone: "+91 98765 43210"
+    image: "assets/images/team/PO/PO.png?auto=format&fit=crop&w=300&q=80",
+    email: "diginss376@gmail.com",
+    phone: "+91 81390 10484"
   },
   {
     id: "team-2",
-    name: "Midhun P.",
-    role: "Volunteer Secretary (Boys)",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
-    email: "midhun.p@nss-vettathur.techora.in",
-    phone: "+91 98765 43211"
+    name: "Muhammed Rifan.KP.",
+    role: "Volunteer Secretary (Boys 25-26)",
+    image: "assets/images/team/leaders/25-26/boy.png?auto=format&fit=crop&w=300&q=80",
+    email: "diginss376@gmail.com"
   },
   {
     id: "team-3",
-    name: "Arya Lakshmi S.",
-    role: "Volunteer Secretary (Girls)",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80",
-    email: "arya.l@nss-vettathur.techora.in",
-    phone: "+91 98765 43212"
+    name: "Sana Fathima.AK.",
+    role: "Volunteer Secretary (Girls 25-26)",
+    image: "assets/images/team/leaders/25-26/girl.png?auto=format&fit=crop&w=300&q=80",
+    email: "diginss376@gmail.com" 
   },
   {
     id: "team-4",
-    name: "Fadhil Ahmed",
-    role: "Cyber Awareness Lead",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80",
-    email: "fadhil.a@nss-vettathur.techora.in",
-    phone: "+91 98765 43213"
+    name: "Raihan.AV",
+    role: "Media Wing(25-26)",
+    image: "assets/images/team/leaders/25-26/boy.png?auto=format&fit=crop&w=300&q=80",
+    email: "diginss376@gmail.com" 
+  },
+  {
+    id: "team-5",
+    name: "?",
+    role: "Volunteer leader(Boys 26-27)",
+    image: "assets/images/team/leaders/25-26/boy.png?auto=format&fit=crop&w=300&q=80",
+    email: "diginss376@gmail.com"
+  },
+  {
+    id: "team-6",
+    name: "?",
+    role: "Volunteer leader(Girls 26-27)",
+    image: "assets/images/team/leaders/25-26/boy.png?auto=format&fit=crop&w=300&q=80",
+    email: "diginss376@gmail.com"
+  },
+  {
+    id: "team-7",
+    name: "?",
+    role: "Media Wing(26-27)",
+    image: "assets/images/team/leaders/25-26/boy.png?auto=format&fit=crop&w=300&q=80",
+    email: "diginss376@gmail.com"
   }
 ];
 
-export const TESTIMONIALS = [
+const TESTIMONIALS = [
   {
     name: "P. Devadas",
     role: "Ward Member, Vettathur Panchayat",
@@ -297,3 +271,7 @@ export const TESTIMONIALS = [
     text: "NSS was the turning point in my student life. It taught me practical leadership, community organization, and shaped my career in public health."
   }
 ];
+
+
+
+

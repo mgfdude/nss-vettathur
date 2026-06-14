@@ -9,8 +9,22 @@ const STATS = {
 };
 
 const ACTIVITIES = [
+{
+  id: "act-1",
+  title: "Anti-Drug Campaign 2026",
+  category: "Anti-Drug",
+  date: "2026-06-05",
+  description: "Conducted in partnership with the Excise Department, this campaign united NSS volunteers, JRC members, teachers, and students to spread awareness about substance abuse through rallies, cultural programs, awareness sessions, and a collective anti-drug pledge.",
+  image: (window.location.pathname.includes('/activities/') ? '../' : '') + "assets/images/thumpnail/Anti-drug_campaigner_26.JPG",
+  link: "Anti-drug_campaigner.html",
+  impact: {
+    volunteers: 50,
+    hours: 3,
+    beneficiaries: 50
+  }
+},
   {
-    id: "act-1",
+    id: "act-2",
     title: "Spandan: 7-Day Special Winter Camp",
     category: "Special Camps",
     date: "2025-12-23",
@@ -60,7 +74,7 @@ const ACHIEVEMENTS = [];
 
 const NEWS = [
   {
-    id: "news-2",
+    id: "news-1",
     title: "Registration Opens for 2026 Volunteer Batch",
     date: "2026-05-25",
     summary: "Higher Secondary students interested in joining the National Service Scheme Unit can submit applications to the Program Officer. Interview dates will be announced next week.",

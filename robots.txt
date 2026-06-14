@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /admin/
 
-Sitemap: https://nssvettathur.in/sitemap.xml
+Sitemap: https://nss-vettathur.techora.in/sitemap.xml

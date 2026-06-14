@@ -10,7 +10,7 @@ const STATS = {
 
 const ACTIVITIES = [
   {
-    id: "act-6",
+    id: "act-1",
     title: "Spandan: 7-Day Special Winter Camp",
     category: "Special Camps",
     date: "2025-12-23",
@@ -21,142 +21,50 @@ const ACTIVITIES = [
   }
 ];
 
-const SCAM_ALERTS = [
-  {
-    id: "scam-1",
-    title: "Fake KSEB Bill Payment Messages",
-    date: "2026-06-11",
-    description: "Fraudulent SMS or WhatsApp messages claiming your electricity connection will be disconnected by 9:30 PM tonight due to unpaid dues. It provides a fake helpline number where scammers try to install remote control apps.",
-    severity: "High",
-    prevention: "KSEB never sends disconnection alerts with personal mobile numbers. Always check your payment status via the official 'kseb.in' portal or the KSEB mobile app."
-  },
-  {
-    id: "scam-2",
-    title: "WhatsApp Family Call Impersonation",
-    date: "2026-06-03",
-    description: "Scammers use AI-generated voice cloning or stolen profile pictures to call targets, pretending to be a relative (e.g., son or nephew abroad) facing an urgent accident or legal emergency. They demand immediate bank transfers.",
-    severity: "High",
-    prevention: "Hang up immediately and call your relative on their normal number. Verify the situation independently before transferring money."
-  },
-  {
-    id: "scam-3",
-    title: "QR Code Receive Fraud",
-    date: "2026-05-28",
-    description: "Buyers or lottery portals online ask you to scan a QR code to 'receive' money. They send a code with text indicating it's a payment collection code, hoping you enter your UPI PIN.",
-    severity: "Medium",
-    prevention: "Remember, scanning a QR code and entering your UPI PIN is ONLY used to SEND money. You never need to enter your PIN to receive funds."
-  },
-  {
-    id: "scam-4",
-    title: "FedEx/Parcel Custom Trap",
-    date: "2026-05-14",
-    description: "Victims receive a call claiming a parcel sent under their Aadhaar card contains illegal substances and has been seized by customs. Fake police officers on Skype video calls 'interrogate' and extort money to settle the case.",
-    severity: "High",
-    prevention: "Law enforcement agencies never conduct interrogation over Skype or WhatsApp. Block the call immediately and report it to the Cyber Cell."
-  }
-];
+const SCAM_ALERTS = [];
 
 const GALLERY_ALBUMS = [
   {
     id: "gal-1",
-    title: "World Environment Day Sapling Drive",
+    title: "Anti-drug campaigner",
     year: "2026",
-    category: "Environment",
-    cover: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=600&q=80",
+    category: "Anti-drug",
+    cover: "assets/images/thumpnail/Anti-drug_campaigner_26.JPG",
     images: [
-      "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80"
+      "assets/images/gallery/Anti-drug_campaigner_26/1.jpg",
+      "assets/images/gallery/Anti-drug_campaigner_26/2.jpg",
+      "assets/images/gallery/Anti-drug_campaigner_26/3.jpg",
+      "assets/images/gallery/Anti-drug_campaigner_26/4.jpg",
+      "assets/images/gallery/Anti-drug_campaigner_26/5.jpg"
     ]
   },
   {
     id: "gal-2",
-    title: "Life-Saving Blood Camp 2026",
-    year: "2026",
-    category: "Health",
-    cover: "https://images.unsplash.com/photo-1615461066841-4a18e041d589?auto=format&fit=crop&w=600&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1615461066841-4a18e041d589?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1536856788636-e87f87a89270?auto=format&fit=crop&w=800&q=80"
-    ]
-  },
-  {
-    id: "gal-3",
-    title: "Special Winter Camp - Vettathur LP School",
+    title: "Special Winter Camp - GLP SCHOOL THELAKKAD",
     year: "2025",
     category: "Special Camps",
-    cover: "/assets/images/thumpnail/special-camp-2025.JPG",
+    cover: "assets/images/thumpnail/special-camp-2025.JPG",
     images: [
-      "/assets/images/thumpnail/special-camp-2025.JPG",
-      "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80"
-    ]
-  },
-  {
-    id: "gal-4",
-    title: "Cyber Security and Digital Literacy Drive",
-    year: "2026",
-    category: "Cyber Awareness",
-    cover: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80",
-    images: [
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+      "assets/images/thumpnail/special-camp-2025.JPG",
+      "assets/images/gallery/camp2025/6.jpg",
+      "assets/images/gallery/camp2025/5.jpg",
+      "assets/images/gallery/camp2025/4.jpg",
+      "assets/images/gallery/camp2025/3.jpg",
+      "assets/images/gallery/camp2025/2.jpg",
+      "assets/images/gallery/camp2025/1.jpg"
     ]
   }
 ];
 
-const ACHIEVEMENTS = [
-  {
-    id: "ach-1",
-    year: "2026",
-    title: "Excellent Community Service Recognition",
-    description: "Awarded by the Vettathur Grama Panchayat for outstanding work in sanitation, cleanliness, and local water body restoration during pre-monsoon camps.",
-    category: "Unit Award"
-  },
-  {
-    id: "ach-2",
-    year: "2025",
-    title: "Green Campus Model Project Award",
-    description: "Received recognition at the District level for launching organic vegetable gardens and a composting program inside college and local school campuses.",
-    category: "Environmental Award"
-  },
-  {
-    id: "ach-3",
-    year: "2025",
-    title: "State Level Pre-RD Selection",
-    description: "Volunteer Secretary Arjun K. was selected and represented the unit in the State Pre-Republic Day parade training camp held in Trivandrum.",
-    category: "Volunteer Achievement"
-  },
-  {
-    id: "ach-4",
-    year: "2024",
-    title: "Blood Donor Unit Appreciation",
-    description: "Appreciated by Malappuram District Blood Bank for coordinating 150+ blood donations across multiple campaigns in rural health sectors.",
-    category: "Social Impact"
-  }
-];
+const ACHIEVEMENTS = [];
 
 const NEWS = [
-  {
-    id: "news-1",
-    title: "NSS Vettathur Launches Monsoon Precaution Campaign",
-    date: "2026-06-10",
-    summary: "As monsoon starts, NSS units have deployed plastic cleanup squads and published health tips detailing prevention of leptospirosis and dengue in local school centers.",
-    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=600&q=80"
-  },
   {
     id: "news-2",
     title: "Registration Opens for 2026 Volunteer Batch",
     date: "2026-05-25",
     summary: "Higher Secondary students interested in joining the National Service Scheme Unit can submit applications to the Program Officer. Interview dates will be announced next week.",
     image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80"
-  },
-  {
-    id: "news-3",
-    title: "Panchayat Level Water Quality Survey Completed",
-    date: "2026-04-30",
-    summary: "A joint initiative by NSS and local departments analyzed well-water quality in 3 core village zones. Survey reports have been submitted to local authorities.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80"
   }
 ];
 

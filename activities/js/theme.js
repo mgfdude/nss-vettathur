@@ -79,7 +79,7 @@ function setupMobileMenu() {
           <a href="https://www.instagram.com/nss_ghss_vettathur/" target="_blank" rel="noopener" aria-label="Instagram">
             <img src="${window.location.pathname.includes('/activities/') ? '../' : ''}assets/images/web/logos/ig.jpg" alt="">
           </a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube">
+          <a href="https://www.youtube.com/channel/UC8QOFEMyT2A9lEq8VE2Q3cA" target="_blank" rel="noopener" aria-label="YouTube">
             <img src="${window.location.pathname.includes('/activities/') ? '../' : ''}assets/images/web/logos/yt.jpg" alt="">
           </a>
         </div>
@@ -199,6 +199,7 @@ function setupMobileMenu() {
     }
   });
 }
+
 
 
 

@@ -61,11 +61,11 @@ const GALLERY_ALBUMS = [
     images: [
       "assets/images/thumpnail/special-camp-2025.JPG",
       "assets/images/gallery/camp2025/6.jpg",
-      "assets/images/gallery/camp2025/5.jpg",
-      "assets/images/gallery/camp2025/4.jpg",
-      "assets/images/gallery/camp2025/3.jpg",
-      "assets/images/gallery/camp2025/2.jpg",
-      "assets/images/gallery/camp2025/1.jpg"
+      "assets/images/gallery/camp2025/5.JPG",
+      "assets/images/gallery/camp2025/4.JPG",
+      "assets/images/gallery/camp2025/3.JPG",
+      "assets/images/gallery/camp2025/2.JPG",
+      "assets/images/gallery/camp2025/1.JPG"
     ]
   }
 ];

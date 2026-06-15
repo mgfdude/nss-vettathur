@@ -59,7 +59,7 @@ function setupMobileMenu() {
     <div class="mobile-menu-surface">
       <div class="mobile-menu-header">
         <div class="mobile-menu-brand">
-          <img src="${window.location.pathname.includes('/activities/') ? '../' : ''}assets/images/web/logo.jpeg" alt="NSS Vettathur logo">
+          <img src="${window.location.pathname.includes('/activities/') ? '../' : ''}assets/images/web/logo.png" alt="NSS Vettathur logo">
           <div>
             <span>NSS Vettathur</span>
             <small>Not Me But You</small>

@@ -195,6 +195,28 @@ function setupLightboxListeners() {
     showActiveImage();
   };
 
+    // Mobile Swipe Support
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  modal.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  modal.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+
+    const swipeDistance = touchStartX - touchEndX;
+
+    if (Math.abs(swipeDistance) > 50) {
+      if (swipeDistance > 0) {
+        next(); // Swipe Left → Next Image
+      } else {
+        prev(); // Swipe Right → Previous Image
+      }
+    }
+  });
+
   closeBtn.addEventListener("click", close);
   prevBtn.addEventListener("click", prev);
   nextBtn.addEventListener("click", next);

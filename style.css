@@ -792,4 +792,77 @@ body.mobile-menu-open {
   #lightbox-counter {
     font-size: 14px;
   }
+
+  /* Lightbox Open */
+.lightbox-enter {
+  animation: lightboxFadeIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Lightbox Close */
+.lightbox-exit {
+  animation: lightboxFadeOut 0.28s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+/* Image Zoom In */
+#lightbox-img {
+  animation: imageZoomIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity .18s ease;
+}
+
+/* Animations */
+@keyframes lightboxFadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(24px);
+    transform: scale(1);
+  }
+}
+
+@keyframes lightboxFadeOut {
+  from {
+    opacity: 1;
+    backdrop-filter: blur(24px);
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    transform: scale(0.98);
+  }
+}
+
+@keyframes imageZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#lightbox-img {
+  transition: transform .08s linear;
+
+  transform-origin: center center;
+
+  touch-action: none;
+
+  cursor: grab;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+
+  will-change: transform;
+}
+
+#lightbox-img.zoomed {
+  cursor: move;
 }

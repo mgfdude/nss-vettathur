@@ -19,6 +19,9 @@ let isDragging = false;
 let dragStartX = 0;
 let dragStartY = 0;
 
+let isClosingGesture = false;
+
+
 document.addEventListener("DOMContentLoaded", () => {
   renderCategoryFilters();
   renderAlbums();
@@ -138,6 +141,10 @@ function openLightbox(albumId) {
   
   albumTitle.textContent = album.title;
   modal.classList.remove("hidden");
+  modal.style.transform = "";
+modal.style.opacity = "";
+
+dragCloseStartY = 0;
 modal.classList.remove("lightbox-exit");
 modal.classList.add("lightbox-enter");
   document.body.style.overflow = "hidden";
@@ -289,6 +296,12 @@ document.addEventListener("mouseup", () => {
   if (!modal) return;
 
   const close = () => {
+
+  modal.style.transform = "";
+  modal.style.opacity = "";
+
+  dragCloseStartY = 0;
+
   modal.classList.remove("lightbox-enter");
   modal.classList.add("lightbox-exit");
 
@@ -297,6 +310,7 @@ document.addEventListener("mouseup", () => {
     modal.classList.remove("lightbox-exit");
     document.body.style.overflow = "";
   }, 280);
+
 };
 
   const prev = () => {
@@ -309,32 +323,92 @@ document.addEventListener("mouseup", () => {
     showActiveImage();
   };
 
-  // Swipe Support
+  //////////////////////////////////////
+ // Swipe Support!@#$%^&*(*&^%$#!@#) //
+//////////////////////////////////////
 let touchStartX = 0;
 let touchEndX = 0;
 
+let touchStartY = 0;
+let touchEndY = 0;
+
+let dragCloseStartY = 0;
+
 modal.addEventListener("touchstart", (e) => {
+
   touchStartX = e.changedTouches[0].screenX;
+  touchStartY = e.changedTouches[0].screenY;
+
+  if (currentZoom !== 1) return;
+
+  dragCloseStartY =
+    e.touches[0].clientY;
+
 });
 
 modal.addEventListener("touchend", (e) => {
 
-  // Don't swipe when zoomed
   if (currentZoom !== 1) return;
 
   touchEndX = e.changedTouches[0].screenX;
+  touchEndY = e.changedTouches[0].screenY;
 
-  const swipeDistance = touchStartX - touchEndX;
+  const swipeX =
+    touchStartX - touchEndX;
 
-  if (Math.abs(swipeDistance) > 50) {
-    if (swipeDistance > 0) {
+  const swipeY =
+    touchStartY - touchEndY;
+
+    
+  // Swipe Down = Close
+  
+
+  const moved =
+  parseFloat(
+    modal.style.transform.match(/-?\d+/)?.[0]
+  ) || 0;
+
+  if (moved > 180){
+
+    close();
+
+  } else {
+
+    modal.style.transform = "";
+    modal.style.opacity = "";
+
+  }
+
+  // Left / Right Navigation
+  if (Math.abs(swipeX) > 50) {
+
+    if (swipeX > 0) {
       next();
     } else {
       prev();
     }
+
   }
+
 });
-  
+
+modal.addEventListener("touchmove", (e) => {
+
+  if (currentZoom !== 1) return;
+
+  const dragY =
+    e.touches[0].clientY - dragCloseStartY;
+
+  // Ignore tiny accidental movements
+  if (dragY < 20) return;
+
+  modal.style.transform =
+    `translateY(${dragY}px)`;
+
+  modal.style.opacity =
+    Math.max(0.3, 1 - dragY / 500);
+
+});
 
 // Desktop Double Click Zoom
 img.addEventListener("dblclick", () => {

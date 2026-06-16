@@ -246,7 +246,8 @@ function renderCards() {
 
   noResults.classList.add("hidden");
 
-  document.getElementById("result-count").textContent = `${filtered.length} Volunteers`;
+  document.getElementById("result-count").textContent =
+`${filtered.length} Volunteer${filtered.length !== 1 ? "s" : ""}`;
 
   grid.innerHTML = filtered.map(v => `
     <div class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">

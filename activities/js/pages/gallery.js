@@ -154,14 +154,37 @@ function showActiveImage() {
   imgFrame.style.opacity = "0";
 
 setTimeout(() => {
+
   currentZoom = 1;
 
-translateX = 0;
-translateY = 0;
+  translateX = 0;
+  translateY = 0;
 
-updateZoom();
-  imgFrame.src = activeImages[currentImageIndex];
+  updateZoom();
+
+  imgFrame.onload = () => {
+
+    imgFrame.classList.remove(
+      "portrait",
+      "landscape"
+    );
+
+    if (
+      imgFrame.naturalHeight >
+      imgFrame.naturalWidth
+    ) {
+      imgFrame.classList.add("portrait");
+    } else {
+      imgFrame.classList.add("landscape");
+    }
+
+  };
+
+  imgFrame.src =
+    activeImages[currentImageIndex];
+
   imgFrame.style.opacity = "1";
+
 }, 120);
   counter.textContent = `${currentImageIndex + 1} of ${activeImages.length}`;
 

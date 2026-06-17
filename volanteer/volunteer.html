@@ -4,25 +4,109 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NSS Volunteers 2025-26 | NSS Vettathur</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="style.css">
+<!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A',
+            secondary: '#EA580C',
+            accent: '#F59E0B',
+            success: '#16A34A'
+          },
+          fontFamily: {
+            display: ['Outfit', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<link rel="stylesheet" href="../style.css">
+  <script src="../activities/js/theme.js"></script>
 </head>
-<body class="bg-white text-slate-800 font-body">
 
-<header class="sticky top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md">
-  <div class="max-w-7xl mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
-    <a href="index.html" class="font-bold text-xl">NSS VETTATHUR</a>
-    <nav class="hidden md:flex gap-6">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="activities.html">Activities</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="team.html">Team</a>
-      <a href="volunteer.html" class="text-primary font-semibold">Volunteers</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<body class="bg-slate-50 text-slate-800 transition-colors duration-300 font-body">
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-50 w-full transition-all duration-300 border-b border-slate-100 bg-white/80 backdrop-blur-md">
+    <div class="w-full bg-slate-50 border-b border-slate-100 text-xs py-1.5 px-4 md:px-8 flex justify-between items-center text-slate-500">
+      <div>
+        <span>Motto: <strong class="text-secondary">Not Me But You</strong></span>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-1 border-r border-slate-200 pr-3">
+          <span class="mr-1 hidden sm:inline">Text Size:</span>
+          <button id="btn-text-dec" class="px-2 py-0.5 hover:bg-slate-200 rounded font-bold cursor-pointer">A-</button>
+          <button id="btn-text-rst" class="px-2 py-0.5 hover:bg-slate-200 rounded font-bold cursor-pointer">A</button>
+          <button id="btn-text-inc" class="px-2 py-0.5 hover:bg-slate-200 rounded font-bold cursor-pointer">A+</button>
+        </div>
+        <button id="theme-toggle" class="p-1 rounded-full hover:bg-slate-200 transition-colors cursor-pointer" aria-label="Toggle Dark Mode">
+          <svg id="theme-toggle-dark-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.46 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-3.5 flex justify-between items-center">
+      <a href="../index.html" class="flex items-center gap-3 group">
+        <img src="../assets/images/web/logo.png" alt="NSS Logo" class="w-10 h-10 object-cover rounded-full shadow-md">
+        <div>
+          <span class="font-bold text-lg text-slate-800 block tracking-tight leading-tight group-hover:text-primary transition-colors font-display">NSS VETTATHUR</span>
+          <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-widest block leading-none">Unit:NSS/SFU/HSE/MPM/81</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-6 font-medium text-sm text-slate-600">
+        <a href="../index.html" class="hover:text-primary transition-colors py-2">Home</a>
+        <a href="../about.html" class="hover:text-primary transition-colors py-2">About</a>
+        <a href="activities.html" class="hover:text-primary transition-colors py-2">Activities</a>
+        <a href="../gallery.html" class="hover:text-primary transition-colors py-2">Gallery</a>
+        <a href="../achievements.html" class="hover:text-primary transition-colors py-2">Achievements</a>
+        <a href="../news.html" class="hover:text-primary transition-colors py-2">News</a>
+        <a href="../blogs.html" class="hover:text-primary transition-colors py-2">Blogs</a>
+        <a href="../team.html" class="hover:text-primary transition-colors py-2">Team</a>
+        <a href="volunteer.html" class="text-primary font-bold py-2 border-b-2 border-primary">Volunteers</a>
+        <a href="index.html#contact" class="hover:text-primary transition-colors py-2">Contact</a>
+      </nav>
+
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-600 hover:bg-slate-100 rounded-lg cursor-pointer">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobile-menu-overlay" class="hidden fixed inset-0 z-40 bg-slate-900/20 backdrop-blur-sm transition-opacity duration-300"></div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-menu-drawer" class="fixed top-0 right-0 z-50 w-72 h-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+      <div class="flex items-center justify-between p-4 border-b border-slate-100">
+        <span class="font-bold text-slate-800 font-display">Menu</span>
+        <button id="mobile-menu-close" class="p-2 text-slate-500 hover:bg-slate-100 rounded-lg cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <nav class="flex-1 overflow-y-auto py-4 px-3 flex flex-col gap-1.5 font-medium text-slate-700">
+        <a href="../index.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Home</a>
+        <a href="../about.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">About</a>
+        <a href="activities.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Activities</a>
+        <a href="../gallery.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Gallery</a>
+        <a href="../achievements.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Achievements</a>
+        <a href="../news.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">News</a>
+        <a href="../blogs.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Blogs</a>
+        <a href="../team.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Team</a>
+        <a href="volunteer.html" class="px-4 py-3 rounded-xl bg-slate-50 text-primary font-bold">Volunteers</a>
+        <a href="index.html#contact" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Contact</a>
+      </nav>
+      <div class="p-6 bg-slate-50 border-t border-slate-100 text-center text-xs text-slate-400">
+        NSS Unit, Vettathur
+      </div>
+    </div>
+  </header>
 
 <section class="py-20 bg-gradient-to-br from-blue-900 to-slate-900 text-white text-center">
   <div class="max-w-5xl mx-auto px-4">
@@ -41,51 +125,60 @@
   </div>
 </section>
 
-<section class="py-8">
-<div class="max-w-7xl mx-auto px-4 md:px-8">
-<div class="bg-white rounded-2xl border p-5 flex flex-col lg:flex-row gap-4">
-<input id="volunteer-search" class="flex-1 border rounded-xl px-4 py-3" placeholder="Search volunteer...">
-<select id="gender-filter" class="border rounded-xl px-4 py-3">
-<option value="All">All Gender</option><option>Male</option><option>Female</option>
-</select>
-<select id="blood-filter" class="border rounded-xl px-4 py-3"><option value="All">All Blood Groups</option></select>
-<select
-  id="district-filter"
-  class="border rounded-xl px-4 py-3"
->
-  <option value="All">All Districts</option>
-</select>
+<section class="py-6 sm:py-8">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <div class="volunteer-filter-card">
+      <div class="volunteer-filter-toolbar">
+        <div class="volunteer-filter-search-wrap">
+          <svg class="volunteer-filter-search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+          <input
+            id="volunteer-search"
+            type="search"
+            class="volunteer-filter-input volunteer-filter-search"
+            placeholder="Search by name or ID..."
+            autocomplete="off"
+          >
+        </div>
 
-<select
-  id="doy-filter"
-  class="border rounded-xl px-4 py-3"
->
-  <option value="All">All Years</option>
-  <select id="doy-filter">
-  <option value="All"></option>
-</select>
+        <select id="gender-filter" class="volunteer-filter-input volunteer-filter-select" aria-label="Filter by gender">
+          <option value="All">All Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
 
-</div>
-</div>
+        <select id="blood-filter" class="volunteer-filter-input volunteer-filter-select" aria-label="Filter by blood group">
+          <option value="All">All Blood Groups</option>
+        </select>
+
+        <select id="district-filter" class="volunteer-filter-input volunteer-filter-select" aria-label="Filter by district">
+          <option value="All">All Districts</option>
+        </select>
+
+        <select id="doy-filter" class="volunteer-filter-input volunteer-filter-select" aria-label="Filter by year">
+          <option value="All">All Years</option>
+        </select>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="pb-20">
-<div class="max-w-7xl mx-auto px-4 md:px-8">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
 
-  <div class="flex justify-between items-center mb-6">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+      <h2 class="font-bold text-xl text-[#102a63] font-display">
+        Volunteers
+      </h2>
 
-  <h2 class="font-bold text-xl">
-    Volunteers
-  </h2>
-
-  <span
-    id="result-count"
-    class="text-sm text-slate-500"
-  >
-    0 Volunteers
-  </span>
-
-</div>
+      <span
+        id="result-count"
+        class="volunteer-result-badge"
+      >
+        0 Volunteers
+      </span>
+    </div>
 
 <div id="volunteer-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 <div id="no-volunteers" class="hidden text-center py-16 text-slate-400">No volunteers found.</div>

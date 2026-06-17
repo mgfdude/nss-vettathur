@@ -31,6 +31,41 @@ function maskAadhaar(aadhaar) {
   return "XXXX XXXX " + aadhaar.slice(-4);
 }
 
+function getInitials(name) {
+  if (!name || typeof name !== "string") return "?";
+
+  const words = name
+    .trim()
+    .split(/\s+/)
+    .map((word) => word.replace(/[^a-zA-Z]/g, ""))
+    .filter((word) => word.length > 0);
+
+  if (words.length === 0) return "?";
+
+  if (words.length === 1) {
+    const word = words[0];
+    return word.length >= 2
+      ? (word[0] + word[1]).toUpperCase()
+      : word[0].toUpperCase();
+  }
+
+  return (words[0][0] + words[words.length - 1][0]).toUpperCase();
+}
+
+function renderInitialsAvatar(name) {
+  const initials = getInitials(name);
+
+  return `
+    <div
+      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white text-sm sm:text-base font-bold shadow-md shrink-0 bg-gradient-to-br from-[#ff6b00] to-[#ff8c42]"
+      style="font-weight: 700"
+      aria-hidden="true"
+    >
+      ${initials}
+    </div>
+  `;
+}
+
 function init() {
   renderStats();
   populateBloodGroups();
@@ -252,9 +287,7 @@ function renderCards() {
   grid.innerHTML = filtered.map(v => `
     <div class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
 
-      <div class="w-14 h-14 rounded-full bg-orange-100 flex items-center justify-center text-2xl">
-        👤
-      </div>
+      ${renderInitialsAvatar(v.name)}
 
       <h3 class="mt-4 font-bold text-xl text-slate-900">
         ${v.name}

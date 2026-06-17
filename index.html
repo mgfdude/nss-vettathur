@@ -96,6 +96,7 @@
         <a href="news.html" class="hover:text-primary transition-colors py-2">News</a>
         <a href="blogs.html" class="hover:text-primary transition-colors py-2">Blogs</a>
         <a href="team.html" class="hover:text-primary transition-colors py-2">Team</a>
+        <a href="volanteer/volunteer.html" class="hover:text-primary transition-colors py-2">Volunteers</a>
         <a href="index.html#contact" class="hover:text-primary transition-colors py-2">Contact</a>
       </nav>
 
@@ -125,6 +126,7 @@
         <a href="news.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">News</a>
         <a href="blogs.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Blogs</a>
         <a href="team.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Team</a>
+         <a href="volanteer/volunteer.html" class="hover:text-primary transition-colors py-2">Volunteers</a>
         <a href="index.html#contact" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Contact</a>
       </nav>
       <div class="p-6 bg-slate-50 border-t border-slate-100 text-center text-xs text-slate-400">
@@ -195,19 +197,19 @@
 
     <!-- Impact Stats Bar (anchored to bottom) -->
     <div class="absolute bottom-8 left-0 right-0 z-10 hidden md:block">
-      <div class="max-w-5xl mx-auto px-6">
-        <div class="grid grid-cols-4 gap-6 bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl py-5 px-8 hero-stats-bar">
-          <div class="text-center">
-            <span class="block text-3xl font-extrabold text-white font-display hero-counter" data-target="100">0</span>
-            <span class="text-[11px] text-white/60 uppercase font-semibold tracking-wider mt-1 block">Volunteers</span>
+      <div class="max-w-[1050px] mx-auto px-6">
+        <div class="hero-stats-bar hero-stats-card">
+          <div class="hero-stat-item">
+            <span class="hero-stat-number hero-counter" data-target="100">0</span>
+            <span class="hero-stat-label">Volunteers</span>
           </div>
-          <div class="text-center border-l border-white/15">
-            <span class="block text-3xl font-extrabold text-white font-display hero-counter" data-target="50">0</span>
-            <span class="text-[11px] text-white/60 uppercase font-semibold tracking-wider mt-1 block">Activities</span>
+          <div class="hero-stat-item">
+            <span class="hero-stat-number hero-counter" data-target="50">0</span>
+            <span class="hero-stat-label">Activities</span>
           </div>
-          <div class="text-center border-l border-white/15">
-            <span class="block text-3xl font-extrabold text-white font-display hero-counter" data-target="800">0</span>
-            <span class="text-[11px] text-white/60 uppercase font-semibold tracking-wider mt-1 block">Beneficiaries</span>
+          <div class="hero-stat-item">
+            <span class="hero-stat-number hero-counter" data-target="800">0</span>
+            <span class="hero-stat-label">Beneficiaries</span>
           </div>
         </div>
       </div>
@@ -215,18 +217,18 @@
 
     <!-- Mobile Stats (visible below hero text on small screens) -->
     <div class="md:hidden absolute bottom-8 left-0 right-0 z-10 px-5">
-      <div class="grid grid-cols-2 gap-3">
-        <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl py-3 px-4 text-center">
-          <span class="block text-2xl font-extrabold text-white font-display">100</span>
-          <span class="text-[10px] text-white/60 uppercase font-semibold tracking-wider">Volunteers</span>
+      <div class="hero-stats-mobile">
+        <div class="hero-stats-mobile-card">
+          <span class="hero-stat-number-sm">100</span>
+          <span class="hero-stat-label-sm">Volunteers</span>
         </div>
-        <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl py-3 px-4 text-center">
-          <span class="block text-2xl font-extrabold text-white font-display">50+</span>
-          <span class="text-[10px] text-white/60 uppercase font-semibold tracking-wider">Activities</span>
+        <div class="hero-stats-mobile-card">
+          <span class="hero-stat-number-sm">50+</span>
+          <span class="hero-stat-label-sm">Activities</span>
         </div>
-        <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl py-3 px-4 text-center">
-          <span class="block text-2xl font-extrabold text-white font-display">800+</span>
-          <span class="text-[10px] text-white/60 uppercase font-semibold tracking-wider">Beneficiaries</span>
+        <div class="hero-stats-mobile-card">
+          <span class="hero-stat-number-sm">800+</span>
+          <span class="hero-stat-label-sm">Beneficiaries</span>
         </div>
       </div>
     </div>
@@ -254,6 +256,125 @@
       opacity: 0;
       transform: translateY(20px);
       animation: heroFadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.9s forwards;
+    }
+
+    /* Hero statistics glass card — desktop */
+    .hero-stats-card {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      padding: 1.5rem 1.25rem;
+      border-radius: 1.25rem;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .hero-stats-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 26px 58px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      min-width: 0;
+    }
+
+    .hero-stat-item:not(:first-child) {
+      border-left: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .hero-stat-number {
+      display: block;
+      font-family: Outfit, sans-serif;
+      font-size: 3.25rem;
+      font-weight: 800;
+      line-height: 1;
+      color: #ffffff;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.28);
+    }
+
+    .hero-stat-label {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    /* Hero statistics — mobile */
+    .hero-stats-mobile {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.625rem;
+    }
+
+    .hero-stats-mobile-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.875rem 0.5rem;
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-stats-mobile-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-stat-number-sm {
+      display: block;
+      font-family: Outfit, sans-serif;
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-stat-label-sm {
+      display: block;
+      margin-top: 0.375rem;
+      font-size: 0.5625rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    @media (max-width: 1023px) {
+      .hero-stat-number {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .hero-stat-number-sm {
+        font-size: 2rem;
+      }
+
+      .hero-stat-label-sm {
+        font-size: 0.5rem;
+        letter-spacing: 0.1em;
+      }
     }
 
     /* Subtle Ken Burns on background image */

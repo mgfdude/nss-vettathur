@@ -570,6 +570,72 @@
     "email": "raihanraiz376@gmail.com",
     "aadhaar": "750354024842",
     "doy": "2008"
-  }
+  },
+  {
+  "id": "NSS-2025-045",
+  "name": "Muhammed Adhil T",
+  "gender": "Male",
+  "bloodGroup": "O+",
+  "batch": "2025-26",
+  "dob": "2008-12-21",
+  "district": "Palakkad",
+  "phone": "8075424014",
+  "email": "muhammedadhil@gmail.com",
+  "aadhaar": "648006126541",
+  "doy": "2008"
+},
+{
+  "id": "NSS-2025-046",
+  "name": "Sreya Das N",
+  "gender": "Female",
+  "bloodGroup": "A+",
+  "batch": "2025-26",
+  "dob": "2008-04-21",
+  "district": "Malappuram",
+  "phone": "8075895767",
+  "email": "das@gmail.com",
+  "aadhaar": "427972098151",
+  "doy": "2008"
+},
+{
+  "id": "NSS-2025-047",
+  "name": "Muhammed Musthafa CK",
+  "gender": "Male",
+  "bloodGroup": "O+",
+  "batch": "2025-26",
+  "dob": "2008-06-21",
+  "district": "Malappuram",
+  "phone": "9037294481",
+  "email": "",
+  "aadhaar": "933254387075",
+  "doy": "2008"
+},
+{
+  "id": "NSS-2025-048",
+  "name": "Shihan PT",
+  "gender": "Male",
+  "bloodGroup": "O+",
+  "batch": "2025-26",
+  "dob": "2008-08-20",
+  "district": "Palakkad",
+  "phone": "9562331665",
+  "email": "shihanptjr10@gmail.com",
+  "aadhaar": "459641712808",
+  "doy": "2008"
+},
+{
+  "id": "NSS-2025-049",
+  "name": "Anshida P",
+  "gender": "Female",
+  "bloodGroup": "B+",
+  "batch": "2025-26",
+  "dob": "2009-05-31",
+  "district": "Palakkad",
+  "phone": "9946269318",
+  "email": "",
+  "aadhaar": "202565059647",
+  "doy": "2009"
+}
+
 
 ]

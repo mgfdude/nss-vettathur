@@ -40,6 +40,8 @@ function setupMobileMenu() {
 
   if (!btn || !drawer || !overlay) return;
 
+  const assetPrefix = (window.location.pathname.includes('/activities/') || window.location.pathname.includes('/volanteer/')) ? '../' : '';
+
   let overlayTimer;
   let lastFocusedElement = null;
   const navIcons = {
@@ -59,7 +61,7 @@ function setupMobileMenu() {
     <div class="mobile-menu-surface">
       <div class="mobile-menu-header">
         <div class="mobile-menu-brand">
-          <img src="${window.location.pathname.includes('/activities/') ? '../' : ''}assets/images/web/logo.png" alt="NSS Vettathur logo">
+          <img src="${assetPrefix}assets/images/web/logo.png" alt="NSS Vettathur logo">
           <div>
             <span>NSS Vettathur</span>
             <small>Not Me But You</small>
@@ -74,13 +76,13 @@ function setupMobileMenu() {
       <div class="mobile-menu-footer">
         <div class="mobile-menu-socials" aria-label="Social links">
           <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
-            <img src="${window.location.pathname.includes('/activities/') ? '../' : ''}assets/images/web/logos/fb.jpg" alt="">
+            <img src="${assetPrefix}assets/images/web/logos/fb.jpg" alt="">
           </a>
           <a href="https://www.instagram.com/nss_ghss_vettathur/" target="_blank" rel="noopener" aria-label="Instagram">
-            <img src="${window.location.pathname.includes('/activities/') ? '../' : ''}assets/images/web/logos/ig.jpg" alt="">
+            <img src="${assetPrefix}assets/images/web/logos/ig.jpg" alt="">
           </a>
           <a href="https://www.youtube.com/channel/UC8QOFEMyT2A9lEq8VE2Q3cA" target="_blank" rel="noopener" aria-label="YouTube">
-            <img src="${window.location.pathname.includes('/activities/') ? '../' : ''}assets/images/web/logos/yt.jpg" alt="">
+            <img src="${assetPrefix}assets/images/web/logos/yt.jpg" alt="">
           </a>
         </div>
         <p>National Service Scheme Unit<br>Vettathur, Kerala</p>

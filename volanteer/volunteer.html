@@ -117,11 +117,13 @@
 </section>
 
 <section class="py-10 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-2 lg:grid-cols-4 gap-6">
-    <div class="bg-white rounded-2xl p-6 text-center shadow"><h3 id="stat-total" class="text-3xl font-bold">50</h3><p>Total</p></div>
-    <div class="bg-white rounded-2xl p-6 text-center shadow"><h3 id="stat-male" class="text-3xl font-bold">0</h3><p>Male</p></div>
-    <div class="bg-white rounded-2xl p-6 text-center shadow"><h3 id="stat-female" class="text-3xl font-bold">0</h3><p>Female</p></div>
-    <div class="bg-white rounded-2xl p-6 text-center shadow"><h3 id="stat-blood" class="text-3xl font-bold">0</h3><p>Blood Groups</p></div>
+  <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6">
+    <div class="bg-white rounded-2xl p-5 sm:p-6 text-center shadow"><h3 id="stat-total" class="text-3xl font-bold">50</h3><p class="text-sm text-slate-600 mt-1">Total</p></div>
+    <div class="bg-white rounded-2xl p-5 sm:p-6 text-center shadow"><h3 id="stat-male" class="text-3xl font-bold">0</h3><p class="text-sm text-slate-600 mt-1">Male</p></div>
+    <div class="bg-white rounded-2xl p-5 sm:p-6 text-center shadow"><h3 id="stat-female" class="text-3xl font-bold">0</h3><p class="text-sm text-slate-600 mt-1">Female</p></div>
+    <div class="bg-white rounded-2xl p-5 sm:p-6 text-center shadow"><h3 id="stat-blood" class="text-3xl font-bold">0</h3><p class="text-sm text-slate-600 mt-1">Blood Groups</p></div>
+    <div class="bg-white rounded-2xl p-5 sm:p-6 text-center shadow"><h3 id="stat-leader" class="text-3xl font-bold text-[#ff6b00]">0</h3><p class="text-sm text-slate-600 mt-1">Leaders</p></div>
+    <div class="bg-white rounded-2xl p-5 sm:p-6 text-center shadow"><h3 id="stat-media" class="text-3xl font-bold text-[#ff6b00]">0</h3><p class="text-sm text-slate-600 mt-1">Media Wing</p></div>
   </div>
 </section>
 
@@ -185,10 +187,29 @@
 </div>
 </section>
 
-<div id="volunteer-modal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm p-4 flex items-center justify-center">
-  <div class="bg-white rounded-3xl p-6 max-w-lg w-full relative">
-    <button id="modal-close" class="absolute top-4 right-4">✕</button>
-    <div id="volunteer-details"></div>
+<div
+  id="volunteer-modal"
+  class="volunteer-modal hidden"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="volunteer-id-name"
+  aria-hidden="true"
+>
+  <div id="volunteer-modal-backdrop" class="volunteer-modal-backdrop"></div>
+  <div class="volunteer-modal-wrap">
+    <div id="volunteer-id-card" class="volunteer-id-card">
+      <button
+        id="modal-close"
+        type="button"
+        class="volunteer-modal-close"
+        aria-label="Close volunteer profile"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <div id="volunteer-details"></div>
+    </div>
   </div>
 </div>
 

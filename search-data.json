@@ -1,0 +1,282 @@
+[
+  {
+    "title": "Home",
+    "description": "NSS Vettathur official homepage — youth empowerment, community service, and Kerala initiatives.",
+    "type": "page",
+    "keywords": "home nss vettathur homepage empowering youth transforming kerala not me but you",
+    "url": "index.html"
+  },
+  {
+    "title": "About NSS",
+    "description": "History, motto, objectives, and vision of NSS Unit Vettathur, Kerala.",
+    "type": "page",
+    "keywords": "about nss vettathur history mission motto objectives vision programme officer",
+    "url": "about.html"
+  },
+  {
+    "title": "Activities",
+    "description": "Browse NSS campaigns, community projects, health drives, and special camps.",
+    "type": "page",
+    "keywords": "activities campaigns programs events service community projects health environment",
+    "url": "activities/activities.html"
+  },
+  {
+    "title": "Gallery",
+    "description": "Photo albums and event galleries from NSS Vettathur campaigns and camps.",
+    "type": "page",
+    "keywords": "gallery photos albums images pictures media events camp anti drug",
+    "url": "gallery.html"
+  },
+  {
+    "title": "Achievements",
+    "description": "Awards, recognitions, milestones, and community impact achievements of NSS Vettathur.",
+    "type": "page",
+    "keywords": "achievements awards recognition honors milestones timeline success impact",
+    "url": "achievements.html"
+  },
+  {
+    "title": "News",
+    "description": "Latest NSS Vettathur announcements, updates, and event notices.",
+    "type": "page",
+    "keywords": "news updates announcements notices events registration batch",
+    "url": "news.html"
+  },
+  {
+    "title": "Blogs",
+    "description": "Articles, volunteer stories, and educational guides from NSS Vettathur.",
+    "type": "page",
+    "keywords": "blogs articles stories editorial volunteerism cyber ecology environment",
+    "url": "blogs.html"
+  },
+  {
+    "title": "Team",
+    "description": "Meet the Programme Officer, volunteer secretaries, and unit leadership.",
+    "type": "page",
+    "keywords": "team officers leaders secretaries programme officer media wing directory",
+    "url": "team.html"
+  },
+  {
+    "title": "Volunteers",
+    "description": "NSS volunteer directory with profiles, blood groups, and districts.",
+    "type": "page",
+    "keywords": "volunteers directory members students nss batch leader media wing",
+    "url": "volanteer/volunteer.html"
+  },
+  {
+    "title": "Cyber Awareness",
+    "description": "Digital safety resources, scam alerts, and cyber awareness programs.",
+    "type": "page",
+    "keywords": "cyber awareness security scams digital safety phishing fraud helpline 1930",
+    "url": "cyber-awareness.html"
+  },
+  {
+    "title": "Contact",
+    "description": "Reach the NSS Programme Officer — inquiries, volunteer stories, and campaigns.",
+    "type": "page",
+    "keywords": "contact email phone address reach programme officer diginss376 inquiries",
+    "url": "index.html#contact"
+  },
+  {
+    "title": "Leaders",
+    "description": "NSS volunteer leaders and unit secretaries for 2025–26.",
+    "type": "role",
+    "keywords": "leader leaders leadership head secretary joint secretary",
+    "url": "volanteer/volunteer.html?pos=Leader"
+  },
+  {
+    "title": "Media Wing",
+    "description": "NSS media wing members covering events, photography, and outreach.",
+    "type": "role",
+    "keywords": "media wing mediawing photography video coverage press documentation",
+    "url": "volanteer/volunteer.html?pos=Media%20Wing"
+  },
+  {
+    "title": "Anti-drug campaigner",
+    "description": "Photo album from the Anti-Drug Campaign 2026 with Excise Department collaboration.",
+    "type": "gallery",
+    "keywords": "anti drug campaign gallery photos excise awareness rally 2026 substance abuse pledge",
+    "url": "gallery.html#gal-1",
+    "thumbnail": "assets/images/thumpnail/Anti-drug_campaigner_26.JPG",
+    "meta": "5 Photos · 2026"
+  },
+  {
+    "title": "Special Winter Camp - GLP SCHOOL THELAKKAD",
+    "description": "Spandan 7-day residential camp gallery — classroom painting, compost pits, and community service.",
+    "type": "gallery",
+    "keywords": "special camp 2025 winter camp spandan gallery photos glp school thelakkad residential sanitation",
+    "url": "gallery.html#gal-2",
+    "thumbnail": "assets/images/thumpnail/special-camp-2025.JPG",
+    "meta": "7 Photos · 2025"
+  },
+  {
+    "title": "Anti-Drug Campaign 2026",
+    "description": "NSS and Excise Department united 70+ participants for anti-drug awareness rallies, cultural programs, and a collective pledge.",
+    "type": "activity",
+    "keywords": "anti drug campaign 2026 excise awareness rally substance abuse jrc teachers students pledge",
+    "url": "activities/Anti-drug_campaigner.html",
+    "thumbnail": "assets/images/thumpnail/Anti-drug_campaigner_26.JPG"
+  },
+  {
+    "title": "Spandan: 7-Day Special Winter Camp",
+    "description": "Annual residential camp at GLP SCHOOL THELAKKAD — compost pits, classroom painting, environmental census, and cultural forums.",
+    "type": "activity",
+    "keywords": "special camp winter camp spandan 2025 residential sanitation education glp school thelakkad sapthadin",
+    "url": "activities/special-camp-2025.html",
+    "thumbnail": "assets/images/thumpnail/special-camp-2025.JPG"
+  },
+  {
+    "title": "NSS Achievements & Milestones",
+    "description": "Timeline of unit awards, panchayat appreciations, and volunteer recognitions.",
+    "type": "achievement",
+    "keywords": "achievement achievements award awards recognition milestone honors timeline impact success",
+    "url": "achievements.html"
+  },
+  {
+    "title": "Environment Awareness",
+    "description": "Environmental conservation, tree planting, and ecology initiatives by NSS Vettathur.",
+    "type": "achievement",
+    "keywords": "environment awareness ecology trees planting vanamahotsavam native species melattur conservation green",
+    "url": "blogs.html"
+  },
+  {
+    "title": "Registration Opens for 2026 Volunteer Batch",
+    "description": "Higher Secondary students can apply to join NSS Vettathur. Interview dates announced soon.",
+    "type": "news",
+    "keywords": "registration volunteer batch 2026 apply join interview program officer announcement",
+    "url": "news.html",
+    "thumbnail": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80",
+    "meta": "25 May 2026"
+  },
+  {
+    "title": "Techora.in: Building Practical Digital Presence for Local Communities",
+    "description": "How Techora.in supports accessible web presence for organizations and community initiatives.",
+    "type": "blog",
+    "keywords": "techora digital presence website community organizations visibility web solutions",
+    "url": "blogs.html",
+    "thumbnail": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
+    "meta": "12 Jun 2026"
+  },
+  {
+    "title": "Not Me But You: The Spirit of Active Student Volunteerism",
+    "description": "Reflection on how student volunteering builds empathy, leadership, and collective growth.",
+    "type": "blog",
+    "keywords": "not me but you volunteerism student volunteering community camps leadership empathy nss spirit",
+    "url": "blogs.html",
+    "thumbnail": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80",
+    "meta": "20 May 2026"
+  },
+  {
+    "title": "How to Keep Your Family Safe from Digital Scams",
+    "description": "Practical cyber safety tips — phishing, mobile banking, OTP fraud, and helpline 1930.",
+    "type": "blog",
+    "keywords": "digital scams cyber safety phishing fraud otp banking whatsapp security family protection 1930",
+    "url": "blogs.html",
+    "thumbnail": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80",
+    "meta": "18 Apr 2026"
+  },
+  {
+    "title": "Restoring Local Ecology: Planting Native Trees in Melattur",
+    "description": "Why NSS Vettathur plants native species like Jackfruit, Mango, and Mahogany during Vanamahotsavam.",
+    "type": "blog",
+    "keywords": "ecology native trees melattur vanamahotsavam jackfruit mango mahogany afforestation environment planting",
+    "url": "blogs.html",
+    "thumbnail": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80",
+    "meta": "5 Mar 2026"
+  },
+  {
+    "title": "Naadira.P",
+    "description": "Programme Officer — NSS Unit Vettathur.",
+    "type": "team",
+    "keywords": "naadira programme officer program officer po diginss376 leadership",
+    "url": "team.html",
+    "thumbnail": "assets/images/team/PO/PO.png",
+    "meta": "Programme Officer"
+  },
+  {
+    "title": "Muhammed Rifan.KP.",
+    "description": "Volunteer Secretary (Boys 25-26) — NSS Unit leadership.",
+    "type": "team",
+    "keywords": "muhammed rifan secretary boys leader 25-26 volunteer secretary",
+    "url": "team.html",
+    "thumbnail": "assets/images/team/leaders/25-26/boy.png",
+    "meta": "Volunteer Secretary (Boys 25-26)"
+  },
+  {
+    "title": "Sana Fathima.AK.",
+    "description": "Volunteer Secretary (Girls 25-26) — NSS Unit leadership.",
+    "type": "team",
+    "keywords": "sana fathima secretary girls leader 25-26 volunteer secretary",
+    "url": "team.html",
+    "thumbnail": "assets/images/team/leaders/25-26/girl.png",
+    "meta": "Volunteer Secretary (Girls 25-26)"
+  },
+  {
+    "title": "Raihan.AV",
+    "description": "Media Wing member (25-26) — event coverage and outreach.",
+    "type": "team",
+    "keywords": "raihan media wing av photography coverage 25-26",
+    "url": "team.html",
+    "thumbnail": "assets/images/team/leaders/25-26/boy.png",
+    "meta": "Media Wing (25-26)"
+  },
+  {
+    "title": "Volunteer Leader (Boys 26-27)",
+    "description": "Volunteer leader position for Boys batch 26-27.",
+    "type": "team",
+    "keywords": "volunteer leader boys 26-27 leadership secretary",
+    "url": "team.html",
+    "thumbnail": "assets/images/team/leaders/25-26/boy.png",
+    "meta": "Volunteer Leader (Boys 26-27)"
+  },
+  {
+    "title": "Volunteer Leader (Girls 26-27)",
+    "description": "Volunteer leader position for Girls batch 26-27.",
+    "type": "team",
+    "keywords": "volunteer leader girls 26-27 leadership secretary",
+    "url": "team.html",
+    "thumbnail": "assets/images/team/leaders/25-26/boy.png",
+    "meta": "Volunteer Leader (Girls 26-27)"
+  },
+  {
+    "title": "Media Wing (26-27)",
+    "description": "Media Wing team member for batch 26-27.",
+    "type": "team",
+    "keywords": "media wing 26-27 photography video coverage",
+    "url": "team.html",
+    "thumbnail": "assets/images/team/leaders/25-26/boy.png",
+    "meta": "Media Wing (26-27)"
+  },
+  {
+    "title": "Techora",
+    "description": "Website Designed & Developed by Techora",
+    "type": "partner",
+    "keywords": "techora developer website developer web design site developer designed developed techora.in partner",
+    "url": "https://techora.in",
+    "thumbnail": "https://www.google.com/s2/favicons?domain=techora.in&sz=128",
+    "external": true
+  },
+  {
+  "title": "Instagram",
+  "description": "Follow NSS GHSS Vettathur on Instagram",
+  "type": "instagram",
+  "keywords": "instagram ig insta reels photos social media nss vettathur",
+  "url": "https://www.instagram.com/nss_ghss_vettathur/",
+  "external": true
+},
+{
+  "title": "YouTube",
+  "description": "Watch NSS GHSS Vettathur videos and activities",
+  "type": "youtube",
+  "keywords": "youtube yt videos channel nss ghss vettathur media reels shorts",
+  "url": "https://youtube.com/@ghss_vettathur_nss",
+  "external": true
+},
+{
+  "title": "Facebook",
+  "description": "Follow NSS GHSS Vettathur on Facebook",
+  "type": "facebook",
+  "keywords": "facebook fb meta social media nss vettathur",
+  "url": "index.html#",
+  "external": false
+}
+]

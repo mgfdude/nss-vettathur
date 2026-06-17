@@ -66,12 +66,107 @@ function renderInitialsAvatar(name) {
   `;
 }
 
+function renderIdCardAvatar(name) {
+  return `
+    <div class="volunteer-id-avatar" aria-hidden="true">
+      ${getInitials(name)}
+    </div>
+  `;
+}
+
+function renderIdRow(label, value) {
+  return `
+    <div class="volunteer-id-row">
+      <span class="volunteer-id-label">${label}</span>
+      <span class="volunteer-id-value">${value ?? "—"}</span>
+    </div>
+  `;
+}
+
+function isSpecialRole(pos) {
+  return Boolean(pos && pos !== "Volunteer");
+}
+
+function getPosRoleClass(pos) {
+  const roleMap = {
+    Leader: "leader",
+    "Media Wing": "media",
+    Treasurer: "navy",
+    Secretary: "navy",
+    "Joint Secretary": "navy",
+  };
+
+  return roleMap[pos] || "leader";
+}
+
+function renderPosBadge(pos, variant = "card") {
+  if (!isSpecialRole(pos)) return "";
+
+  const roleClass = getPosRoleClass(pos);
+  const baseClass = variant === "modal" ? "volunteer-id-pos" : "volunteer-pos-badge";
+
+  return `<span class="${baseClass} ${baseClass}--${roleClass}">${pos}</span>`;
+}
+
+const VOLUNTEER_MODAL_DURATION = 350;
+
+function openVolunteerModal() {
+  const modal = document.getElementById("volunteer-modal");
+  if (!modal) return;
+
+  modal.classList.remove("hidden");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      modal.classList.add("is-open");
+      document.getElementById("modal-close")?.focus();
+    });
+  });
+}
+
+function closeVolunteerModal() {
+  const modal = document.getElementById("volunteer-modal");
+  if (!modal || modal.classList.contains("hidden") || !modal.classList.contains("is-open")) {
+    return;
+  }
+
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+
+  window.setTimeout(() => {
+    modal.classList.add("hidden");
+    document.body.style.overflow = "";
+  }, VOLUNTEER_MODAL_DURATION);
+}
+
+function setupVolunteerModal() {
+  document
+    .getElementById("modal-close")
+    ?.addEventListener("click", closeVolunteerModal);
+
+  document
+    .getElementById("volunteer-modal-backdrop")
+    ?.addEventListener("click", closeVolunteerModal);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") return;
+
+    const modal = document.getElementById("volunteer-modal");
+    if (modal && modal.classList.contains("is-open")) {
+      closeVolunteerModal();
+    }
+  });
+}
+
 function init() {
   renderStats();
   populateBloodGroups();
   populateDistricts();
   populateDoy();
   renderCards();
+  handleVolunteerDeepLink();
 
   document
     .getElementById("volunteer-search")
@@ -92,26 +187,38 @@ function init() {
   document
     .getElementById("doy-filter")
     .addEventListener("change", renderCards);
-     
-  document
-    .getElementById("modal-close")
-    .addEventListener("click", () => {
-      document
-        .getElementById("volunteer-modal")
-        .classList.add("hidden");
-    });
 
-  document
-    .getElementById("volunteer-modal")
-    .addEventListener("click", (e) => {
+  setupVolunteerModal();
+}
 
-      if (e.target.id === "volunteer-modal") {
-        document
-          .getElementById("volunteer-modal")
-          .classList.add("hidden");
-      }
+function handleVolunteerDeepLink() {
+  const params = new URLSearchParams(window.location.search);
+  const volunteerId = params.get("id");
+  const posFilter = params.get("pos");
 
-    });
+  if (posFilter) {
+    const searchInput = document.getElementById("volunteer-search");
+    if (searchInput) {
+      searchInput.value = posFilter;
+      renderCards();
+    }
+  }
+
+  if (volunteerId) {
+    window.setTimeout(() => highlightVolunteerCard(volunteerId), 150);
+  }
+}
+
+function highlightVolunteerCard(volunteerId) {
+  const card = document.querySelector(`[data-volunteer-id="${volunteerId}"]`);
+  if (!card) return;
+
+  card.scrollIntoView({ behavior: "smooth", block: "center" });
+  card.classList.add("volunteer-card-highlight");
+
+  window.setTimeout(() => {
+    card.classList.remove("volunteer-card-highlight");
+  }, 2800);
 }
 
 function renderStats() {
@@ -128,6 +235,19 @@ function renderStats() {
     new Set(
       volunteers.map(v => v.bloodGroup)
     ).size;
+
+  const statLeader = document.getElementById("stat-leader");
+  const statMedia = document.getElementById("stat-media");
+
+  if (statLeader) {
+    statLeader.textContent =
+      volunteers.filter(v => v.pos === "Leader").length;
+  }
+
+  if (statMedia) {
+    statMedia.textContent =
+      volunteers.filter(v => v.pos === "Media Wing").length;
+  }
 }
 
 function populateBloodGroups() {
@@ -235,7 +355,8 @@ function renderCards() {
 
       const matchesSearch =
         v.name.toLowerCase().includes(search) ||
-        v.id.toLowerCase().includes(search);
+        v.id.toLowerCase().includes(search) ||
+        (v.pos || "").toLowerCase().includes(search);
 
       const matchesGender =
         gender === "All" ||
@@ -285,9 +406,12 @@ function renderCards() {
 `${filtered.length} Volunteer${filtered.length !== 1 ? "s" : ""}`;
 
   grid.innerHTML = filtered.map(v => `
-    <div class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6">
+    <div data-volunteer-id="${v.id}" class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6 flex flex-col">
 
-      ${renderInitialsAvatar(v.name)}
+      <div class="volunteer-card-header">
+        ${renderInitialsAvatar(v.name)}
+        ${isSpecialRole(v.pos) ? renderPosBadge(v.pos) : ""}
+      </div>
 
       <h3 class="mt-4 font-bold text-xl text-slate-900">
         ${v.name}
@@ -354,73 +478,35 @@ function showVolunteer(id) {
 
   if (!volunteer) return;
 
-  document.getElementById(
-    "volunteer-details"
-  ).innerHTML = `
-    <h2 class="text-2xl font-bold mb-4">
-      ${volunteer.name}
-    </h2>
+  document.getElementById("volunteer-details").innerHTML = `
+    <div class="volunteer-id-brand">
+      <span class="volunteer-id-brand-title">NSS Vettathur</span>
+      <span class="volunteer-id-brand-sub">Volunteer Identity Card</span>
+    </div>
 
-    <div class="space-y-2">
+    <div class="volunteer-id-header">
+      ${renderIdCardAvatar(volunteer.name)}
+      <h2 id="volunteer-id-name" class="volunteer-id-name">${volunteer.name}</h2>
+      ${renderPosBadge(volunteer.pos, "modal")}
+    </div>
 
-      <p>
-        <strong>ID:</strong>
-        ${volunteer.id}
-      </p>
+    <div class="volunteer-id-body">
+      ${renderIdRow("ID", volunteer.id)}
+      ${renderIdRow("Blood Group", volunteer.bloodGroup)}
+      ${renderIdRow("Gender", volunteer.gender)}
+      ${renderIdRow("District", volunteer.district)}
+      ${renderIdRow("DOB", volunteer.dob)}
+      ${renderIdRow("DOY", volunteer.doy)}
+      ${renderIdRow("Batch", volunteer.batch)}
+    </div>
 
-      <p>
-        <strong>Gender:</strong>
-        ${volunteer.gender}
-      </p>
-
-      <p>
-        <strong>Blood Group:</strong>
-        ${volunteer.bloodGroup}
-      </p>
-
-      <p>
-        <strong>Batch:</strong>
-        ${volunteer.batch}
-      </p>
-
-        <p>
-        <strong>DOB:</strong>
-      ${volunteer.dob}
-      </p>
-
-    <p>
-      <strong>District:</strong>
-      ${volunteer.district}
-    </p>
-
-    <p>
-      <strong>DOY:</strong>
-      ${volunteer.doy}
-    </p>
-
-    <hr class="my-4">
-
-      
-      <p>
-        <strong>Phone:</strong>
-        ${maskPhone(volunteer.phone)}
-      </p>
-
-      <p>
-        <strong>Email:</strong>
-        ${maskEmail(volunteer.email)}
-      </p>
-
-      <p>
-        <strong>Aadhaar:</strong>
-        ${maskAadhaar(volunteer.aadhaar)}
-      </p>
-
+    <div class="volunteer-id-private">
+      <p class="volunteer-id-private-title">Private Information</p>
+      ${renderIdRow("Phone", maskPhone(volunteer.phone))}
+      ${renderIdRow("Email", maskEmail(volunteer.email))}
+      ${renderIdRow("Aadhaar", maskAadhaar(volunteer.aadhaar))}
     </div>
   `;
 
-  document
-    .getElementById("volunteer-modal")
-    .classList.remove("hidden");
-
+  openVolunteerModal();
 }

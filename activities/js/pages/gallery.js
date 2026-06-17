@@ -27,7 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAlbums();
   setupYearFilterListeners();
   setupLightboxListeners();
+  handleAlbumHash();
 });
+
+function handleAlbumHash() {
+  const albumId = window.location.hash.replace("#", "").trim();
+  if (!albumId || typeof GALLERY_ALBUMS === "undefined") return;
+  if (!GALLERY_ALBUMS.some((album) => album.id === albumId)) return;
+  window.setTimeout(() => openLightbox(albumId), 350);
+}
 
 function renderCategoryFilters() {
   const container = document.getElementById("gallery-category-filters");

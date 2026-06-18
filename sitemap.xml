@@ -91,4 +91,20 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://nss-vettathur.techora.in/activities/cleanliness-drive.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>  
+
+  <!-- ── Volunteers Section ── --> 
+
+  <url>
+    <loc>https://nss-vettathur.techora.in/volanteer/volunteer.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>  
+  
 </urlset>

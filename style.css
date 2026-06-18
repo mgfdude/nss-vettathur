@@ -1695,4 +1695,48 @@ body.mobile-menu-open {
   flex-shrink:0;
   border:1px solid rgba(0,0,0,.08);
 }
-  
+.batch-pills{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.batch-pill{
+  padding:12px 22px;
+
+  border-radius:999px;
+
+  background:rgba(255,255,255,.10);
+
+  border:1px solid rgba(255,255,255,.12);
+
+  color:white;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  backdrop-filter:blur(16px);
+
+  transition:.25s ease;
+
+  user-select:none;
+}
+
+.batch-pill:hover{
+  background:rgba(255,255,255,.18);
+  transform:translateY(-2px);
+}
+
+.batch-pill.active{
+  background:white;
+
+  color:#1E3A8A;
+
+  border-color:white;
+
+  box-shadow:
+    0 8px 25px rgba(255,255,255,.15);
+}
+

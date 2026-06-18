@@ -1,4 +1,5 @@
 let volunteers = [];
+let selectedBatch = "All";
 
 fetch("volunteer.json")
   .then(response => response.json())
@@ -161,6 +162,7 @@ function setupVolunteerModal() {
 }
 
 function init() {
+  populateBatchSelector();
   renderStats();
   populateBloodGroups();
   populateDistricts();
@@ -195,6 +197,7 @@ function handleVolunteerDeepLink() {
   const params = new URLSearchParams(window.location.search);
   const volunteerId = params.get("id");
   const posFilter = params.get("pos");
+  const batch = params.get("batch");
 
   if (posFilter) {
     const searchInput = document.getElementById("volunteer-search");
@@ -204,8 +207,38 @@ function handleVolunteerDeepLink() {
     }
   }
 
+  if (batch) {
+
+  selectedBatch = batch;
+
+  populateBatchSelector();
+
+  renderStats();
+
+  renderCards();
+
+}
+
   if (volunteerId) {
-    window.setTimeout(() => highlightVolunteerCard(volunteerId), 150);
+    window.setTimeout(() => {
+
+  const card =
+    document.querySelector(
+      `[data-volunteer-id="${volunteerId}"]`
+    );
+
+  if (!card) return;
+
+  card.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+
+  card.classList.add(
+    "volunteer-card-highlight"
+  );
+
+}, 400);
   }
 }
 
@@ -222,18 +255,24 @@ function highlightVolunteerCard(volunteerId) {
 }
 
 function renderStats() {
+
+  const currentBatch =
+  volunteers.filter(
+    v => v.batch === selectedBatch
+  );
+
   document.getElementById("stat-total").textContent =
-    volunteers.length;
+    currentBatch.length;
 
   document.getElementById("stat-male").textContent =
-    volunteers.filter(v => v.gender === "Male").length;
+    currentBatch.filter(v => v.gender === "Male").length;
 
   document.getElementById("stat-female").textContent =
-    volunteers.filter(v => v.gender === "Female").length;
+    currentBatch.filter(v => v.gender === "Female").length;
 
   document.getElementById("stat-blood").textContent =
     new Set(
-      volunteers.map(v => v.bloodGroup)
+      currentBatch.map(v => v.bloodGroup)
     ).size;
 
   const statLeader = document.getElementById("stat-leader");
@@ -241,12 +280,12 @@ function renderStats() {
 
   if (statLeader) {
     statLeader.textContent =
-      volunteers.filter(v => v.pos === "Leader").length;
+      currentBatch.filter(v => v.pos === "Leader").length;
   }
 
   if (statMedia) {
     statMedia.textContent =
-      volunteers.filter(v => v.pos === "Media Wing").length;
+      currentBatch.filter(v => v.pos === "Media Wing").length;
   }
 }
 
@@ -328,6 +367,120 @@ function populateDoy() {
 
 }
 
+function populateBatchSelector() {
+
+  const container =
+    document.getElementById(
+      "batch-selector"
+    );
+
+  container.innerHTML = "";
+
+  const batches = [
+    ...new Set(
+      volunteers
+        .map(v => v.batch)
+        .filter(Boolean)
+    )
+  ];
+
+  // Oldest → Newest
+  batches.sort((a, b) => {
+
+    const yearA =
+      parseInt(a.split("-")[0]);
+
+    const yearB =
+      parseInt(b.split("-")[0]);
+
+    return yearA - yearB;
+
+  });
+
+  if (batches.length <= 1) {
+
+  container.style.display =
+    "none";
+
+  selectedBatch =
+    batches[0] || "All";
+
+  renderStats();
+renderCards();
+return;
+
+}
+
+container.style.display =
+  "flex";
+
+  // Auto-select first batch
+  if (
+    selectedBatch === "All" &&
+    batches.length
+  ) {
+
+    selectedBatch =
+      batches[0];
+
+  }
+
+  batches.forEach(batch => {
+
+    const button =
+      document.createElement(
+        "button"
+      );
+
+    button.className =
+      "batch-pill";
+
+    if (
+      batch === selectedBatch
+    ) {
+
+      button.classList.add(
+        "active"
+      );
+
+    }
+
+    button.textContent =
+      batch;
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        selectedBatch =
+          batch;
+
+        populateBatchSelector();
+
+        renderStats();
+
+        renderCards();
+
+      }
+    );
+
+    container.appendChild(
+      button
+    );
+
+  });
+
+}
+
+function updateBatchHeading() {
+
+  document.getElementById(
+  "batch-title"
+).textContent =
+  "NSS Volunteers";
+
+}
+
 function renderCards() {
 
   const search =
@@ -352,6 +505,10 @@ function renderCards() {
 
   const filtered =
     volunteers.filter(v => {
+
+      if (
+      v.batch !== selectedBatch
+    ) return false;
 
       const matchesSearch =
         v.name.toLowerCase().includes(search) ||

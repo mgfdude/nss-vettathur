@@ -85,36 +85,91 @@ function renderActivities() {
   noResults.classList.add("hidden");
 
   grid.innerHTML = filtered.map(act => `
-    <div class="flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group animate-slide-up">
-      <div class="h-48 overflow-hidden relative">
-        <img src="${act.image}" alt="${act.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-        <span class="absolute top-4 left-4 px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-white/95 text-secondary shadow-sm">${act.category}</span>
-      </div>
-      <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-        <div>
-          <span class="text-xs font-semibold text-slate-400 block mb-2">${act.date}</span>
-          <h3 class="font-bold text-lg text-slate-900 leading-tight group-hover:text-secondary transition-colors">${act.title}</h3>
-          <p class="text-slate-500 text-sm mt-2 line-clamp-4 leading-relaxed">${act.description}</p>
-        </div>
-        <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-[10px] text-slate-400 uppercase font-medium">
-          <div class="flex gap-4">
-            <div class="text-center">
-              <span class="block font-extrabold text-xs text-secondary">${act.impact.volunteers}</span>
-              <span>Volunteers</span>
-            </div>
-            <div class="text-center">
-              <span class="block font-extrabold text-xs text-secondary">${act.impact.hours}h</span>
-              <span>Hours</span>
-            </div>
-            <div class="text-center">
-              <span class="block font-extrabold text-xs text-secondary">${act.impact.beneficiaries}+</span>
-              <span>Helped</span>
-            </div>
-          </div>
-          <a href="${act.link ? act.link : 'activities.html'}" class="text-primary font-bold group-hover:translate-x-1 transition-transform inline-block text-xs normal-case">Read more &rarr;</a>
-        </div>
-      </div>
+  <a
+    href="${act.link ? act.link : 'activities.html'}"
+    class="flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group animate-slide-up cursor-pointer"
+  >
+
+    <div class="h-48 overflow-hidden relative">
+
+      <img
+        src="${act.image}"
+        alt="${act.title}"
+        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+      >
+
+      <span
+        class="absolute top-4 left-4 px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-white/95 text-secondary shadow-sm"
+      >
+        ${act.category}
+      </span>
+
     </div>
-  `).join('');
+
+    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+
+      <div>
+
+        <span
+          class="text-xs font-semibold text-slate-400 block mb-2"
+        >
+          ${act.date}
+        </span>
+
+        <h3
+          class="font-bold text-lg text-slate-900 leading-tight group-hover:text-primary transition-colors duration-300"
+        >
+          ${act.title}
+        </h3>
+
+        <p
+          class="text-slate-500 text-sm mt-2 line-clamp-4 leading-relaxed"
+        >
+          ${act.description}
+        </p>
+
+      </div>
+
+      <div
+        class="pt-4 border-t border-slate-100 flex justify-between items-center text-[10px] text-slate-400 uppercase font-medium"
+      >
+
+        <div class="flex gap-4">
+
+          <div class="text-center">
+            <span class="block font-extrabold text-xs text-secondary">
+              ${act.impact.volunteers}
+            </span>
+            <span>Volunteers</span>
+          </div>
+
+          <div class="text-center">
+            <span class="block font-extrabold text-xs text-secondary">
+              ${act.impact.hours}h
+            </span>
+            <span>Hours</span>
+          </div>
+
+          <div class="text-center">
+            <span class="block font-extrabold text-xs text-secondary">
+              ${act.impact.beneficiaries}+
+            </span>
+            <span>Helped</span>
+          </div>
+
+        </div>
+
+        <span
+          class="text-primary font-bold group-hover:translate-x-1 transition-transform inline-block text-xs normal-case"
+        >
+          Read more →
+        </span>
+
+      </div>
+
+    </div>
+
+  </a>
+`).join('');
 }
 

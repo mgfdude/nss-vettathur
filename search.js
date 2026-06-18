@@ -64,6 +64,7 @@
 
     const descriptionParts = [
       volunteer.id,
+      volunteer.batch,
       volunteer.bloodGroup,
       volunteer.gender,
       volunteer.district,
@@ -75,7 +76,7 @@
       description: descriptionParts.join(" · "),
       type: "volunteer",
       keywords,
-      url: `volanteer/volunteer.html?id=${encodeURIComponent(volunteer.id)}`,
+      url: `volanteer/volunteer.html?id=${encodeURIComponent(volunteer.id)}&batch=${encodeURIComponent(volunteer.batch)}`,
       meta: volunteer.pos !== "Volunteer" ? volunteer.pos : volunteer.district,
     };
   }

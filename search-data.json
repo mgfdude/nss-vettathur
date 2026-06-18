@@ -256,6 +256,15 @@
     "external": true
   },
   {
+    "title": "Techora-Instagram",
+    "description": "Instagram",
+    "type": "partner-instagram",
+    "keywords": "techora developer website developer web design site developer designed developed techora.in partner",
+    "url": "https://www.instagram.com/techora.inofficial",
+    "thumbnail": "https://www.google.com/s2/favicons?domain=techora.in&sz=128",
+    "external": true
+  },
+  {
   "title": "Instagram",
   "description": "Follow NSS GHSS Vettathur on Instagram",
   "type": "instagram",

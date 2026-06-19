@@ -46,7 +46,7 @@
     "description": "Articles, volunteer stories, and educational guides from NSS Vettathur.",
     "type": "page",
     "keywords": "blogs articles stories editorial volunteerism cyber ecology environment",
-    "url": "blogs.html"
+    "url": "blog/index.html"
   },
   {
     "title": "Team",
@@ -136,7 +136,7 @@
     "description": "Environmental conservation, tree planting, and ecology initiatives by NSS Vettathur.",
     "type": "achievement",
     "keywords": "environment awareness ecology trees planting vanamahotsavam native species melattur conservation green",
-    "url": "blogs.html"
+    "url": "blog/restoring-local-ecology-planting-native-trees-in-melattur.html"
   },
   {
     "title": "Registration Opens for 2026 Volunteer Batch",
@@ -152,7 +152,7 @@
     "description": "How Techora.in supports accessible web presence for organizations and community initiatives.",
     "type": "blog",
     "keywords": "techora digital presence website community organizations visibility web solutions",
-    "url": "blogs.html",
+    "url": "blog/techora-in-building-practical-digital-presence-for-local-communities.html",
     "thumbnail": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
     "meta": "12 Jun 2026"
   },
@@ -161,7 +161,7 @@
     "description": "Reflection on how student volunteering builds empathy, leadership, and collective growth.",
     "type": "blog",
     "keywords": "not me but you volunteerism student volunteering community camps leadership empathy nss spirit",
-    "url": "blogs.html",
+    "url": "blog/not-me-but-you-the-spirit-of-active-student-volunteerism.html",
     "thumbnail": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80",
     "meta": "20 May 2026"
   },
@@ -170,7 +170,7 @@
     "description": "Practical cyber safety tips — phishing, mobile banking, OTP fraud, and helpline 1930.",
     "type": "blog",
     "keywords": "digital scams cyber safety phishing fraud otp banking whatsapp security family protection 1930",
-    "url": "blogs.html",
+    "url": "blog/how-to-keep-your-family-safe-from-digital-scams.html",
     "thumbnail": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80",
     "meta": "18 Apr 2026"
   },
@@ -179,7 +179,7 @@
     "description": "Why NSS Vettathur plants native species like Jackfruit, Mango, and Mahogany during Vanamahotsavam.",
     "type": "blog",
     "keywords": "ecology native trees melattur vanamahotsavam jackfruit mango mahogany afforestation environment planting",
-    "url": "blogs.html",
+    "url": "blog/restoring-local-ecology-planting-native-trees-in-melattur.html",
     "thumbnail": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80",
     "meta": "5 Mar 2026"
   },
@@ -265,27 +265,35 @@
     "external": true
   },
   {
-  "title": "Instagram",
-  "description": "Follow NSS GHSS Vettathur on Instagram",
-  "type": "instagram",
-  "keywords": "instagram ig insta reels photos social media nss vettathur",
-  "url": "https://www.instagram.com/nss_ghss_vettathur/",
-  "external": true
-},
-{
-  "title": "YouTube",
-  "description": "Watch NSS GHSS Vettathur videos and activities",
-  "type": "youtube",
-  "keywords": "youtube yt videos channel nss ghss vettathur media reels shorts",
-  "url": "https://youtube.com/@ghss_vettathur_nss",
-  "external": true
-},
-{
-  "title": "Facebook",
-  "description": "Follow NSS GHSS Vettathur on Facebook",
-  "type": "facebook",
-  "keywords": "facebook fb meta social media nss vettathur",
-  "url": "index.html#",
-  "external": false
-}
+    "title": "Instagram",
+    "description": "Follow NSS GHSS Vettathur on Instagram",
+    "type": "instagram",
+    "keywords": "instagram ig insta reels photos social media nss vettathur",
+    "url": "https://www.instagram.com/nss_ghss_vettathur/",
+    "external": true
+  },
+  {
+    "title": "YouTube",
+    "description": "Watch NSS GHSS Vettathur videos and activities",
+    "type": "youtube",
+    "keywords": "youtube yt videos channel nss ghss vettathur media reels shorts",
+    "url": "https://youtube.com/@ghss_vettathur_nss",
+    "external": true
+  },
+  {
+    "title": "Facebook",
+    "description": "Follow NSS GHSS Vettathur on Facebook",
+    "type": "facebook",
+    "keywords": "facebook fb meta social media nss vettathur",
+    "url": "index.html#",
+    "external": false
+  },
+  {
+    "title": "National Reading Day 2026",
+    "description": "Reading Day celebration, book donation drive and book review activit  .",
+    "type": "activity",
+    "keywords": "national reading day reading day 2026 reading celebration book donation book donation drive book review book review activity library library movement school library reading culture reading habit reading awareness literacy education knowledge learning books literature student activities campus activity nss nss vettathur ghss vettathur volunteer programme p n panicker pn panicker father of library movement kerala reading week reading campaign reading promotion study books knowledge sharing learning through books student participation school event june 19 reading day event library support initiative",
+    "thumbnail": "assets/images/thumpnail/National-reading-day.JPG",
+    "url": "activities/reading-day-2026.html"
+  }
 ]

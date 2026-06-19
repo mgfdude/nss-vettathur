@@ -32,7 +32,21 @@ const ACTIVITIES = [
     image: (window.location.pathname.includes('/activities/') ? '../' : '') + "assets/images/thumpnail/special-camp-2025.JPG",
     link: "special-camp-2025.html",
     impact: { volunteers: 52, hours: 350, beneficiaries: 800 }
+  },
+
+  {
+    id: "act-3",
+    title: "National Reading Day 2026",
+    category: "Reading Day",
+    date: "2026-09-19",
+    description: "Celebrated National Reading Day by Donating Books For school Library, promoting literacy and a love for reading.",
+    image: (window.location.pathname.includes('/activities/') ? '../' : '') + "assets/images/thumpnail/National-reading-day.JPG",
+    link: "reading-day-2026.html",
+    impact: { volunteers: 30, hours: 3, beneficiaries: 200 }
+
   }
+
+
 ];
 
 const SCAM_ALERTS = [];
@@ -42,6 +56,7 @@ const GALLERY_ALBUMS = [
     id: "gal-1",
     title: "Anti-drug campaigner",
     year: "2026",
+    date: "2026-06-05",
     category: "Anti-drug",
     cover: "assets/images/thumpnail/Anti-drug_campaigner_26.JPG",
     images: [
@@ -56,6 +71,7 @@ const GALLERY_ALBUMS = [
     id: "gal-2",
     title: "Special Winter Camp - GLP SCHOOL THELAKKAD",
     year: "2025",
+    date: "2025-12-23",
     category: "Special Camps",
     cover: "assets/images/thumpnail/special-camp-2025.JPG",
     images: [
@@ -66,6 +82,20 @@ const GALLERY_ALBUMS = [
       "assets/images/gallery/camp2025/3.JPG",
       "assets/images/gallery/camp2025/2.JPG",
       "assets/images/gallery/camp2025/1.JPG"
+    ]
+  },
+  {
+    id: "gal-3",
+    title: "National Reading Day",
+    year: "2026",
+    date: "2026-09-19",
+    category: "Reading Day",
+    cover: "assets/images/thumpnail/National-reading-day.JPG",
+    images: [
+      "assets/images/gallery/National-reading-day/1.jpeg",
+      "assets/images/gallery/National-reading-day/2.jpeg",
+      "assets/images/gallery/National-reading-day/3.jpeg",
+      "assets/images/gallery/National-reading-day/4.jpeg"
     ]
   }
 ];

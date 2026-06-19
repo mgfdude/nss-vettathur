@@ -94,7 +94,7 @@
         <a href="gallery.html" class="hover:text-primary transition-colors py-2">Gallery</a>
         <a href="achievements.html" class="hover:text-primary transition-colors py-2">Achievements</a>
         <a href="news.html" class="hover:text-primary transition-colors py-2">News</a>
-        <a href="blogs.html" class="hover:text-primary transition-colors py-2">Blogs</a>
+        <a href="blog/index.html" class="hover:text-primary transition-colors py-2">Blogs</a>
         <a href="team.html" class="hover:text-primary transition-colors py-2">Team</a>
         <a href="volanteer/volunteer.html" class="hover:text-primary transition-colors py-2">Volunteers</a>
         <a href="index.html#contact" class="hover:text-primary transition-colors py-2">Contact</a>
@@ -124,7 +124,7 @@
         <a href="gallery.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Gallery</a>
         <a href="achievements.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Achievements</a>
         <a href="news.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">News</a>
-        <a href="blogs.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Blogs</a>
+        <a href="blog/index.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Blogs</a>
         <a href="team.html" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Team</a>
          <a href="volanteer/volunteer.html" class="hover:text-primary transition-colors py-2">Volunteers</a>
         <a href="index.html#contact" class="px-4 py-3 rounded-xl hover:bg-slate-50 hover:text-primary transition-colors">Contact</a>
@@ -519,7 +519,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="max-w-7xl mx-auto px-4 md:px-8">
       <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12 gap-4">
         <div>
-          <h2 class="text-xs uppercase tracking-widest font-bold text-secondary mb-2 font-display">Our Footprints</h2>
+          <h2 class="text-xs uppercase tracking-widest font-bold text-secondary mb-2 font-display">Latest Activities</h2>
           <p class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight font-display">Recent Social Campaigns</p>
         </div>
         <a href="activities/activities.html" class="px-5 py-2.5 bg-white border border-slate-200 hover:bg-slate-50 rounded-xl text-sm font-semibold transition-all shadow-sm">
@@ -730,7 +730,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3 class="font-bold text-white text-base mb-4 tracking-wide font-display">Resources</h3>
         <ul class="space-y-2.5 text-sm">
           <li><a href="news.html" class="hover:text-accent transition-colors">News Alerts</a></li>
-          <li><a href="blogs.html" class="hover:text-accent transition-colors">NSS Blog Articles</a></li>
+          <li><a href="blog/index.html" class="hover:text-accent transition-colors">NSS Blog Articles</a></li>
            <li><a href="volanteer/volunteer.html" class="hover:text-accent transition-colors">Volunteers</a></li>
           <li><a href="team.html" class="hover:text-accent transition-colors">Our Team Directory</a></li>
           <li><a href="index.html#contact" class="hover:text-accent transition-colors">Get in Touch</a></li>
@@ -772,7 +772,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 if (container) {
 
-  const latest = ACTIVITIES.slice(0, 3);
+  const latest = [...ACTIVITIES]
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 2);
 
   container.innerHTML = latest.map(act => `
 

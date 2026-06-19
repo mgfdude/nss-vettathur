@@ -101,7 +101,7 @@ function renderAlbums() {
     const matchesYear = activeYear === 'All' || al.year === activeYear;
     const matchesCat = activeCategory === 'All' || al.category === activeCategory;
     return matchesYear && matchesCat;
-  });
+  }).sort((a, b) => new Date(b.date || b.year) - new Date(a.date || a.year));
 
   if (filtered.length === 0) {
     grid.innerHTML = `

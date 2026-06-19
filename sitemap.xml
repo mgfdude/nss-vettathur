@@ -48,10 +48,40 @@
   </url>
 
   <url>
-    <loc>https://nss-vettathur.techora.in/blogs.html</loc>
+    <loc>https://nss-vettathur.techora.in/blog/index.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- ── Blog Articles ── -->
+
+  <url>
+    <loc>https://nss-vettathur.techora.in/blog/techora-in-building-practical-digital-presence-for-local-communities.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://nss-vettathur.techora.in/blog/not-me-but-you-the-spirit-of-active-student-volunteerism.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://nss-vettathur.techora.in/blog/how-to-keep-your-family-safe-from-digital-scams.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://nss-vettathur.techora.in/blog/restoring-local-ecology-planting-native-trees-in-melattur.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>

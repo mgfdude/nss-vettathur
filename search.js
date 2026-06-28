@@ -33,6 +33,28 @@
 
   const MAX_RESULTS = 8;
   const DEBOUNCE_MS = 120;
+  const searchBasePath =
+    typeof BASE_PATH !== "undefined"
+      ? BASE_PATH
+      : window.location.pathname.includes("/activities/") ||
+        window.location.pathname.includes("/blog/") ||
+        window.location.pathname.includes("/volanteer/")
+        ? "../"
+        : "";
+  const searchDataPath =
+    typeof SEARCH_PATH !== "undefined"
+      ? SEARCH_PATH
+      : `${searchBasePath}data/search-data/`;
+  const searchFiles = [
+    "search-pages.json",
+    "search-activities.json",
+    "search-gallery.json",
+    "search-news.json",
+    "search-blogs.json",
+    "search-achievements.json",
+    "search-team.json",
+    "search-social.json"
+  ];
 
   let searchIndex = [];
   let activeIndex = -1;
@@ -76,9 +98,15 @@
       description: descriptionParts.join(" · "),
       type: "volunteer",
       keywords,
-      url: `volanteer/volunteer.html?id=${encodeURIComponent(volunteer.id)}&batch=${encodeURIComponent(volunteer.batch)}`,
+      url: `${searchBasePath}volanteer/volunteer.html?id=${encodeURIComponent(volunteer.id)}&batch=${encodeURIComponent(volunteer.batch)}`,
       meta: volunteer.pos !== "Volunteer" ? volunteer.pos : volunteer.district,
     };
+  }
+
+  function withBasePath(path) {
+    if (!path) return path;
+    if (/^(?:[a-z][a-z\d+.-]*:|#|\/)/i.test(path)) return path;
+    return `${searchBasePath}${path}`;
   }
 
   function normalizeSearchItem(item) {
@@ -87,8 +115,8 @@
       description: item.description || item.meta || "",
       type: item.type || "page",
       keywords: item.keywords || "",
-      url: item.url || "#",
-      thumbnail: item.thumbnail || null,
+      url: withBasePath(item.url || "#"),
+      thumbnail: item.thumbnail ? withBasePath(item.thumbnail) : null,
       meta: item.meta || null,
       external: Boolean(item.external),
     };
@@ -96,17 +124,25 @@
 
   async function loadSearchIndex() {
     try {
-      const [dataResponse, volunteerResponse] = await Promise.all([
-        fetch("search-data.json"),
-        fetch("volanteer/volunteer.json"),
+      const responses = await Promise.all([
+        ...searchFiles.map((file) => fetch(`${searchDataPath}${file}`)),
+        fetch(`${searchBasePath}volanteer/volunteer.json`)
       ]);
 
-      const staticItems = (await dataResponse.json()).map(normalizeSearchItem);
-      const volunteers = await volunteerResponse.json();
+      responses.forEach((response) => {
+        if (!response.ok) {
+          throw new Error(`Search data request failed: ${response.url}`);
+        }
+      });
+
+      const searchData = await Promise.all(
+        responses.slice(0, searchFiles.length).map((response) => response.json())
+      );
+      const volunteers = await responses[searchFiles.length].json();
 
       searchIndex = [
-        ...staticItems,
-        ...volunteers.map(buildVolunteerEntry),
+        ...searchData.flat().map(normalizeSearchItem),
+        ...volunteers.map(buildVolunteerEntry)
       ];
     } catch (error) {
       console.error("Failed to load search index:", error);
@@ -193,7 +229,7 @@
     if (TYPE_IMAGES[item.type]) {
   return `
     <img
-      src="${TYPE_IMAGES[item.type]}"
+      src="${withBasePath(TYPE_IMAGES[item.type])}"
       alt="${item.type}"
       class="nss-search-thumb nss-search-thumb--logo"
       loading="lazy"

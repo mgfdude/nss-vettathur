@@ -232,7 +232,8 @@
   </footer>
 
   <!-- Loader module script -->
-  <script src="../activities/js/data.js"></script>
+  <script src="../data/content-data/data.js"></script>
+  <script>loadContentData(["blogs"]);</script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const container = document.getElementById("blogs-grid-container");

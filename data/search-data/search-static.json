@@ -63,32 +63,11 @@
     "url": "volanteer/volunteer.html"
   },
   {
-    "title": "Cyber Awareness",
-    "description": "Digital safety resources, scam alerts, and cyber awareness programs.",
-    "type": "page",
-    "keywords": "cyber awareness security scams digital safety phishing fraud helpline 1930",
-    "url": "cyber-awareness.html"
-  },
-  {
     "title": "Contact",
     "description": "Reach the NSS Programme Officer — inquiries, volunteer stories, and campaigns.",
     "type": "page",
     "keywords": "contact email phone address reach programme officer diginss376 inquiries",
     "url": "index.html#contact"
-  },
-  {
-    "title": "Leaders",
-    "description": "NSS volunteer leaders and unit secretaries for 2025–26.",
-    "type": "role",
-    "keywords": "leader leaders leadership head secretary joint secretary",
-    "url": "volanteer/volunteer.html?pos=Leader"
-  },
-  {
-    "title": "Media Wing",
-    "description": "NSS media wing members covering events, photography, and outreach.",
-    "type": "role",
-    "keywords": "media wing mediawing photography video coverage press documentation",
-    "url": "volanteer/volunteer.html?pos=Media%20Wing"
   },
   {
     "title": "Anti-drug campaigner",
@@ -184,69 +163,31 @@
     "meta": "5 Mar 2026"
   },
   {
-    "title": "Naadira.P",
-    "description": "Programme Officer — NSS Unit Vettathur.",
-    "type": "team",
-    "keywords": "naadira programme officer program officer po diginss376 leadership",
-    "url": "team.html",
-    "thumbnail": "assets/images/team/PO/PO.png",
-    "meta": "Programme Officer"
+    "title": "National Reading Day 2026",
+    "description": "Reading Day celebration, book donation drive and book review activit  .",
+    "type": "activity",
+    "keywords": "national reading day reading day 2026 reading celebration book donation book donation drive book review book review activity library library movement school library reading culture reading habit reading awareness literacy education knowledge learning books literature student activities campus activity nss nss vettathur ghss vettathur volunteer programme p n panicker pn panicker father of library movement kerala reading week reading campaign reading promotion study books knowledge sharing learning through books student participation school event june 19 reading day event library support initiative",
+    "thumbnail": "assets/images/thumpnail/National-reading-day.JPG",
+    "url": "activities/reading-day-2026.html"
   },
   {
-    "title": "Muhammed Rifan.KP.",
-    "description": "Volunteer Secretary (Boys 25-26) — NSS Unit leadership.",
-    "type": "team",
-    "keywords": "muhammed rifan secretary boys leader 25-26 volunteer secretary",
-    "url": "team.html",
-    "thumbnail": "assets/images/team/leaders/25-26/boy.png",
-    "meta": "Volunteer Secretary (Boys 25-26)"
+    "title": "International Yoga Day 2026",
+    "description": "International Yoga Day 2026 celebrated by NSS Unit GHSS Vettathur to promote physical fitness, mental well-being, mindfulness, and healthy living.",
+    "type": "activity",
+    "keywords": "international yoga day yoga 2026 june 21 physical fitness mental well-being mental health mindfulness healthy living healthy ageing meditation pranayama breathing exercises campus cleaning drive nss vettathur nss unit volunteer activity ghss vettathur students health awareness wellness spirituality fitness guided yoga asanas inner peace peace",
+    "thumbnail": "assets/images/thumpnail/International-Yoga-Day-2026.JPG",
+    "url": "activities/international-yoga-day.html"
   },
   {
-    "title": "Sana Fathima.AK.",
-    "description": "Volunteer Secretary (Girls 25-26) — NSS Unit leadership.",
-    "type": "team",
-    "keywords": "sana fathima secretary girls leader 25-26 volunteer secretary",
-    "url": "team.html",
-    "thumbnail": "assets/images/team/leaders/25-26/girl.png",
-    "meta": "Volunteer Secretary (Girls 25-26)"
+    "title": "Census 2027 – Self Enumeration Orientation Class",
+    "description": "Census 2027 Self Enumeration Orientation Class to educate volunteers about digital self-enumeration methods and community engagement.",
+    "type": "activity",
+    "keywords": "census 2027 census self enumeration digital census orientation class master trainer suresh babu karakunnummal national planning population data digital literacy volunteer training deployment house visits awareness campaign live demonstration citizen support nss unit ghss vettathur nss volunteer bava hall community engagement my data my nation our future civic duty government initiative statistics demographic india",
+    "thumbnail": "assets/images/thumpnail/Self-Enumeration-2027.JPG",
+    "url": "activities/self-enumeration-2027.html"
   },
   {
-    "title": "Raihan.AV",
-    "description": "Media Wing member (25-26) — event coverage and outreach.",
-    "type": "team",
-    "keywords": "raihan media wing av photography coverage 25-26",
-    "url": "team.html",
-    "thumbnail": "assets/images/team/leaders/25-26/boy.png",
-    "meta": "Media Wing (25-26)"
-  },
-  {
-    "title": "Volunteer Leader (Boys 26-27)",
-    "description": "Volunteer leader position for Boys batch 26-27.",
-    "type": "team",
-    "keywords": "volunteer leader boys 26-27 leadership secretary",
-    "url": "team.html",
-    "thumbnail": "assets/images/team/leaders/25-26/boy.png",
-    "meta": "Volunteer Leader (Boys 26-27)"
-  },
-  {
-    "title": "Volunteer Leader (Girls 26-27)",
-    "description": "Volunteer leader position for Girls batch 26-27.",
-    "type": "team",
-    "keywords": "volunteer leader girls 26-27 leadership secretary",
-    "url": "team.html",
-    "thumbnail": "assets/images/team/leaders/25-26/boy.png",
-    "meta": "Volunteer Leader (Girls 26-27)"
-  },
-  {
-    "title": "Media Wing (26-27)",
-    "description": "Media Wing team member for batch 26-27.",
-    "type": "team",
-    "keywords": "media wing 26-27 photography video coverage",
-    "url": "team.html",
-    "thumbnail": "assets/images/team/leaders/25-26/boy.png",
-    "meta": "Media Wing (26-27)"
-  },
-  {
+    "_comment": "Social media and partner links",
     "title": "Techora",
     "description": "Website Designed & Developed by Techora",
     "type": "partner",
@@ -287,13 +228,5 @@
     "keywords": "facebook fb meta social media nss vettathur",
     "url": "index.html#",
     "external": false
-  },
-  {
-    "title": "National Reading Day 2026",
-    "description": "Reading Day celebration, book donation drive and book review activit  .",
-    "type": "activity",
-    "keywords": "national reading day reading day 2026 reading celebration book donation book donation drive book review book review activity library library movement school library reading culture reading habit reading awareness literacy education knowledge learning books literature student activities campus activity nss nss vettathur ghss vettathur volunteer programme p n panicker pn panicker father of library movement kerala reading week reading campaign reading promotion study books knowledge sharing learning through books student participation school event june 19 reading day event library support initiative",
-    "thumbnail": "assets/images/thumpnail/National-reading-day.JPG",
-    "url": "activities/reading-day-2026.html"
   }
 ]

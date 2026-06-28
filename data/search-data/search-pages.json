@@ -1,0 +1,72 @@
+[
+    {
+    "title": "Home",
+    "description": "NSS Vettathur official homepage — youth empowerment, community service, and Kerala initiatives.",
+    "type": "page",
+    "keywords": "home nss vettathur homepage empowering youth transforming kerala not me but you",
+    "url": "index.html"
+  },
+  {
+    "title": "About NSS",
+    "description": "History, motto, objectives, and vision of NSS Unit Vettathur, Kerala.",
+    "type": "page",
+    "keywords": "about nss vettathur history mission motto objectives vision programme officer",
+    "url": "about.html"
+  },
+  {
+    "title": "Activities",
+    "description": "Browse NSS campaigns, community projects, health drives, and special camps.",
+    "type": "page",
+    "keywords": "activities campaigns programs events service community projects health environment",
+    "url": "activities/activities.html"
+  },
+  {
+    "title": "Gallery",
+    "description": "Photo albums and event galleries from NSS Vettathur campaigns and camps.",
+    "type": "page",
+    "keywords": "gallery photos albums images pictures media events camp anti drug",
+    "url": "gallery.html"
+  },
+  {
+    "title": "Achievements",
+    "description": "Awards, recognitions, milestones, and community impact achievements of NSS Vettathur.",
+    "type": "page",
+    "keywords": "achievements awards recognition honors milestones timeline success impact",
+    "url": "achievements.html"
+  },
+  {
+    "title": "News",
+    "description": "Latest NSS Vettathur announcements, updates, and event notices.",
+    "type": "page",
+    "keywords": "news updates announcements notices events registration batch",
+    "url": "news.html"
+  },
+  {
+    "title": "Blogs",
+    "description": "Articles, volunteer stories, and educational guides from NSS Vettathur.",
+    "type": "page",
+    "keywords": "blogs articles stories editorial volunteerism cyber ecology environment",
+    "url": "blog/index.html"
+  },
+  {
+    "title": "Team",
+    "description": "Meet the Programme Officer, volunteer secretaries, and unit leadership.",
+    "type": "page",
+    "keywords": "team officers leaders secretaries programme officer media wing directory",
+    "url": "team.html"
+  },
+  {
+    "title": "Volunteers",
+    "description": "NSS volunteer directory with profiles, blood groups, and districts.",
+    "type": "page",
+    "keywords": "volunteers directory members students nss batch leader media wing",
+    "url": "volanteer/volunteer.html"
+  },
+  {
+    "title": "Contact",
+    "description": "Reach the NSS Programme Officer — inquiries, volunteer stories, and campaigns.",
+    "type": "page",
+    "keywords": "contact email phone address reach programme officer diginss376 inquiries",
+    "url": "index.html#contact"
+  }
+]

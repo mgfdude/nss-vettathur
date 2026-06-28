@@ -74,7 +74,7 @@ function renderActivities() {
                           act.description.toLowerCase().includes(searchQuery) ||
                           act.category.toLowerCase().includes(searchQuery);
     return matchesCategory && matchesSearch;
-  });
+  }).sort((a, b) => new Date(b.date) - new Date(a.date));
 
   if (filtered.length === 0) {
     grid.innerHTML = '';
@@ -113,7 +113,7 @@ function renderActivities() {
         <span
           class="text-xs font-semibold text-slate-400 block mb-2"
         >
-          ${act.date}
+          ${act.displayDate || act.date}
         </span>
 
         <h3

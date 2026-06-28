@@ -4,7 +4,7 @@ const generateSlug = (title) => {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
 };
 
-const searchDataPath = 'c:/Users/HP/OneDrive/Desktop/nss/web/search-data.json';
+const searchDataPath = 'c:/Users/HP/OneDrive/Desktop/nss/web/data/search-data/search-blogs.json';
 let searchData = JSON.parse(fs.readFileSync(searchDataPath, 'utf8'));
 
 searchData = searchData.map(item => {
@@ -17,4 +17,4 @@ searchData = searchData.map(item => {
 });
 
 fs.writeFileSync(searchDataPath, JSON.stringify(searchData, null, 2), 'utf8');
-console.log('search-data.json updated');
+console.log('data/search-data/search-blogs.json updated');

@@ -1,0 +1,44 @@
+[
+    {
+    "title": "Techora",
+    "description": "Website Designed & Developed by Techora",
+    "type": "partner",
+    "keywords": "techora developer website developer web design site developer designed developed techora.in partner",
+    "url": "https://techora.in",
+    "thumbnail": "https://www.google.com/s2/favicons?domain=techora.in&sz=128",
+    "external": true
+  },
+  {
+    "title": "Techora-Instagram",
+    "description": "Instagram",
+    "type": "partner-instagram",
+    "keywords": "techora developer website developer web design site developer designed developed techora.in partner",
+    "url": "https://www.instagram.com/techora.inofficial",
+    "thumbnail": "https://www.google.com/s2/favicons?domain=techora.in&sz=128",
+    "external": true
+  },
+  {
+    "title": "Instagram",
+    "description": "Follow NSS GHSS Vettathur on Instagram",
+    "type": "instagram",
+    "keywords": "instagram ig insta reels photos social media nss vettathur",
+    "url": "https://www.instagram.com/nss_ghss_vettathur/",
+    "external": true
+  },
+  {
+    "title": "YouTube",
+    "description": "Watch NSS GHSS Vettathur videos and activities",
+    "type": "youtube",
+    "keywords": "youtube yt videos channel nss ghss vettathur media reels shorts",
+    "url": "https://youtube.com/@ghss_vettathur_nss",
+    "external": true
+  },
+  {
+    "title": "Facebook",
+    "description": "Follow NSS GHSS Vettathur on Facebook",
+    "type": "facebook",
+    "keywords": "facebook fb meta social media nss vettathur",
+    "url": "index.html#",
+    "external": false
+  }
+]

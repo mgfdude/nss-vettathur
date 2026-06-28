@@ -97,6 +97,24 @@ const GALLERY_ALBUMS = [
       "assets/images/gallery/National-reading-day/3.jpeg",
       "assets/images/gallery/National-reading-day/4.jpeg"
     ]
+  },
+
+  {
+    id: "gal-4",
+    title: "International-Yoga-Day",
+    year: "2026",
+    date: "2026-06-21",
+    category: "Yoga Day",
+    cover: "assets/images/thumpnail/International-Yoga-Day-2026.JPG",
+    images: [
+      "assets/images/gallery/International-Yoga-Day/1.jpeg",
+      "assets/images/gallery/International-Yoga-Day/2.jpeg",
+      "assets/images/gallery/International-Yoga-Day/3.jpeg",
+      "assets/images/gallery/International-Yoga-Day/4.jpeg",
+      "assets/images/gallery/International-Yoga-Day/5.jpeg",
+      "assets/images/gallery/International-Yoga-Day/6.jpeg",
+      "assets/images/gallery/International-Yoga-Day/7.jpeg"
+    ]
   }
 ];
 

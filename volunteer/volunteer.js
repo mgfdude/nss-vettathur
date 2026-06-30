@@ -82,7 +82,9 @@ function renderInitialsAvatar(
 ){
 
     const photo =
-        volunteer.photo;
+    volunteer.photo
+    ? `../${volunteer.photo}`
+    : null;
 
     return `
         <div class="volunteer-avatar-wrapper">
@@ -758,7 +760,7 @@ function showVolunteer(id) {
     ""
 }
 
-<div
+    <div
     class="volunteer-id-avatar"
     style="
         ${
@@ -773,62 +775,49 @@ function showVolunteer(id) {
     )}
 </div>
 
-        class="
-            volunteer-id-photo
-        "
 
-        onerror="
-            this.style.display='none';
-            this.nextElementSibling.style.display='flex';
-        "
-    >
-
-    <div
-        class="
-            volunteer-id-avatar
-        "
-
-        style="
-            display:none;
-        "
-    >
-        ${getInitials(
-            volunteer.name
-        )}
-    </div>
-
-</div>
-
-    <div class="volunteer-id-attendance-panel">
-
-        <div class="
-            volunteer-attendance-score
-            volunteer-attendance-${getAttendanceStatus(
-                getAttendancePercentage(
-                    volunteer.id
-                )
-            ).color}
-        ">
-            ${getAttendanceStatus(
-                getAttendancePercentage(
-                    volunteer.id
-                )
-            ).icon}
-
-            ${getAttendancePercentage(
-                volunteer.id
-            )}%
         </div>
 
-        <button
-            class="attendance-open-btn"
-            onclick="
-                openAttendancePopup(
-                    '${volunteer.id}'
+<div class="volunteer-id-attendance-panel">
+
+    <div class="
+        volunteer-attendance-score
+        volunteer-attendance-${
+            getAttendanceStatus(
+                getAttendancePercentage(
+                    volunteer.id
                 )
-            "
-        >
-            Show More
+            ).color
+        }
+    ">
+        ${
+            getAttendanceStatus(
+                getAttendancePercentage(
+                    volunteer.id
+                )
+            ).icon
+        }
+
+        ${
+            getAttendancePercentage(
+                volunteer.id
+            )
+        }%
+    </div>
+
+    <button
+        class="attendance-open-btn"
+        onclick="
+            openAttendancePopup(
+                '${volunteer.id}'
+            )
+        "
+    >
+        Show More
+    </button>
+
+</div>
+            
         </button>
 
     </div>

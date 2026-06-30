@@ -5,7 +5,7 @@ const GALLERY_ALBUMS = [
     year: "2026",
     date: "2026-06-05",
     category: "Anti-drug",
-    cover: BASE_PATH + "assets/images/thumpnail/Anti-drug_campaigner_26.JPG",
+    cover: BASE_PATH + "assets/images/thumbnail/Anti-drug_campaigner_26.JPG",
     images: [
       BASE_PATH + "assets/images/gallery/Anti-drug_campaigner_26/1.jpg",
       BASE_PATH + "assets/images/gallery/Anti-drug_campaigner_26/2.jpg",
@@ -20,9 +20,9 @@ const GALLERY_ALBUMS = [
     year: "2025",
     date: "2025-12-23",
     category: "Special Camps",
-    cover: BASE_PATH + "assets/images/thumpnail/special-camp-2025.JPG",
+    cover: BASE_PATH + "assets/images/thumbnail/special-camp-2025.JPG",
     images: [
-      BASE_PATH + "assets/images/thumpnail/special-camp-2025.JPG",
+      BASE_PATH + "assets/images/thumbnail/special-camp-2025.JPG",
       BASE_PATH + "assets/images/gallery/camp2025/6.jpg",
       BASE_PATH + "assets/images/gallery/camp2025/5.JPG",
       BASE_PATH + "assets/images/gallery/camp2025/4.JPG",
@@ -37,7 +37,7 @@ const GALLERY_ALBUMS = [
     year: "2026",
     date: "2026-09-19",
     category: "Reading Day",
-    cover: BASE_PATH + "assets/images/thumpnail/National-reading-day.JPG",
+    cover: BASE_PATH + "assets/images/thumbnail/National-reading-day.JPG",
     images: [
       BASE_PATH + "assets/images/gallery/National-reading-day/1.jpeg",
       BASE_PATH + "assets/images/gallery/National-reading-day/2.jpeg",
@@ -52,7 +52,7 @@ const GALLERY_ALBUMS = [
     year: "2026",
     date: "2026-06-21",
     category: "Yoga Day",
-    cover: BASE_PATH + "assets/images/thumpnail/International-Yoga-Day-2026.JPG",
+    cover: BASE_PATH + "assets/images/thumbnail/International-Yoga-Day-2026.JPG",
     images: [
       BASE_PATH + "assets/images/gallery/International-Yoga-Day/1.jpeg",
       BASE_PATH + "assets/images/gallery/International-Yoga-Day/2.jpeg",

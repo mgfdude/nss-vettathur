@@ -1,140 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-          http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ══════════════════════════════════════════
-       NSS VETTATHUR — SITEMAP
-       Unit: NSS/SFU/HSE/MPM/81
-       Generated: 2026-06-15
-  ══════════════════════════════════════════ -->
+    <url>
+        <loc>https://nss-vettathur.techora.in/</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- ── Core Pages ── -->
+    <url>
+        <loc>https://nss-vettathur.techora.in/about.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/index.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/achievements.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/about.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/activities/Anti-drug_campaigner.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/achievements.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/activities/activities.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/gallery.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/activities/international-yoga-day.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/news.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/activities/reading-day-2026.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/blog/index.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/activities/self-enumeration-census-2027.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- ── Blog Articles ── -->
+    <url>
+        <loc>https://nss-vettathur.techora.in/activities/special-camp-2025.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/blog/techora-in-building-practical-digital-presence-for-local-communities.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/activities/traffic-awareness.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/blog/not-me-but-you-the-spirit-of-active-student-volunteerism.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/admin/admin.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/blog/how-to-keep-your-family-safe-from-digital-scams.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/admin/login.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/blog/restoring-local-ecology-planting-native-trees-in-melattur.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/blog/how-to-keep-your-family-safe-from-digital-scams.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/team.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/blog/index.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/cyber-awareness.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/blog/not-me-but-you-the-spirit-of-active-student-volunteerism.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- ── Activities Section ── -->
+    <url>
+        <loc>https://nss-vettathur.techora.in/blog/restoring-local-ecology-planting-native-trees-in-melattur.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/activities/activities.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/blog/techora-in-building-practical-digital-presence-for-local-communities.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/activities/special-camp-2025.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/cyber-awareness.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/activities/Anti-drug_campaigner.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+    <url>
+        <loc>https://nss-vettathur.techora.in/gallery.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/activities/cleanliness-drive.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>  
+    <url>
+        <loc>https://nss-vettathur.techora.in/google0d680905eee06fc0.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <!-- ── Volunteers Section ── --> 
+    <url>
+        <loc>https://nss-vettathur.techora.in/news.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
-  <url>
-    <loc>https://nss-vettathur.techora.in/volanteer/volunteer.html</loc>
-    <lastmod>2026-06-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>  
-  
+    <url>
+        <loc>https://nss-vettathur.techora.in/team.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://nss-vettathur.techora.in/update-soon.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://nss-vettathur.techora.in/videos.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://nss-vettathur.techora.in/volunteer/volunteer.html</loc>
+        <lastmod>2026-07-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>

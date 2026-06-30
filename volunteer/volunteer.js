@@ -59,18 +59,68 @@ function getInitials(name) {
   return (words[0][0] + words[words.length - 1][0]).toUpperCase();
 }
 
-function renderInitialsAvatar(name) {
-  const initials = getInitials(name);
+function getVolunteerPhoto(
+    volunteerId
+){
 
-  return `
-    <div
-      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white text-sm sm:text-base font-bold shadow-md shrink-0 bg-gradient-to-br from-[#ff6b00] to-[#ff8c42]"
-      style="font-weight: 700"
-      aria-hidden="true"
-    >
-      ${initials}
-    </div>
-  `;
+    const parts =
+        volunteerId.split("-");
+
+    const year =
+        parts[1];
+
+    const number =
+        parts[2];
+
+    return `
+../assets/images/volunteer/${year}/${number}.jpg
+`;
+}
+
+function renderInitialsAvatar(
+    volunteer
+){
+
+    const photo =
+        volunteer.photo;
+
+    return `
+        <div class="volunteer-avatar-wrapper">
+
+            ${
+                photo
+                ?
+                `
+                <img
+                    src="${photo}"
+                    class="volunteer-photo"
+                    onerror="
+                        this.style.display='none';
+                        this.nextElementSibling.style.display='flex';
+                    "
+                >
+                `
+                :
+                ""
+            }
+
+            <div
+                class="volunteer-fallback-avatar"
+                style="
+                    ${
+                        photo
+                        ? "display:none;"
+                        : "display:flex;"
+                    }
+                "
+            >
+                ${getInitials(
+                    volunteer.name
+                )}
+            </div>
+
+        </div>
+    `;
 }
 
 function renderIdCardAvatar(name) {
@@ -604,7 +654,7 @@ function renderCards() {
     <div data-volunteer-id="${v.id}" class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6 flex flex-col">
 
       <div class="volunteer-card-header">
-        ${renderInitialsAvatar(v.name)}
+        ${renderInitialsAvatar(v)}
         ${isSpecialRole(v.pos) ? renderPosBadge(v.pos) : ""}
       </div>
 
@@ -689,9 +739,65 @@ function showVolunteer(id) {
 
     <div></div>
 
-    <div class="volunteer-id-avatar">
-        ${getInitials(volunteer.name)}
+    <div class="volunteer-id-avatar-wrapper">
+
+    ${
+    volunteer.photo
+    ?
+    `
+    <img
+        src="../${volunteer.photo}"
+        class="volunteer-id-photo"
+        onerror="
+            this.style.display='none';
+            this.nextElementSibling.style.display='flex';
+        "
+    >
+    `
+    :
+    ""
+}
+
+<div
+    class="volunteer-id-avatar"
+    style="
+        ${
+            volunteer.photo
+            ? "display:none;"
+            : "display:flex;"
+        }
+    "
+>
+    ${getInitials(
+        volunteer.name
+    )}
+</div>
+
+        class="
+            volunteer-id-photo
+        "
+
+        onerror="
+            this.style.display='none';
+            this.nextElementSibling.style.display='flex';
+        "
+    >
+
+    <div
+        class="
+            volunteer-id-avatar
+        "
+
+        style="
+            display:none;
+        "
+    >
+        ${getInitials(
+            volunteer.name
+        )}
     </div>
+
+</div>
 
     <div class="volunteer-id-attendance-panel">
 

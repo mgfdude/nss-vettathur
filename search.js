@@ -38,7 +38,7 @@
       ? BASE_PATH
       : window.location.pathname.includes("/activities/") ||
         window.location.pathname.includes("/blog/") ||
-        window.location.pathname.includes("/volanteer/")
+        window.location.pathname.includes("/volunteer/")
         ? "../"
         : "";
   const searchDataPath =
@@ -98,7 +98,7 @@
       description: descriptionParts.join(" · "),
       type: "volunteer",
       keywords,
-      url: `${searchBasePath}volanteer/volunteer.html?id=${encodeURIComponent(volunteer.id)}&batch=${encodeURIComponent(volunteer.batch)}`,
+      url: `${searchBasePath}volunteer/volunteer.html?id=${encodeURIComponent(volunteer.id)}&batch=${encodeURIComponent(volunteer.batch)}`,
       meta: volunteer.pos !== "Volunteer" ? volunteer.pos : volunteer.district,
     };
   }
@@ -126,7 +126,7 @@
     try {
       const responses = await Promise.all([
         ...searchFiles.map((file) => fetch(`${searchDataPath}${file}`)),
-        fetch(`${searchBasePath}volanteer/volunteer.json`)
+        fetch(`${searchBasePath}volunteer/volunteer.json`)
       ]);
 
       responses.forEach((response) => {

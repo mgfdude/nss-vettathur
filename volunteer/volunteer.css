@@ -814,3 +814,56 @@
     color:#dc2626;
     border:1px solid rgba(239,68,68,.18);
 }
+
+/*image*/
+
+.volunteer-avatar-wrapper{
+    position:relative;
+}
+
+.volunteer-photo{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
+.volunteer-fallback-avatar{
+    width:56px;
+    height:56px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+    font-weight:700;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff6b00,
+            #ff8c42
+        );
+}
+
+.volunteer-id-photo{
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    box-shadow:
+        0 8px 24px
+        rgba(
+            0,
+            0,
+            0,
+            .15
+        );
+}

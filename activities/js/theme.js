@@ -40,7 +40,7 @@ function setupMobileMenu() {
 
   if (!btn || !drawer || !overlay) return;
 
-  const assetPrefix = (window.location.pathname.includes('/activities/') || window.location.pathname.includes('/volanteer/')) ? '../' : '';
+  const assetPrefix = (window.location.pathname.includes('/activities/') || window.location.pathname.includes('/volunteer/')) ? '../' : '';
 
   let overlayTimer;
   let lastFocusedElement = null;

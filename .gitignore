@@ -1,2 +1,29 @@
+# Python files
+*.py
+
+# Virtual environments
 .venv/
+venv/
+
+# Admin panel
 admin/
+
+# Local scripts
+update_links.js
+update_blog_index.js
+sitemap.py
+run-x.py
+push_it.bat
+
+# Volunteer local tools
+volunteer/run.py
+
+# Image readme
+assets/images/web/README.md
+
+# VS Code
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc

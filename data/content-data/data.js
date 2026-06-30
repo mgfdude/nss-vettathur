@@ -1,7 +1,7 @@
 const BASE_PATH =
   window.location.pathname.includes("/activities/") ||
   window.location.pathname.includes("/blog/") ||
-  window.location.pathname.includes("/volanteer/")
+  window.location.pathname.includes("/volunteer/")
     ? "../"
     : "";
 

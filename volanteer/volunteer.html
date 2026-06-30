@@ -26,6 +26,7 @@
       }
     }
   </script>
+<link rel="stylesheet" href="volunteer.css">
 <link rel="stylesheet" href="../style.css">
   <script src="../activities/js/theme.js"></script>
 </head>
@@ -238,7 +239,21 @@
   </div>
 </div>
 
+<div
+    id="attendance-popup"
+    class="hidden fixed inset-0 z-[999] bg-black/50 flex items-center justify-center p-4"
+>
+
+    <div
+        id="attendance-popup-content"
+    ></div>
+
+</div>
+
 <footer class="py-10 text-center border-t">© NSS Vettathur</footer>
+<script src="../data/content-data/activities.js"></script>
+<script src="../data/content-data/meetings.js"></script>
+<script src="attendance.js"></script>
 <script src="volunteer.js"></script>
 </body>
 </html>

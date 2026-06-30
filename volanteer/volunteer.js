@@ -1,12 +1,18 @@
 let volunteers = [];
 let selectedBatch = "All";
 
+
 fetch("volunteer.json")
   .then(response => response.json())
-  .then(data => {
+  .then(async data => {
+
     volunteers = data;
+
+    await loadAttendanceData();
+
     init();
-  })
+
+})
   .catch(error => {
     console.error("Failed to load volunteer data:", error);
   });
@@ -100,13 +106,45 @@ function getPosRoleClass(pos) {
   return roleMap[pos] || "leader";
 }
 
+
 function renderPosBadge(pos, variant = "card") {
+
   if (!isSpecialRole(pos)) return "";
 
   const roleClass = getPosRoleClass(pos);
-  const baseClass = variant === "modal" ? "volunteer-id-pos" : "volunteer-pos-badge";
 
-  return `<span class="${baseClass} ${baseClass}--${roleClass}">${pos}</span>`;
+  const baseClass =
+    variant === "modal"
+      ? "volunteer-id-pos"
+      : "volunteer-pos-badge";
+
+  return `
+    <span class="${baseClass} ${baseClass}--${roleClass}">
+      ${pos}
+    </span>
+  `;
+}
+
+function renderAttendanceBadge(id) {
+
+    const percentage =
+        getAttendancePercentage(id);
+
+    const status =
+        getAttendanceStatus(
+            percentage
+        );
+
+    return `
+        <div
+            class="
+                volunteer-attendance-badge
+                volunteer-attendance-${status.color}
+            "
+        >
+            ${percentage}%
+        </div>
+    `;
 }
 
 const VOLUNTEER_MODAL_DURATION = 350;
@@ -574,9 +612,13 @@ function renderCards() {
         ${v.name}
       </h3>
 
-      <p class="text-sm text-slate-500 mt-1">
-        ${v.id}
-      </p>
+      <div class="flex items-center justify-between mt-1">
+  <p class="text-sm text-slate-500">
+    ${v.id}
+  </p>
+
+  ${renderAttendanceBadge(v.id)}
+</div>
 
       <div class="mt-4 space-y-1">
 
@@ -640,12 +682,66 @@ function showVolunteer(id) {
       <span class="volunteer-id-brand-title">NSS Vettathur</span>
       <span class="volunteer-id-brand-sub">Volunteer Identity Card</span>
     </div>
+<div class="volunteer-id-header">
 
-    <div class="volunteer-id-header">
-      ${renderIdCardAvatar(volunteer.name)}
-      <h2 id="volunteer-id-name" class="volunteer-id-name">${volunteer.name}</h2>
-      ${renderPosBadge(volunteer.pos, "modal")}
+   <div class="volunteer-id-top">
+   
+
+    <div></div>
+
+    <div class="volunteer-id-avatar">
+        ${getInitials(volunteer.name)}
     </div>
+
+    <div class="volunteer-id-attendance-panel">
+
+        <div class="
+            volunteer-attendance-score
+            volunteer-attendance-${getAttendanceStatus(
+                getAttendancePercentage(
+                    volunteer.id
+                )
+            ).color}
+        ">
+            ${getAttendanceStatus(
+                getAttendancePercentage(
+                    volunteer.id
+                )
+            ).icon}
+
+            ${getAttendancePercentage(
+                volunteer.id
+            )}%
+        </div>
+
+        <button
+            class="attendance-open-btn"
+            onclick="
+                openAttendancePopup(
+                    '${volunteer.id}'
+                )
+            "
+        >
+            Show More
+        </button>
+
+    </div>
+
+</div>
+
+<h2
+    class="volunteer-id-name"
+>
+    ${volunteer.name}
+</h2>
+
+ <div class="volunteer-id-pos-wrapper">
+  ${renderPosBadge(
+    volunteer.pos,
+    "modal"
+  )}
+</div>
+</div>
 
     <div class="volunteer-id-body">
       ${renderIdRow("ID", volunteer.id)}
@@ -666,4 +762,117 @@ function showVolunteer(id) {
   `;
 
   openVolunteerModal();
+}
+
+function renderAttendancePopupButton(
+    volunteerId
+){
+
+    const percentage =
+        getAttendancePercentage(
+            volunteerId
+        );
+
+    const status =
+        getAttendanceStatus(
+            percentage
+        );
+
+    return `
+        <button
+            class="
+                volunteer-attendance-popup-btn
+                volunteer-attendance-${status.color}
+            "
+            onclick="
+                openAttendancePopup(
+                    '${volunteerId}'
+                )
+            "
+        >
+            ${status.icon}
+            ${percentage}%
+        </button>
+    `;
+}
+
+function openAttendancePopup(
+    volunteerId
+){
+
+    const percentage =
+        getAttendancePercentage(
+            volunteerId
+        );
+
+    const present =
+        getAttendancePresentCount(
+            volunteerId
+        );
+
+    const status =
+        getAttendanceStatus(
+            percentage
+        );
+
+    const message =
+        percentage >= 90
+        ? "Outstanding participation."
+        : percentage >= 75
+        ? "Good participation level."
+        : percentage >= 50
+        ? "Participation is average."
+        : "Attendance improvement recommended.";
+
+    document.getElementById(
+        "attendance-popup-content"
+    ).innerHTML = `
+        <div class="attendance-popup-card">
+
+            <h3>
+                ${status.icon}
+                ${status.label}
+            </h3>
+
+            <p>
+                Present:
+                ${present}/${totalActivities}
+            </p>
+
+            <p>
+                Attendance:
+                ${percentage}%
+            </p>
+
+            <p>
+                ${message}
+            </p>
+
+            <button
+                onclick="
+                    closeAttendancePopup()
+                "
+            >
+                Close
+            </button>
+
+        </div>
+    `;
+
+    document
+        .getElementById(
+            "attendance-popup"
+        )
+        .classList
+        .remove("hidden");
+}
+
+function closeAttendancePopup(){
+
+    document
+        .getElementById(
+            "attendance-popup"
+        )
+        .classList
+        .add("hidden");
 }

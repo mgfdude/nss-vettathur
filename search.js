@@ -94,13 +94,26 @@
     ].filter(Boolean);
 
     return {
-      title: volunteer.name,
-      description: descriptionParts.join(" · "),
-      type: "volunteer",
-      keywords,
-      url: `${searchBasePath}volunteer/volunteer.html?id=${encodeURIComponent(volunteer.id)}&batch=${encodeURIComponent(volunteer.batch)}`,
-      meta: volunteer.pos !== "Volunteer" ? volunteer.pos : volunteer.district,
-    };
+  title: volunteer.name,
+  description: descriptionParts.join(" · "),
+  type: "volunteer",
+  keywords,
+
+  thumbnail: volunteer.photo
+    ? withBasePath(volunteer.photo)
+    : null,
+
+  url:
+    `${searchBasePath}volunteer/volunteer.html?id=` +
+    encodeURIComponent(volunteer.id) +
+    `&batch=` +
+    encodeURIComponent(volunteer.batch),
+
+  meta:
+    volunteer.pos !== "Volunteer"
+      ? volunteer.pos
+      : volunteer.district,
+};
   }
 
   function withBasePath(path) {
@@ -216,9 +229,25 @@
 
   function renderResultThumb(item) {
     if (item.thumbnail) {
-      return `<img src="${escapeHtml(item.thumbnail)}" alt="" class="nss-search-thumb${item.type === "partner" ? " nss-search-thumb--logo" : ""}" loading="lazy">`;
-    }
-
+  return `
+    <img
+      src="${escapeHtml(item.thumbnail)}"
+      alt=""
+      class="nss-search-thumb"
+      loading="lazy"
+      onerror="
+        this.style.display='none';
+        this.nextElementSibling.style.display='flex';
+      "
+    >
+    <span
+      class="nss-search-thumb nss-search-thumb--icon"
+      style="display:none;"
+    >
+      👤
+    </span>
+  `;
+}
     const TYPE_IMAGES = {
   instagram: "assets/images/web/logos/ig.jpg",
   youtube: "assets/images/web/logos/yt.jpg",

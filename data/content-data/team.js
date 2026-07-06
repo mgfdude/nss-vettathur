@@ -30,6 +30,13 @@ const TEAM = [
   },
   {
     id: "team-5",
+    name: "Mohammed Aslam.VP",
+    role: "Media Wing(25-26)",
+    image: BASE_PATH + "assets/images/team/leaders/25-26/boy.png?auto=format&fit=crop&w=300&q=80",
+    email: "diginss376@gmail.com" 
+  },
+  {
+    id: "team-5",
     name: "?",
     role: "Volunteer leader(Boys 26-27)",
     image: BASE_PATH + "assets/images/team/leaders/25-26/boy.png?auto=format&fit=crop&w=300&q=80",
@@ -44,6 +51,13 @@ const TEAM = [
   },
   {
     id: "team-7",
+    name: "?",
+    role: "Media Wing(26-27)",
+    image: BASE_PATH + "assets/images/team/leaders/25-26/boy.png?auto=format&fit=crop&w=300&q=80",
+    email: "diginss376@gmail.com"
+  },
+  {
+    id: "team-8",
     name: "?",
     role: "Media Wing(26-27)",
     image: BASE_PATH + "assets/images/team/leaders/25-26/boy.png?auto=format&fit=crop&w=300&q=80",

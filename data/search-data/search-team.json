@@ -13,6 +13,7 @@
     "keywords": "media wing mediawing photography video coverage press documentation",
     "url": "volunteer/volunteer.html?pos=Media%20Wing"
   },
+  
   {
     "title": "Naadira.P",
     "description": "Programme Officer — NSS Unit Vettathur.",
@@ -50,6 +51,15 @@
     "meta": "Media Wing (25-26)"
   },
   {
+    "title": "Mohammed Aslam VP",
+    "description": "Media Wing member (25-26) — event coverage and outreach.",
+    "type": "team",
+    "keywords": "aslam media wing v photography coverage 25-26",
+    "url": "team.html",
+    "thumbnail": "assets/images/team/leaders/25-26/boy.png",
+    "meta": "Media Wing (25-26)"
+  },
+  {
     "title": "Volunteer Leader (Boys 26-27)",
     "description": "Volunteer leader position for Boys batch 26-27.",
     "type": "team",
@@ -66,6 +76,15 @@
     "url": "team.html",
     "thumbnail": "assets/images/team/leaders/25-26/boy.png",
     "meta": "Volunteer Leader (Girls 26-27)"
+  },
+  {
+    "title": "Media Wing (26-27)",
+    "description": "Media Wing team member for batch 26-27.",
+    "type": "team",
+    "keywords": "media wing 26-27 photography video coverage",
+    "url": "team.html",
+    "thumbnail": "assets/images/team/leaders/25-26/boy.png",
+    "meta": "Media Wing (26-27)"
   },
   {
     "title": "Media Wing (26-27)",

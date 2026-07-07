@@ -570,14 +570,17 @@ function updateBatchHeading() {
   "NSS Volunteers";
 
 }
-
 function renderCards() {
 
   const search =
-    document.getElementById("volunteer-search")
-      .value
-      .toLowerCase()
-      .trim();
+    document.getElementById(
+        "volunteer-search"
+    )
+    .value
+    .toLowerCase()
+    .trim();
+
+const searchLower = search;
 
   const gender =
     document.getElementById("gender-filter")
@@ -593,44 +596,35 @@ function renderCards() {
     document.getElementById("doy-filter")
       .value;
 
-  const filtered =
-    volunteers.filter(v => {
+  const filtered = volunteers.filter(v => {
 
-      if (
-      v.batch !== selectedBatch
-    ) return false;
+    if (v.batch !== selectedBatch)
+        return false;
 
-      const matchesSearch =
-        v.name.toLowerCase().includes(search) ||
-        v.id.toLowerCase().includes(search) ||
-        (v.pos || "").toLowerCase().includes(search);
-
-      const matchesGender =
+    const matchesGender =
         gender === "All" ||
         v.gender === gender;
 
-      const matchesBlood =
+    const matchesBlood =
         blood === "All" ||
         v.bloodGroup === blood;
 
-      const matchesDistrict =
+    const matchesDistrict =
         district === "All" ||
         v.district === district;
-        
-      const matchesDoy =
+
+    const matchesDoy =
         doy === "All" ||
         v.doy === doy;
-      
 
-      return (
-        matchesSearch &&
+    return (
         matchesGender &&
         matchesBlood &&
         matchesDistrict &&
         matchesDoy
-      );
+    );
 
-    });
+});
 
   const grid =
     document.getElementById("volunteer-grid");
@@ -641,6 +635,8 @@ function renderCards() {
   if (filtered.length === 0) {
 
     grid.innerHTML = "";
+    
+    
 
     noResults.classList.remove("hidden");
 
@@ -653,69 +649,105 @@ function renderCards() {
 `${filtered.length} Volunteer${filtered.length !== 1 ? "s" : ""}`;
 
   grid.innerHTML = filtered.map(v => `
-    <div data-volunteer-id="${v.id}" class="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6 flex flex-col">
+    
+    <div
+    data-volunteer-id="${v.id}"
+    class="
+        bg-white
+        rounded-2xl
+        border
+        ${
+            searchLower &&
+            (
+                v.name.toLowerCase().includes(searchLower) ||
+                v.id.toLowerCase().includes(searchLower) ||
+                (v.pos || "").toLowerCase().includes(searchLower)
+            )
+            ? "volunteer-search-match"
+            : "border-slate-100"
+        }
+        shadow-sm
+        hover:shadow-xl
+        hover:-translate-y-1
+        transition-all
+        duration-300
+        p-6
+        flex
+        flex-col
+    "
+>
 
       <div class="volunteer-card-header">
-        ${renderInitialsAvatar(v)}
-        ${isSpecialRole(v.pos) ? renderPosBadge(v.pos) : ""}
-      </div>
 
-      <h3 class="mt-4 font-bold text-xl text-slate-900">
-        ${v.name}
-      </h3>
+    ${renderInitialsAvatar(v)}
 
-      <div class="flex items-center justify-between mt-1">
-  <p class="text-sm text-slate-500">
-    ${v.id}
-  </p>
+    ${
+        isSpecialRole(v.pos)
+        ? renderPosBadge(v.pos)
+        : ""
+    }
 
-  ${renderAttendanceBadge(v.id)}
 </div>
 
-      <div class="mt-4 space-y-1">
+<h3 class="mt-4 font-bold text-xl text-slate-900">
+    ${v.name}
+</h3>
 
-        <p class="text-sm">
-          <span class="font-semibold">
+<div class="flex items-center justify-between mt-1">
+
+    <p class="text-sm text-slate-500">
+        ${v.id}
+    </p>
+
+    ${renderAttendanceBadge(v.id)}
+
+</div>
+
+<div class="mt-4 space-y-1">
+
+    <p class="text-sm">
+        <span class="font-semibold">
             Blood:
-          </span>
-          ${v.bloodGroup}
-        </p>
+        </span>
+        ${v.bloodGroup}
+    </p>
 
-        <p class="text-sm">
-          <span class="font-semibold">
+    <p class="text-sm">
+        <span class="font-semibold">
             Gender:
-          </span>
-          ${v.gender}
-        </p>
+        </span>
+        ${v.gender}
+    </p>
 
-        <p class="text-sm">
-          <span class="font-semibold">
+    <p class="text-sm">
+        <span class="font-semibold">
             Batch:
-          </span>
-          ${v.batch}
-        </p>
+        </span>
+        ${v.batch}
+    </p>
 
-        <p class="text-sm">
-  <span class="font-semibold">
-    District:
-  </span>
-  ${v.district}
-</p>
-        <p class="text-sm">
-  <span class="font-semibold">
-    DOY:
-  </span>
-  ${v.doy}
-</p>
+    <p class="text-sm">
+        <span class="font-semibold">
+            District:
+        </span>
+        ${v.district}
+    </p>
 
-      </div>
+    <p class="text-sm">
+        <span class="font-semibold">
+            DOY:
+        </span>
+        ${v.doy}
+    </p>
 
-      <button
-        onclick="showVolunteer('${v.id}')"
-        class="mt-5 w-full bg-primary text-white py-2.5 rounded-xl font-semibold hover:bg-blue-900 transition-colors"
-      >
-        View Profile
-      </button>
+</div>
+
+<button
+    onclick="showVolunteer('${v.id}')"
+    class="mt-5 w-full bg-primary text-white py-2.5 rounded-xl font-semibold hover:bg-blue-900 transition-colors"
+>
+    View Profile
+</button>
 
     </div>
   `).join("");

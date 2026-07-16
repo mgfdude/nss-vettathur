@@ -45,7 +45,6 @@ const GALLERY_ALBUMS = [
       BASE_PATH + "assets/images/gallery/National-reading-day/4.jpeg"
     ]
   },
-
   {
     id: "gal-4",
     title: "International-Yoga-Day",
@@ -61,6 +60,25 @@ const GALLERY_ALBUMS = [
       BASE_PATH + "assets/images/gallery/International-Yoga-Day/5.jpeg",
       BASE_PATH + "assets/images/gallery/International-Yoga-Day/6.jpeg",
       BASE_PATH + "assets/images/gallery/International-Yoga-Day/7.jpeg"
+    ]
+  },
+  {
+    id: "gal-5",
+    title: "World Population Day 2026",
+    year: "2026",
+    date: "2026-07-13",
+    category: "Quiz",
+    cover: BASE_PATH + "assets/images/thumbnail/World-Population-Day-2026.JPG",
+    images: [
+      BASE_PATH + "assets/images/gallery/World-Population-day/1.jpeg",
+      BASE_PATH + "assets/images/gallery/World-Population-day/2.jpeg",
+      BASE_PATH + "assets/images/gallery/World-Population-day/3.jpeg",
+      BASE_PATH + "assets/images/gallery/World-Population-day/4.jpeg",
+      BASE_PATH + "assets/images/gallery/World-Population-day/5.jpeg",
+      BASE_PATH + "assets/images/gallery/World-Population-day/6.jpeg",
+      BASE_PATH + "assets/images/gallery/World-Population-day/7.jpeg",
+      BASE_PATH + "assets/images/gallery/World-Population-day/8.jpeg",
+      BASE_PATH + "assets/images/gallery/World-Population-day/9.jpeg"
     ]
   }
 ];

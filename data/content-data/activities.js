@@ -113,6 +113,18 @@ const ACTIVITIES = [
     image: BASE_PATH + "assets/images/thumbnail/Swachh-Bharat-Mission-2026.JPG",
     link: "update-soon.html",
     impact: { volunteers: 50, hours: 2, beneficiaries: 100 }
+  },
+
+  {
+    id: "act-10",
+    title: "TOOFAN 2026",
+    category: "work",
+    date: "2026-07-25",
+    displayDate: "25 July 2026",
+    description: "",
+    image: BASE_PATH + "assets/images/thumbnail/TOOFAN-2026.JPG",
+    link: "update-soon.html",
+    impact: { volunteers: 50, hours: 2, beneficiaries: 100 }
   }
 
 ];

@@ -119,10 +119,22 @@ const ACTIVITIES = [
     id: "act-10",
     title: "TOOFAN 2026",
     category: "work",
-    date: "2026-07-25",
-    displayDate: "25 July 2026",
+    date: "2026-06-17",
+    displayDate: "17 June 2026",
     description: "",
     image: BASE_PATH + "assets/images/thumbnail/TOOFAN-2026.JPG",
+    link: "update-soon.html",
+    impact: { volunteers: 50, hours: 2, beneficiaries: 100 }
+  },
+
+  {
+    id: "act-11",
+    title: "Youth Festival 2026",
+    category: "work",
+    date: "2026-07-28",
+    displayDate: "28 July 2026",
+    description: "",
+    image: BASE_PATH + "assets/images/thumbnail/Youth-Festival-2026.JPG",
     link: "update-soon.html",
     impact: { volunteers: 50, hours: 2, beneficiaries: 100 }
   }

@@ -101,6 +101,18 @@ const ACTIVITIES = [
     image: BASE_PATH + "assets/images/thumbnail/World-Population-Day-2026.JPG",
     link: "update-soon.html",
     impact: { volunteers: 50, hours: 2, beneficiaries: 100 }
+  },
+
+  {
+    id: "act-9",
+    title: "Swachh Bharat Mission 2026",
+    category: "orientation",
+    date: "2026-07-21",
+    displayDate: "21 July 2026",
+    description: "",
+    image: BASE_PATH + "assets/images/thumbnail/Swachh-Bharat-Mission-2026.JPG",
+    link: "update-soon.html",
+    impact: { volunteers: 50, hours: 2, beneficiaries: 100 }
   }
 
 ];
